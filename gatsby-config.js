@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `metaxisdigital`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `metaxis.digital`,
+    siteUrl: `https://metaxis.digital`,
+    author: `Óscar A. Montiel`,
+    twitterUrl: `https://twitter.com/metaxisdigital`,
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
