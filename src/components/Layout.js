@@ -9,7 +9,9 @@ const IndexPage = ({children}) => {
   return (
     <div className={layoutStyles.layout}>
       <Navbar />
+      <div className={layoutStyles.verticalineleft} />
       {children}
+      <div className={layoutStyles.verticalineright} />
       <Footer />
     </div>
   )

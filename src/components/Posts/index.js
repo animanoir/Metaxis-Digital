@@ -6,11 +6,9 @@ import Post from "./Post"
 const Posts = ({posts}) => {
   return (
     <section className={postsStyles.container}>
-      <article>
         {posts.map(post => {
           return <Post key={post.id} {...post} />
         })}
-      </article>
     </section>
   )
 }

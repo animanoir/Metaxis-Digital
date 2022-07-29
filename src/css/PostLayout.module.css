@@ -1,17 +1,47 @@
-.title{
-  transform: rotateX(180deg);
-  font-size: 6rem;
-  animation-name: title;
-  animation-duration: 2s;
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.infocontainer {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 7rem;
+  /* transform: rotateX(180deg); */
+  /* animation-name: title;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; */
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* @keyframes title {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotateX(180deg)
+  }
+
+  100% {
+    transform: rotateX(1deg)
+  }
+} */
+
+.author {
+  font-family: 'Karla', sans-serif;
+  font-weight: normal;
+  text-align: end;
+}
+
+.date {
+  text-align: end;
   font-family: 'Karla', sans-serif;
 }
-
-@keyframes title {
-  0%   {transform: rotateX(0deg);}
-  50%  {transform: rotateX(180deg)}
-  100% {transform: rotateX(1deg)}
-}
-
-

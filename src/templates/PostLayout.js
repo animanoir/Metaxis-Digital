@@ -12,7 +12,7 @@ export const postQuery = graphql`
   query GetSinglePost($slug: String) {
     mdx(frontmatter: {slug: {eq: $slug}}) {
       frontmatter {
-        date
+        date(formatString: "M/D/YYYY")
         title
         image {
           childImageSharp {
@@ -30,10 +30,12 @@ const PostLayout = ({data}) => {
   const {mdx: {frontmatter: {title, date, author, image}, body}} = data
   return (
     <Layout>
-        <article>
+        <article className={postStyles.container}>
+        <div className={postStyles.infocontainer}>
           <h1 className={postStyles.title}>{title}</h1>
-          <h3>{author}</h3>
-          <p>{date}</p>
+          <h3 className={postStyles.author}>escrito por <b>{author}</b></h3>
+          <h3 className={postStyles.date}>{date}</h3>
+        </div>
           <GatsbyImage image={getImage(image)} alt={title}/>
           <PostStyleWrapper>
             <MDXRenderer>
@@ -46,7 +48,7 @@ const PostLayout = ({data}) => {
 }
 
 const PostStyleWrapper = styled.div`
-  width: 45%;
+  width: 60%;
   margin: 0 auto;
   font-family: 'Lora', serif;
   h1 {
