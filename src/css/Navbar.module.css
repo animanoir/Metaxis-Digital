@@ -18,3 +18,7 @@
   font-weight: bold;
   color: black;
 }
+
+.title:hover {
+  color: #dc143c;
+}

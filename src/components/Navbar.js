@@ -68,7 +68,8 @@ const Navbar = () => {
     <nav className={navbarStyles.container}>
       <div>
         <Link to="/"><h1 className={navbarStyles.title}><b>metaxis.digital</b> <span style={{fontWeight: "normal"}}>| {tesis} y {antitesis}</span></h1></Link>
-      </div>
+        <small>En construcción...</small>
+        </div>
     </nav>
   )
 }
