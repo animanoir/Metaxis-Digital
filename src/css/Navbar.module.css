@@ -1,7 +1,21 @@
 .container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 100%;
-  background-color: aliceblue;
+  background-color: rgba(255, 255, 255, 0.5);
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: 'Karla', sans-serif;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
 }

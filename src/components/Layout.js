@@ -7,7 +7,7 @@ import Footer from "./Footer"
 // markup
 const IndexPage = ({children}) => {
   return (
-    <div className="layout">
+    <div className={layoutStyles.layout}>
       <Navbar />
       {children}
       <Footer />

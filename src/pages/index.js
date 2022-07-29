@@ -1,14 +1,37 @@
 import * as React from "react"
 import Layout from "../components/Layout"
+import Posts from '../components/Posts'
+import { graphql } from "gatsby"
 
-const IndexPage = () => {
+export const query = graphql`
+  query {
+    allMdx {
+      nodes {
+        id
+        frontmatter {
+          title
+          slug
+          date
+          author
+          tags
+          excerpt
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const IndexPage = ({data}) => {
+  const {allMdx: {nodes: posts}} = data
   return (
     <Layout>
     <main>
-      <title>Home Page</title>
-      <div style={{fontSize: '10rem'}}>
-        awdasewer
-      </div>
+      <Posts posts={posts}/>
     </main>
     </Layout>
   )

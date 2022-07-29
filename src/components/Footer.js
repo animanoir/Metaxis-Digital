@@ -23,19 +23,18 @@ const Footer = () => {
           >
             <img
               alt="Creative Commons License"
-              style={{ borderWidth: 0, marginRight: "5px" }}
+              style={{ borderWidth: 0, marginRight: "10px" }}
               src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
             />
           </a>
-          {' '}
-          <div className="footer-fantasma">
-            <p>
-              Una iniciativa de{" "}
-              <a className="link-fantasma" href="https://fantasma.rip/">
-                fantasma
-              </a>
-            </p>
-          </div>
+          <div className={footerStyles.fantasmacontainer}>
+          <p>
+            Una iniciativa de{" "}
+            <a className={footerStyles.fantasma} href="https://fantasma.rip/">
+              <b>fantasma</b>
+            </a>
+          </p>
+        </div>
         </div>
       </div>
     </footer>

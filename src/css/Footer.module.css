@@ -2,7 +2,8 @@
 .footer {
   background: rgba(255, 255, 255, 0.0);
   color: black;
-  width: 100vh;
+  width: 100vw;
+  max-width: 100%;
   position: fixed;
   bottom: 0vh;
   font-family: 'Karla', sans-serif;
@@ -10,10 +11,9 @@
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
-  width: 100vw;
+  padding: 1.5rem 5rem;
 }
 
 .twittericon {
@@ -34,6 +34,19 @@
 
 .ccommons{
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   align-items: center;
+}
+
+.fantasmacontainer {
+  font-size: 0.8rem;
+}
+
+.fantasma {
+  transition: 300ms;
+}
+
+.fantasma:hover {
+  color: white;
+  transition: all 0.3s ease;
 }
