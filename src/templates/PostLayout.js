@@ -5,7 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as postStyles from '../css/PostLayout.module.css'
 import styled from "styled-components"
-
+import SEO from "../components/SEO"
 
 
 export const postQuery = graphql`
@@ -14,10 +14,19 @@ export const postQuery = graphql`
       frontmatter {
         date(formatString: "M/D/YYYY")
         title
+        excerpt
+        slug
         image {
           childImageSharp {
             gatsbyImageData
+            parent {
+              id
+              ... on File {
+                relativePath
+              }
+            }
           }
+          relativePath
         }
         author
       }
@@ -27,9 +36,16 @@ export const postQuery = graphql`
 `
 
 const PostLayout = ({data}) => {
-  const {mdx: {frontmatter: {title, date, author, image}, body}} = data
+  const {mdx: {frontmatter: {title, date, author, image, excerpt, slug}, body}} = data
   return (
     <Layout>
+        <SEO
+          title={title}
+          description={excerpt}
+          image={image.childImageSharp.parent.relativePath}
+          metaurl={`https://metaxis.digital/posts/${slug}`}
+          type="article"
+        />
         <article className={postStyles.container}>
         <div className={postStyles.infocontainer}>
           <h1 className={postStyles.title}>{title}</h1>

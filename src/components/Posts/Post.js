@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 
 const Post = ({frontmatter}) => {
   const {title, tags, slug, excerpt} = frontmatter
-  console.log(tags)
   return (
     <article className={postsStyles.cardcontainer}>
       <Link to={`/posts/${slug}`} >
@@ -15,7 +14,7 @@ const Post = ({frontmatter}) => {
       <h6 className={postsStyles.tags}>
         {
           tags.map(tag => {
-            return <span className={postsStyles.singletag}>{tag}{' '}</span>
+            return <span key={tag} className={postsStyles.singletag}>{tag}{' '}</span>
           })
         }
       </h6>
