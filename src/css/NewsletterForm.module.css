@@ -71,3 +71,23 @@
 .small {
   font-family: 'Karla', sans-serif;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 0.5rem 3rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+  }
+  .emailinput{
+    padding: 12px 40px;
+    margin-bottom: 0.5rem;
+    font-family: 'lora', serif;
+    width: -webkit-fill-available;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+}

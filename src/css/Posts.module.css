@@ -43,3 +43,12 @@
   margin-right: 0.5rem;
   padding: 0.2rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 1rem 0.5rem 5rem 0.5rem;
+  }
+  .cardcontainer {
+    padding: 2rem 0;
+  }
+}

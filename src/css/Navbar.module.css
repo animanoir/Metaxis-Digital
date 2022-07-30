@@ -43,3 +43,64 @@
 .menulist a:hover {
   color: #dc143c;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    padding: 0;
+    align-items: initial;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    top: 0;
+    z-index: 50;
+    font-family: 'Karla', sans-serif;
+    backdrop-filter: blur(4px);
+  }
+
+  .antitesis {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+  }
+
+  .title:hover {
+    color: #dc143c;
+  }
+
+  .menulist {
+    margin: 0;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    list-style-type: none;
+    font-weight: normal;
+    font-size: 1.25rem;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .menulist li {
+    margin-left: 0;
+    /* font-style: italic; */
+  }
+
+  .menulist a {
+    color: black;
+  }
+
+  .menulist a:hover {
+    color: #dc143c;
+  }
+
+}

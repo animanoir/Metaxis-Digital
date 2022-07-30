@@ -30,7 +30,7 @@ const NewsletterSubscribe = ({data}) => {
   const {allMdx: {nodes: posts}} = data
   return (
     <Layout>
-      <h1 style={{fontSize: "3rem", textAlign: "center", fontFamily: "Karla"}}>¡Estás suscrito!</h1>
+      <h1 style={{fontSize: "2rem", textAlign: "center", fontFamily: "Karla"}}>¡Estás suscrito!</h1>
       <main>
         <Posts posts={posts}/>
       </main>

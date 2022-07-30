@@ -54,3 +54,26 @@
     transform: rotateX(1deg)
   }
 } */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+  }
+  .title{
+    font-family: 'Karla', sans-serif;
+    font-size: 4rem;
+      /* transform: rotateX(180deg); */
+      animation-name: title;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+  }
+  .text {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 8rem;
+    width: 100%;
+  }
+}

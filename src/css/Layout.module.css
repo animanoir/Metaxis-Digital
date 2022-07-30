@@ -388,3 +388,17 @@ a:hover {
   top: 30%;
   z-index: 100;
 }
+
+@media only screen and (max-width: 600px) {
+  .layout {
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .verticalineleft {
+    display: none;
+  }
+  .verticalineright {
+    display: none;
+  }
+}

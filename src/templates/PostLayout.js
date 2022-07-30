@@ -8,7 +8,6 @@ import * as postStyles from '../css/PostLayout.module.css'
 import styled from "styled-components"
 import SEO from "../components/SEO"
 
-
 export const postQuery = graphql`
   query GetSinglePost($slug: String) {
     mdx(frontmatter: {slug: {eq: $slug}}) {
@@ -76,6 +75,8 @@ const PostStyleWrapper = styled.div`
   width: 60%;
   margin: 0 auto;
   font-family: 'Lora', serif;
+  line-height: 1.55;
+  text-align: justify;
   h1 {
     font-size: 2.5rem;
   }
@@ -99,11 +100,37 @@ const PostStyleWrapper = styled.div`
     font-size: 2rem;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: justify;
-    line-height: 1.55;
     font-family: 'Lora', serif;
     color: #000;
+  }
+  list {
+    margin-left: 1.5rem;
+  }
+  li{
+    font-size: 1.4rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+    padding: 0 1rem;
+    blockquote {
+      font-family: 'Karla', serif;
+      font-size: 1.5rem;
+    }
+    .container {
+      padding: 0 0.5rem 5rem 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+      font-family: 'Lora', serif;
+      color: #000;
+    }
+    li{
+      font-size: 1.2rem;
+    }
   }
 `
 
