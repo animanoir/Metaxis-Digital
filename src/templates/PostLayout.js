@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Disqus } from 'gatsby-plugin-disqus';
 import * as postStyles from '../css/PostLayout.module.css'
 import styled from "styled-components"
 import SEO from "../components/SEO"
@@ -12,7 +13,7 @@ export const postQuery = graphql`
   query GetSinglePost($slug: String) {
     mdx(frontmatter: {slug: {eq: $slug}}) {
       frontmatter {
-        date(formatString: "M/D/YYYY")
+        date(formatString: "d, MM, YYYY")
         title
         excerpt
         slug
@@ -20,23 +21,27 @@ export const postQuery = graphql`
           childImageSharp {
             gatsbyImageData
             parent {
-              id
               ... on File {
                 relativePath
               }
             }
           }
-          relativePath
         }
         author
       }
       body
+      id
     }
   }
 `
 
 const PostLayout = ({data}) => {
-  const {mdx: {frontmatter: {title, date, author, image, excerpt, slug}, body}} = data
+  const {mdx: {frontmatter: {title, date, author, image, excerpt, slug}, body, id}} = data
+  let disqusConfig = {
+    url: `https://metaxis.digital/posts/${slug}`,
+    identifier: id,
+    title: title,
+  }
   return (
     <Layout>
         <SEO
@@ -45,6 +50,7 @@ const PostLayout = ({data}) => {
           image={image.childImageSharp.parent.relativePath}
           metaurl={`https://metaxis.digital/posts/${slug}`}
           type="article"
+          author={author}
         />
         <article className={postStyles.container}>
         <div className={postStyles.infocontainer}>
@@ -52,12 +58,15 @@ const PostLayout = ({data}) => {
           <h3 className={postStyles.author}>escrito por <b>{author}</b></h3>
           <h3 className={postStyles.date}>{date}</h3>
         </div>
-          <GatsbyImage image={getImage(image)} alt={title}/>
+          <GatsbyImage className={postStyles.featuredimage} image={getImage(image)} alt={title}/>
           <PostStyleWrapper>
             <MDXRenderer>
               {body}
             </MDXRenderer>
           </PostStyleWrapper>
+          <div className={postStyles.disqus}>
+            <Disqus config={disqusConfig} />
+          </div>
       </article>
     </Layout>
   )

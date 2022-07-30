@@ -45,3 +45,13 @@
   text-align: end;
   font-family: 'Karla', sans-serif;
 }
+
+.featuredimage {
+  margin-bottom: 5rem;
+}
+
+.disqus {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 70%;
+}

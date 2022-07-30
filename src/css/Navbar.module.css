@@ -5,20 +5,41 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  width: 100vw;
-  max-width: 100%;
+  width: 89.5%;
+  max-width: 100vw;
   top: 0;
   z-index: 50;
   font-family: 'Karla', sans-serif;
+  backdrop-filter: blur(4px);
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.48rem;
   font-family: 'Karla', sans-serif;
   font-weight: bold;
   color: black;
 }
 
 .title:hover {
+  color: #dc143c;
+}
+
+.menulist {
+  display: flex;
+  font-family: 'Karla', sans-serif;
+  list-style-type: none;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.menulist li {
+  margin-left: 1rem;
+}
+
+.menulist a {
+  color: black;
+}
+
+.menulist a:hover {
   color: #dc143c;
 }

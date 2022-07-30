@@ -31,5 +31,11 @@ module.exports = {
       "path": `${__dirname}/src/posts/`
     },
     __key: "posts"
+  },
+  {
+    resolve: `gatsby-plugin-disqus`,
+    options: {
+      shortname: `metaxisdigital`,
+    },
   }]
 };

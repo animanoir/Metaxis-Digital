@@ -4,9 +4,10 @@ import * as postsStyles from "../../css/Posts.module.css"
 import { Link } from "gatsby"
 
 const Post = ({frontmatter}) => {
-  const {title, tags, slug, excerpt} = frontmatter
+  const {title, tags, slug, excerpt, date} = frontmatter
   return (
     <article className={postsStyles.cardcontainer}>
+    <p className={postsStyles.date}>{date}</p>
       <Link to={`/posts/${slug}`} >
           <h2 className={postsStyles.title}>{title}</h2>
       </Link>

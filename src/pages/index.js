@@ -6,13 +6,13 @@ import SEO from "../components/SEO"
 
 export const query = graphql`
   query {
-    allMdx {
+    allMdx(sort: {fields: frontmatter___date, order: DESC}){
       nodes {
         id
         frontmatter {
           title
           slug
-          date
+          date(formatString: "d, MM, YYYY")
           author
           tags
           excerpt
@@ -34,9 +34,10 @@ const IndexPage = ({data}) => {
     <SEO
       title="metaxis.digital"
       description="Filosofía y computación"
-      image="../images/metaxis.jpg"
+      image="metaxis.jpg"
       metaurl="https://metaxis.digital/"
       type="website"
+      author="Óscar A. Montiel"
     />
     <main>
       <Posts posts={posts}/>

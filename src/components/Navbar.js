@@ -21,6 +21,8 @@ const Navbar = () => {
     "materia",
     "capitalismo",
     "tú",
+    "ying",
+    "posthumanos"
   ]
   const antitesisPalabras = [
     "computación",
@@ -35,6 +37,8 @@ const Navbar = () => {
     "nada",
     "metamorfosis",
     "yo",
+    "yang",
+    "ludismo"
   ]
   const [scrollY, setScrollY] = React.useState(0)
   const [tesis, setTesis] = React.useState("filosofía")
@@ -67,9 +71,20 @@ const Navbar = () => {
   return (
     <nav className={navbarStyles.container}>
       <div>
-        <Link to="/"><h1 className={navbarStyles.title}><b>metaxis.digital</b> <span style={{fontWeight: "normal"}}>| {tesis} y {antitesis}</span></h1></Link>
-        <small>En construcción...</small>
+        <Link to="/"><h1 className={navbarStyles.title}><b>metaxis.digital</b> <span style={{fontWeight: "normal"}}>| {tesis} y {antitesis}</span><small>En construcción...</small></h1></Link>
         </div>
+        <ul className={navbarStyles.menulist}>
+          <li>
+            <Link to="/Conceptos">
+              Conceptos
+            </Link>
+          </li>
+          <li>
+            <Link to="/Acerca">
+              Acerca
+            </Link>
+          </li>
+        </ul>
     </nav>
   )
 }

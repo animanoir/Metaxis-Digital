@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Helmet } from "react-helmet"
 
-const SEO = ({title, description, image, metaurl, type}) => {
+const SEO = ({title, description, image, metaurl, type, author}) => {
   return (
     <Helmet
       htmlAttributes={{lang: "es"}}
@@ -10,7 +10,7 @@ const SEO = ({title, description, image, metaurl, type}) => {
       { name: `description`, content: description },
       ]}>
         <meta name="keywords" content="filosofía, computación, tecnología, sociedad"/>
-        <meta name="author" content="Óscar A. Montiel" />
+        <meta name="author" content={author} />
         <link rel="canonical" href="https://metaxis.digital/"/>
         <meta name="robots" content="index"/>
         <meta name="robots" content="follow"/>
