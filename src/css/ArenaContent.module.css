@@ -20,6 +20,20 @@
   font-family: "Karla", sans-serif;
 }
 
+.loading{
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  animation: blinker 0.25s infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     display: grid;

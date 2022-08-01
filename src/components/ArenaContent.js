@@ -3,15 +3,23 @@ import * as arenaContentStyles from '../css/ArenaContent.module.css';
 
 const ArenaContent = () => {
   const [arenaContent, setArenaContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    fetch(`https://api.are.na/v2/channels/dimension-cybernesis/contents?per=19?sort=position&direction=desc`)
+    setIsLoading(true)
+    fetch(`https://api.are.na/v2/channels/dimension-cybernesis/contents?per=23?sort=position&direction=desc`)
       .then(response => response.json())
       .then(data => {
-        const { contents } = data;
-        setArenaContent(contents);
+        const { contents } = data
+        setArenaContent(contents)
+        setIsLoading(false)
       }
     );
-  },[]);
+  },[])
+
+  if(isLoading){
+    return <p className={arenaContentStyles.loading}>Cargando...</p>
+  }
 
   return (
     <div className={arenaContentStyles.container}>
