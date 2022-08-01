@@ -4,11 +4,10 @@ import * as arenaContentStyles from '../css/ArenaContent.module.css';
 const ArenaContent = () => {
   const [arenaContent, setArenaContent] = useState([]);
   useEffect(() => {
-    fetch("https://api.are.na/v2/channels/dimension-cybernesis/contents")
+    fetch(`https://api.are.na/v2/channels/dimension-cybernesis/contents?per=19?sort=position&direction=desc`)
       .then(response => response.json())
       .then(data => {
         const { contents } = data;
-        console.log(contents);
         setArenaContent(contents);
       }
     );
