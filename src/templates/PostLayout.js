@@ -97,7 +97,7 @@ const PostStyleWrapper = styled.div`
   }
   blockquote {
     font-family: 'Karla', serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   p {
     font-size: 1.4rem;

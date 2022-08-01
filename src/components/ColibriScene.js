@@ -1,8 +1,9 @@
 import React, { Suspense, useEffect } from 'react'
 import { Canvas, useThree } from '@react-three/fiber'
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as androsFetalStyles from "../css/AndrosFetal.module.css"
 import Colibri from "./Colibri/Colibri.js";
+import { OrbitControls } from '@react-three/drei';
 
 const CameraController = () => {
   const { camera, gl } = useThree();
@@ -25,14 +26,11 @@ function ColibriScene() {
   return (
     <div className={androsFetalStyles.container}>
       <Canvas frameloop='demand'>
-        <directionalLight color="red" position={[0, 0, 5]} />
+      <OrbitControls />
+        <ambientLight />
         <Suspense fallback={null}>
           <Colibri/>
         </Suspense>
-        <mesh>
-          <boxGeometry />
-          <meshStandardMaterial />
-        </mesh>
       </Canvas>
     </div>
   )
