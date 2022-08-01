@@ -361,6 +361,16 @@ a {
   text-decoration: none;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: rgb(0, 217, 255);
+  background: rgb(225, 0, 255);
+}
+
+::selection {
+  color: rgb(0, 217, 255);
+  background: rgb(225, 0, 255);
+}
+
 a:hover {
   color: #dc143c;
 }

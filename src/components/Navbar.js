@@ -2,6 +2,7 @@ import * as React from "react"
 import * as navbarStyles from '../css/Navbar.module.css'
 import { Link } from "gatsby"
 import WeeklyMix from "./WeeklyMix"
+import Telegram from "../images/svg/Telegram.svg"
 
 const Navbar = () => {
   const tesisPalabras = [
@@ -76,15 +77,22 @@ const Navbar = () => {
         <Link to="/"><h1 className={navbarStyles.title}><b>metaxis.digital</b> <span className={navbarStyles.antitesis} style={{fontWeight: "normal"}}>| {tesis} y {antitesis}</span>{' '}<small></small></h1></Link>
         </div>
         <ul className={navbarStyles.menulist}>
-          <li>
-            <Link to="/Conceptos">
-              Conceptos
-            </Link>
-          </li>
+          {
+            // <li>
+            //   <Link to="/Conceptos">
+            //     Conceptos
+            //   </Link>
+            // </li>
+          }
           <li>
             <Link to="/Acerca">
               Acerca
             </Link>
+          </li>
+          <li>
+            <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5">
+              <img className={navbarStyles.telegram} src={Telegram} alt="Únete a nuestro canal de Telegram"/>
+            </a>
           </li>
         </ul>
     </nav>
