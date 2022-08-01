@@ -6,7 +6,7 @@ const WeeklyMix = () => {
   return (
     <section className={weeklymixStyles.container}>
         <Marquee pauseOnHover speed={33}>
-          MIX DE LA SEMANA (31·7·22)—<a className={weeklymixStyles.link} rel="noreferrer" href="https://soundcloud.com/pleasuregallery/pleasure-gallery-w-alec-noods-radio-july-2022">pleasure gallery w/ alec - noods radio - july 2022</a>—
+          MIX DE LA SEMANA (31·7·22)—<a className={weeklymixStyles.link} target="_blank" rel="noreferrer" href="https://soundcloud.com/pleasuregallery/pleasure-gallery-w-alec-noods-radio-july-2022">pleasure gallery w/ alec - noods radio - july 2022</a>—
         </Marquee>
     </section>
   )

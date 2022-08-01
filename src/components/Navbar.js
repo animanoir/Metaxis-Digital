@@ -90,7 +90,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5">
+            <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5" rel="noreferrer">
               <img className={navbarStyles.telegram} src={Telegram} alt="Únete a nuestro canal de Telegram"/>
             </a>
           </li>
