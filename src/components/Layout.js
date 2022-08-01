@@ -5,6 +5,7 @@ import Footer from "./Footer"
 import NewsletterForm from "./NewsletterForm"
 
 
+
 // markup
 const IndexPage = ({children}) => {
   return (

@@ -3,7 +3,6 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import * as acercaStyles from "../css/Acerca.module.css"
 import { Link } from "gatsby"
-import ColibriScene from "../components/ColibriScene"
 
 const AcercaPage = () => {
   return (
@@ -22,7 +21,6 @@ const AcercaPage = () => {
             <b>metaxis.digital</b> es un blog dedicado a la difusión de ideas que entrelazan la filosofía y la computación y cómo es que interactúan una con la otra a través de una perspectiva <Link to="/posts/la-metamodernidad">metamoderna</Link>.
           </p>
         </main>
-        <ColibriScene />
     </Layout>
   )
 }

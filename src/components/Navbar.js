@@ -1,6 +1,7 @@
 import * as React from "react"
 import * as navbarStyles from '../css/Navbar.module.css'
 import { Link } from "gatsby"
+import WeeklyMix from "./WeeklyMix"
 
 const Navbar = () => {
   const tesisPalabras = [
@@ -69,6 +70,7 @@ const Navbar = () => {
   }, [scrollY])
 
   return (
+    <React.Fragment>
     <nav className={navbarStyles.container}>
       <div>
         <Link to="/"><h1 className={navbarStyles.title}><b>metaxis.digital</b> <span className={navbarStyles.antitesis} style={{fontWeight: "normal"}}>| {tesis} y {antitesis}</span>{' '}<small></small></h1></Link>
@@ -86,6 +88,10 @@ const Navbar = () => {
           </li>
         </ul>
     </nav>
+    <div>
+      <WeeklyMix />
+    </div>
+    </React.Fragment>
   )
 }
 

@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export default function Colibri({ ...props }) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./static/210604_Colibri.glb");
+  const { nodes, materials, animations } = useGLTF("../../models/210604_Colibri");
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
     actions.ArmatureAction.play();
@@ -1122,4 +1122,4 @@ export default function Colibri({ ...props }) {
   );
 }
 
-useGLTF.preload("./static/210604_Colibri.glb");
+useGLTF.preload("../../models/210604_Colibri");

@@ -11,6 +11,7 @@
   z-index: 50;
   font-family: 'Karla', sans-serif;
   backdrop-filter: blur(4px);
+  flex-direction: row-reverse;
 }
 
 .title {

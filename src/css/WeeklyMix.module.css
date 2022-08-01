@@ -1,0 +1,12 @@
+.container {
+  font-family: 'Karla', sans-serif;
+  font-size: 4rem;
+}
+
+.link {
+  color: black;
+}
+
+.link:hover{
+  color: #dc143c;
+}
