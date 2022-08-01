@@ -4,6 +4,7 @@ import Posts from '../components/Posts'
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 import ogImage from '../images/metaxis.jpg'
+import ArenaContent from "../components/ArenaContent"
 
 export const query = graphql`
   query {
@@ -43,6 +44,7 @@ const IndexPage = ({data}) => {
     <main>
       <Posts posts={posts}/>
     </main>
+      <ArenaContent />
     </Layout>
   )
 }

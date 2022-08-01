@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  padding: 0 5rem 1rem 5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  place-items: center;
+  grid-gap: 1rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    padding: 0 1rem 10rem 1rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    place-items: center;
+    grid-gap: 0;
+  }
+}

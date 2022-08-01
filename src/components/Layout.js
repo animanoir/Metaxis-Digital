@@ -4,9 +4,6 @@ import Navbar from "../components/Navbar"
 import Footer from "./Footer"
 import NewsletterForm from "./NewsletterForm"
 
-
-
-// markup
 const IndexPage = ({children}) => {
   return (
     <div className={layoutStyles.layout}>
