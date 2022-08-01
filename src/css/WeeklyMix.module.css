@@ -1,6 +1,7 @@
 .container {
   font-family: 'Karla', sans-serif;
   font-size: 4rem;
+  padding: 2rem 0;
 }
 
 .link {
@@ -9,4 +10,10 @@
 
 .link:hover{
   color: #dc143c;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: none;
+  }
 }
