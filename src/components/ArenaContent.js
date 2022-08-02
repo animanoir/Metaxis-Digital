@@ -7,7 +7,7 @@ const ArenaContent = () => {
 
   useEffect(() => {
     setIsLoading(true)
-    fetch(`https://api.are.na/v2/channels/dimension-cybernesis/contents?per=19?sort=position&direction=desc`)
+    fetch(`https://api.are.na/v2/channels/metaxis-digital/contents?per=19?sort=position&direction=desc`)
       .then(response => response.json())
       .then(data => {
         const { contents } = data
