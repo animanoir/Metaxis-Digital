@@ -14,7 +14,7 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 4rem;
   font-weight: bold;
   text-align: center;
   font-family: "Karla", sans-serif;
@@ -43,5 +43,9 @@
     align-content: center;
     place-items: center;
     grid-gap: 0;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 }

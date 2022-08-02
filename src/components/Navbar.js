@@ -24,7 +24,10 @@ const Navbar = () => {
     "capitalismo",
     "tú",
     "ying",
-    "posthumanos"
+    "posthumanos",
+    "amor",
+    "blanco",
+    "unos"
   ]
   const antitesisPalabras = [
     "computación",
@@ -40,7 +43,10 @@ const Navbar = () => {
     "metamorfosis",
     "yo",
     "yang",
-    "ludismo"
+    "ludismo",
+    "odio",
+    "negro",
+    "ceros"
   ]
   const [scrollY, setScrollY] = React.useState(0)
   const [tesis, setTesis] = React.useState("filosofía")

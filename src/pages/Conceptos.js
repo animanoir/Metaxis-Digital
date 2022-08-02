@@ -31,16 +31,9 @@ const Conceptos = ({
       type="website"
       author="Óscar A. Montiel"
     />
-    <main>
-      <h1
-      style={{
-          fontFamily: "Karla, sans-serif",
-          fontSize: "2.5rem",
-          color: "black",
-          padding: "2rem 10rem 0 10rem",
-          fontWeight: "normal"}}
-        >Todos los conceptos</h1>
-      <ul>
+    <main className={conceptosStyle.maincontainer}>
+      <h1 className={conceptosStyle.title}>Todos los conceptos</h1>
+      <ul className={conceptosStyle.container}>
         {group.map(concept => (
           <li className={conceptosStyle.conceptcard} key={concept.fieldValue}>
             <Link to={`/concepts/${concept.fieldValue}/`}>

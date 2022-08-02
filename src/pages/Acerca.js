@@ -18,7 +18,7 @@ const AcercaPage = () => {
         <main className={acercaStyles.container}>
           <h2 className={acercaStyles.title}>Acerca</h2>
           <p className={acercaStyles.text}>
-            <b>metaxis.digital</b> es un blog dedicado a la difusión de ideas que entrelazan la filosofía y la computación y cómo es que interactúan una con la otra a través de una perspectiva <Link to="/posts/la-metamodernidad">metamoderna</Link>.
+            <b>metaxis.digital</b> es un blog dedicado a la difusión de ideas que entrelazan la filosofía y la computación y cómo es que interactúan una con la otra a través de una perspectiva <Link style={{color: "black"}} to="/posts/la-metamodernidad">metamoderna</Link>.
           </p>
         </main>
     </Layout>

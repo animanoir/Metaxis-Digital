@@ -4,6 +4,7 @@ import Posts from '../components/Posts'
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 import ogImage from '../images/metaxis.jpg'
+import * as conceptLayoutStyles from "../css/ConceptLayout.module.css"
 
 export const query = graphql`
   query ($concept: String) {
@@ -45,13 +46,7 @@ const ConceptLayout = ({pageContext, data}) => {
       author="Óscar A. Montiel"
     />
     <main>
-      <h2 style={{
-        fontFamily: "Karla, sans-serif",
-        fontSize: "2.5rem",
-        color: "black",
-        padding: "2rem 10rem 0 10rem",
-        fontWeight: "normal"
-      }}>Artículos relacionados al concepto de{' '}<span style={{fontWeight: "bold"}}>{concept}:</span></h2>
+      <h2 className={conceptLayoutStyles.text}>Artículos relacionados al concepto de{' '}<span style={{fontWeight: "bold"}}>{concept}:</span></h2>
       <Posts posts={posts}/>
       </main>
     </Layout>

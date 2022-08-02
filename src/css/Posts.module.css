@@ -32,7 +32,7 @@
 
 .concepts {
   font-family: 'Karla', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: italic;
   font-weight: normal;
 }
@@ -41,7 +41,11 @@
   background-color: black;
   color: white;
   margin-right: 0.5rem;
-  padding: 0.2rem;
+  padding: 0.3rem;
+}
+
+.singleconcept:hover {
+  color:#dc143c;
 }
 
 @media only screen and (max-width: 600px) {

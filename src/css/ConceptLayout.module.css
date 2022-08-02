@@ -1,0 +1,19 @@
+.text{
+  font-family: "Karla", sans-serif;
+  font-size: 2.5rem;
+  color: black;
+  padding: 2rem 10rem 0 10rem;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 600px) {
+  .text{
+    padding: 0;
+    padding-top: 1.5rem;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  .container {
+    grid-template-columns: auto;
+  }
+}

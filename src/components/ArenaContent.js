@@ -7,7 +7,7 @@ const ArenaContent = () => {
 
   useEffect(() => {
     setIsLoading(true)
-    fetch(`https://api.are.na/v2/channels/dimension-cybernesis/contents?per=23?sort=position&direction=desc`)
+    fetch(`https://api.are.na/v2/channels/dimension-cybernesis/contents?per=19?sort=position&direction=desc`)
       .then(response => response.json())
       .then(data => {
         const { contents } = data
@@ -23,7 +23,7 @@ const ArenaContent = () => {
 
   return (
     <div className={arenaContentStyles.container}>
-      <h2 className={arenaContentStyles.title} style={{fontSize: "4rem"}}>Inspiración:</h2>
+      <h2 className={arenaContentStyles.title}>Inspiración:</h2>
       {
         arenaContent.map(content => {
           return (

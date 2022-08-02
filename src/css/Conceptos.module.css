@@ -1,3 +1,54 @@
+.maincontainer {
+  margin: 7.5rem 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.title{
+  font-family: "Karla", sans-serif;
+  font-size: "2.5rem";
+  color: "black";
+  padding: "2rem 10rem 0 10rem";
+  font-weight: "normal";
+  padding: 2rem 10rem 0 10rem;
+}
+
 .conceptcard {
-  font-size: 5rem;
+  background-color: black;
+  color: white;
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.conceptcard a {
+  color: white;
+  text-decoration: none;
+}
+
+.conceptcard a:hover {
+  color: #dc143c;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .title{
+    padding: 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .container {
+    grid-template-columns: auto;
+  }
 }
