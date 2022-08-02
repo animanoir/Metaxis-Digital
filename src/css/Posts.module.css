@@ -16,6 +16,7 @@
   font-family: 'Karla', sans-serif;
   font-size: 2.5rem;
   color: black;
+  word-wrap: break-word;
 }
 
 .title:hover {
@@ -54,5 +55,11 @@
   }
   .cardcontainer {
     padding: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .singleconcept {
+    line-height: 2rem;
   }
 }

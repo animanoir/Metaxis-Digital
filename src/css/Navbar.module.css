@@ -103,5 +103,23 @@
   .menulist a:hover {
     color: #dc143c;
   }
+}
 
+@media only screen and (max-width: 769px) {
+  .container {
+    padding: 0;
+  }
+  .menulist {
+    width: 80%;
+  }
+  .antitesis {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .container {
+    padding: 0;
+    justify-content: space-around;
+  }
 }

@@ -49,3 +49,19 @@
     margin-bottom: 1.5rem;
   }
 }
+
+@media only screen and (max-width: 769px) {
+  .container {
+    display: grid;
+    padding: 0 1rem 10rem 1rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    place-items: center;
+    grid-gap: 0;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}

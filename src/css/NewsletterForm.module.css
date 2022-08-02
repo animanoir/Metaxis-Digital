@@ -72,6 +72,15 @@
   font-family: 'Karla', sans-serif;
 }
 
+@media only screen and (max-width: 769px) {
+  .container{
+    padding: 5rem;
+  }
+  .emailinput{
+    width: initial;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     padding: 0 0.5rem 3rem 0.5rem;
@@ -89,5 +98,4 @@
   .button {
     width: 100%;
   }
-
 }
