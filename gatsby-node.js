@@ -17,7 +17,10 @@ exports.createPages = async ({
           }
         }
       }
-
+      concepts: allMdx {
+        totalCount
+        distinct(field: frontmatter___concepts)
+      }
     }
   `)
 
@@ -34,6 +37,14 @@ exports.createPages = async ({
       },
     })
   })
-
+  result.data.concepts.distinct.forEach(concept => {
+    createPage({
+      path: `/concepts/${concept}`,
+      component: path.resolve(`src/templates/ConceptLayout.js`),
+      context: {
+        concept
+      }
+    })
+  })
 
 }

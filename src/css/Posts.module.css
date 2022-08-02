@@ -30,14 +30,14 @@
   margin-bottom: 1rem;
 }
 
-.tags {
+.concepts {
   font-family: 'Karla', sans-serif;
   font-size: 0.9rem;
   font-style: italic;
   font-weight: normal;
 }
 
-.singletag {
+.singleconcept {
   background-color: black;
   color: white;
   margin-right: 0.5rem;

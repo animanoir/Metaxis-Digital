@@ -4,7 +4,7 @@ import * as postsStyles from "../../css/Posts.module.css"
 import { Link } from "gatsby"
 
 const Post = ({frontmatter}) => {
-  const {title, tags, slug, excerpt, date} = frontmatter
+  const {title, concepts, slug, excerpt, date} = frontmatter
   return (
     <article className={postsStyles.cardcontainer}>
     <p className={postsStyles.date}>{date}</p>
@@ -12,14 +12,17 @@ const Post = ({frontmatter}) => {
           <h2 className={postsStyles.title}>{title}</h2>
       </Link>
       <h4 className={postsStyles.excerpt}>{excerpt}</h4>
-      <h6 className={postsStyles.tags}>
+      <h6 className={postsStyles.concepts}>
         {
-          tags.map(tag => {
-            return <span key={tag} className={postsStyles.singletag}>{tag}{' '}</span>
+          concepts.map(concept => {
+            return (
+              <Link to={`/concepts/${concept}`} key={concept}>
+                <span className={postsStyles.singleconcept}>{concept}{' '}</span>
+              </Link>
+              )
           })
         }
       </h6>
-      {/*<GatsbyImage image={getImage(image)} alt={title}/>*/}
     </article>
   )
 }

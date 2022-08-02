@@ -77,16 +77,14 @@ const Navbar = () => {
         <Link to="/"><h1 className={navbarStyles.title}><b>metaxis.digital</b> <span className={navbarStyles.antitesis} style={{fontWeight: "normal"}}>| {tesis} y {antitesis}</span>{' '}<small></small></h1></Link>
         </div>
         <ul className={navbarStyles.menulist}>
-          {
-            // <li>
-            //   <Link to="/Conceptos">
-            //     Conceptos
-            //   </Link>
-            // </li>
-          }
           <li>
             <Link to="/Acerca">
               Acerca
+            </Link>
+          </li>
+          <li>
+            <Link to="/Conceptos">
+              Conceptos
             </Link>
           </li>
           <li>

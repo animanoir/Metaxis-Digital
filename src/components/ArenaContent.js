@@ -31,8 +31,8 @@ const ArenaContent = () => {
             {
               content.image
               ? <a href={content.image.original.url} target="_blank" rel="noreferrer">
-                <img className={arenaContentStyles.image} src={content.image.original.url} alt={content.title} />
-              </a>
+                  <img className={arenaContentStyles.image} src={content.image.original.url} alt={content.title} />
+                </a>
               : <p className={arenaContentStyles.title}>{content.title}</p>
             }
             </div>
@@ -41,6 +41,5 @@ const ArenaContent = () => {
     </div>
   );
 }
-
 
 export default ArenaContent

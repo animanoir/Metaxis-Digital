@@ -13,7 +13,7 @@ export const query = graphql`
           slug
           date
           author
-          tags
+          concepts
           excerpt
           image {
             childImageSharp {
