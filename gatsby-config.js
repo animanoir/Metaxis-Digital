@@ -37,5 +37,12 @@ module.exports = {
     options: {
       shortname: `metaxisdigital`,
     },
+  },
+  {
+    resolve: "gatsby-plugin-verify-brave",
+    options: {
+      token: "49819d483396061135ef9ae357dba7b2152f55da48793c0eb9cfe945fcfec7fe",
+      domain: "metaxis.digital"
+    }
   }]
 };

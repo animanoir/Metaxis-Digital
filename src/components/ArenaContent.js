@@ -18,7 +18,7 @@ const ArenaContent = () => {
   },[])
 
   if(isLoading){
-    return <p className={arenaContentStyles.loading}>Cargando...</p>
+    return <p className={arenaContentStyles.loading}>Cargando inspiración...</p>
   }
 
   return (
