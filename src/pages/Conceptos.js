@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
-import ogImage from '../images/metaxis.jpg'
+import pulpoConFlores from '../images/metaxisdigital.jpg'
 import { Link } from "gatsby"
 import * as conceptosStyle from "../css/Conceptos.module.css"
 
@@ -26,7 +26,7 @@ const Conceptos = ({
     <SEO
       title="conceptos"
       description="Filosofía y computación"
-      image={ogImage}
+      image={pulpoConFlores}
       metaurl="https://metaxis.digital/Conceptos"
       type="website"
       author="Óscar A. Montiel"

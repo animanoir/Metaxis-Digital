@@ -1,16 +1,16 @@
 .container {
   width: 80%;
   margin: 0 auto;
+  display: flex;
 }
 
 .title{
   font-family: 'Karla', sans-serif;
   font-size: 8rem;
-    /* transform: rotateX(180deg); */
-    animation-name: title;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  animation-name: title;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes title {
@@ -28,16 +28,18 @@
   }
 }
 
+.image {
+  max-width: 100%;
+  width: 50%;
+  height: 50%;
+  height: auto;
+}
+
 .text {
   font-family: 'Karla', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  width: 50%
-  /* animation-name: text;
-  animation-duration: 5s;
-  line-height: 1.5;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; */
+  padding-right: 5rem;
 }
 
 /* @keyframes text {
@@ -60,15 +62,15 @@
     width: 90%;
     margin: 0 auto;
     padding-top: 5rem;
+    flex-direction: column;
   }
   .title{
     font-family: 'Karla', sans-serif;
     font-size: 4rem;
-      /* transform: rotateX(180deg); */
-      animation-name: title;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+    animation-name: title;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
   .text {
     font-family: 'Karla', sans-serif;
@@ -81,6 +83,20 @@
 @media only screen and (max-width: 769px) {
   .text{
     width: 100%;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .text{
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
   }
 }

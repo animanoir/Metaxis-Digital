@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import Posts from '../components/Posts'
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
-import ogImage from '../images/metaxis.jpg'
+import pulpoConFlores from '../images/metaxisdigital.jpg'
 
 export const query = graphql`
   query {
@@ -35,7 +35,7 @@ const IndexPage = ({data}) => {
     <SEO
       title="metaxis.digital"
       description="Filosofía y computación"
-      image={ogImage}
+      image={pulpoConFlores}
       metaurl="https://metaxis.digital/"
       type="website"
       author="Óscar A. Montiel"
