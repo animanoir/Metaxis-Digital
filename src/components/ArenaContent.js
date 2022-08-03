@@ -30,13 +30,13 @@ const ArenaContent = () => {
             <div key={content.id}>
             {
               content.image
-              ? <a href={content.image.original.url} target="_blank" rel="noreferrer">
+              ? <a href={content.source?.url ? content.source.url : content.image.original.url} target="_blank" rel="noreferrer">
                   <img className={arenaContentStyles.image} src={content.image.original.url} alt={content.title} />
                 </a>
               : <p className={arenaContentStyles.title}>{content.title}</p>
             }
             </div>
-          )})
+        )})
       }
     </div>
   );

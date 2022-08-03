@@ -13,6 +13,10 @@
   height: auto;
 }
 
+.image:hover {
+  filter:invert(100%)
+}
+
 .title {
   font-size: 4rem;
   font-weight: bold;
