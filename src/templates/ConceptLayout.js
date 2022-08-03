@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import Posts from '../components/Posts'
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
-import ogImage from '../images/metaxis.jpg'
+import pulpoConFlores from '../images/metaxisdigital.jpg'
 import * as conceptLayoutStyles from "../css/ConceptLayout.module.css"
 
 export const query = graphql`
@@ -40,7 +40,7 @@ const ConceptLayout = ({pageContext, data}) => {
     <SEO
       title={concept}
       description="Filosofía y computación"
-      image={ogImage}
+      image={pulpoConFlores}
       metaurl="https://metaxis.digital/"
       type="website"
       author="Óscar A. Montiel"
