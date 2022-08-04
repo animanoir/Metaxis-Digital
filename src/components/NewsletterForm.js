@@ -1,5 +1,5 @@
-import React from "react"
-import * as newsletterStyles from "../css/NewsletterForm.module.css"
+import React from 'react';
+import * as newsletterStyles from '../css/NewsletterForm.module.css';
 
 const NewsletterForm = () => {
   return (
@@ -16,13 +16,24 @@ const NewsletterForm = () => {
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="NewsletterForm" />
           <div>
-            <input required className={newsletterStyles.emailinput} type="email" placeholder="Email" name="email" />
-            <button className={newsletterStyles.button} type="submit">Acepto darle mi email a un extraño</button>
+            <input
+              required
+              className={newsletterStyles.emailinput}
+              type="email"
+              placeholder="Email"
+              name="email"
+            />
+            <button className={newsletterStyles.button} type="submit">
+              Acepto darle mi email a un extraño
+            </button>
           </div>
         </form>
-        <small className={newsletterStyles.small}>Nunca recibirás spam de nuestra parte, sólo boletines de vez en cuando sobre artículos del sitio.</small>
+        <small className={newsletterStyles.small}>
+          Nunca recibirás spam de nuestra parte, sólo boletines de vez en cuando sobre artículos del
+          sitio.
+        </small>
       </div>
     </section>
-  )
-}
-export default NewsletterForm
+  );
+};
+export default NewsletterForm;

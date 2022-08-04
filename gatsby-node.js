@@ -14,6 +14,8 @@ exports.createPages = async ({
         nodes {
           frontmatter {
             slug
+            author
+            authorContact
           }
         }
       }
@@ -24,6 +26,7 @@ exports.createPages = async ({
     }
   `)
 
+  // Create pages for each post
   result.data.allMdx.nodes.forEach(({
     frontmatter: {
       slug
@@ -37,6 +40,25 @@ exports.createPages = async ({
       },
     })
   })
+
+  // Create pages for each author
+  result.data.allMdx.nodes.forEach(({
+    frontmatter: {
+      author,
+      authorContact
+    }
+  }) => {
+    createPage({
+      path: `/autores/${author}`,
+      component: path.resolve(`src/templates/AuthorLayout.js`),
+      context: {
+        author,
+        authorContact
+      },
+    })
+  })
+
+  // Create pages for each concept
   result.data.concepts.distinct.forEach(concept => {
     createPage({
       path: `/concepts/${concept}`,

@@ -1,7 +1,7 @@
-import * as React from "react"
-import Layout from "../components/Layout"
-import Posts from '../components/Posts'
-import { graphql } from "gatsby"
+import * as React from 'react';
+import Layout from '../components/Layout';
+import Posts from '../components/Posts';
+import { graphql } from 'gatsby';
 
 export const query = graphql`
   query {
@@ -24,18 +24,22 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-const NewsletterSubscribe = ({data}) => {
-  const {allMdx: {nodes: posts}} = data
+const NewsletterSubscribe = ({ data }) => {
+  const {
+    allMdx: { nodes: posts },
+  } = data;
   return (
     <Layout>
-      <h1 style={{fontSize: "2rem", textAlign: "center", fontFamily: "Karla"}}>¡Estás suscrito!</h1>
+      <h1 style={{ fontSize: '2rem', textAlign: 'center', fontFamily: 'Karla' }}>
+        ¡Estás suscrito!
+      </h1>
       <main>
-        <Posts posts={posts}/>
+        <Posts posts={posts} />
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default NewsletterSubscribe
+export default NewsletterSubscribe;

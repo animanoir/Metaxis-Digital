@@ -14,21 +14,21 @@
 }
 
 .image:hover {
-  filter:invert(100%)
+  filter: invert(100%);
 }
 
 .title {
   font-size: 4rem;
   font-weight: bold;
   text-align: center;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
-.loading{
+.loading {
   font-size: 2rem;
   font-weight: normal;
   text-align: center;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   animation: blinker 0.25s infinite;
 }
 

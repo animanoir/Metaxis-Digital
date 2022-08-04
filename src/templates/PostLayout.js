@@ -1,16 +1,17 @@
-import * as React from "react"
-import Layout from "../components/Layout"
-import { graphql } from "gatsby"
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import * as React from 'react';
+import Layout from '../components/Layout';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Disqus } from 'gatsby-plugin-disqus';
-import * as postStyles from '../css/PostLayout.module.css'
-import styled from "styled-components"
-import SEO from "../components/SEO"
+import { Link } from 'gatsby';
+import * as postStyles from '../css/PostLayout.module.css';
+import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 export const postQuery = graphql`
   query GetSinglePost($slug: String) {
-    mdx(frontmatter: {slug: {eq: $slug}}) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         date(formatString: "d, MM, YYYY")
         title
@@ -32,44 +33,53 @@ export const postQuery = graphql`
       id
     }
   }
-`
+`;
 
-const PostLayout = ({data}) => {
-  const {mdx: {frontmatter: {title, date, author, image, excerpt, slug}, body, id}} = data
+const PostLayout = ({ data }) => {
+  const {
+    mdx: {
+      frontmatter: { title, date, author, image, excerpt, slug },
+      body,
+      id,
+    },
+  } = data;
   let disqusConfig = {
     url: `https://metaxis.digital/posts/${slug}`,
     identifier: id,
     title: title,
-  }
+  };
   return (
     <Layout>
-        <SEO
-          title={title}
-          description={excerpt}
-          image={image.childImageSharp.parent.relativePath}
-          metaurl={`https://metaxis.digital/posts/${slug}`}
-          type="article"
-          author={author}
-        />
-        <article className={postStyles.container}>
+      <SEO
+        title={title}
+        description={excerpt}
+        image={image.childImageSharp.parent.relativePath}
+        metaurl={`https://metaxis.digital/posts/${slug}`}
+        type="article"
+        author={author}
+      />
+      <article className={postStyles.container}>
         <div className={postStyles.infocontainer}>
           <h1 className={postStyles.title}>{title}</h1>
-          <h3 className={postStyles.author}>escrito por <b>{author}</b></h3>
+          <h3 className={postStyles.author}>
+            escrito por{' '}
+            <Link to={`/autores/${author}`}>
+              <b>{author}</b>
+            </Link>
+          </h3>
           <h3 className={postStyles.date}>{date}</h3>
         </div>
-          <GatsbyImage className={postStyles.featuredimage} image={getImage(image)} alt={title}/>
-          <PostStyleWrapper>
-            <MDXRenderer>
-              {body}
-            </MDXRenderer>
-          </PostStyleWrapper>
-          <div className={postStyles.disqus}>
-            <Disqus config={disqusConfig} />
-          </div>
+        <GatsbyImage className={postStyles.featuredimage} image={getImage(image)} alt={title} />
+        <PostStyleWrapper>
+          <MDXRenderer>{body}</MDXRenderer>
+        </PostStyleWrapper>
+        <div className={postStyles.disqus}>
+          <Disqus config={disqusConfig} />
+        </div>
       </article>
     </Layout>
-  )
-}
+  );
+};
 
 const PostStyleWrapper = styled.div`
   width: 60%;
@@ -108,7 +118,7 @@ const PostStyleWrapper = styled.div`
   list {
     margin-left: 1.5rem;
   }
-  li{
+  li {
     font-size: 1.4rem;
   }
 
@@ -128,10 +138,10 @@ const PostStyleWrapper = styled.div`
       font-family: 'Lora', serif;
       color: #000;
     }
-    li{
+    li {
       font-size: 1.2rem;
     }
   }
-`
+`;
 
-export default PostLayout
+export default PostLayout;

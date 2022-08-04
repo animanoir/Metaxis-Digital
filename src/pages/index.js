@@ -1,13 +1,14 @@
-import * as React from "react"
-import Layout from "../components/Layout"
-import Posts from '../components/Posts'
-import { graphql } from "gatsby"
-import SEO from "../components/SEO"
-import pulpoConFlores from '../images/metaxisdigital.jpg'
+import * as React from 'react';
+import Layout from '../components/Layout';
+import Posts from '../components/Posts';
+import { graphql } from 'gatsby';
+import SEO from '../components/SEO';
+import pulpoConFlores from '../images/metaxisdigital.jpg';
+import ArenaContent from '../components/ArenaContent';
 
 export const query = graphql`
   query {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}){
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         id
         frontmatter {
@@ -26,25 +27,28 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-const IndexPage = ({data}) => {
-  const {allMdx: {nodes: posts}} = data
+const IndexPage = ({ data }) => {
+  const {
+    allMdx: { nodes: posts },
+  } = data;
   return (
     <Layout>
-    <SEO
-      title="metaxis.digital"
-      description="Filosofía y computación"
-      image={pulpoConFlores}
-      metaurl="https://metaxis.digital/"
-      type="website"
-      author="Óscar A. Montiel"
-    />
+      <SEO
+        title="metaxis.digital"
+        description="Filosofía y computación"
+        image={pulpoConFlores}
+        metaurl="https://metaxis.digital/"
+        type="website"
+        author="Óscar A. Montiel"
+      />
       <main>
-        <Posts posts={posts}/>
+        <Posts posts={posts} />
       </main>
+      <ArenaContent />
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

@@ -4,7 +4,7 @@
   display: flex;
 }
 
-.title{
+.title {
   font-family: 'Karla', sans-serif;
   font-size: 8rem;
   animation-name: title;
@@ -20,7 +20,7 @@
 
   50% {
     /* transform: rotateX(180deg); */
-    transform:rotateZ(-1deg);
+    transform: rotateZ(-1deg);
   }
 
   100% {
@@ -37,7 +37,7 @@
 
 .text {
   font-family: 'Karla', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   padding-right: 5rem;
 }
@@ -64,7 +64,7 @@
     padding-top: 5rem;
     flex-direction: column;
   }
-  .title{
+  .title {
     font-family: 'Karla', sans-serif;
     font-size: 4rem;
     animation-name: title;
@@ -81,7 +81,7 @@
 }
 
 @media only screen and (max-width: 769px) {
-  .text{
+  .text {
     width: 100%;
     margin-bottom: 2rem;
   }
@@ -91,7 +91,7 @@
   .container {
     flex-direction: column;
   }
-  .text{
+  .text {
     padding-right: 0;
     margin-bottom: 2rem;
   }

@@ -7,10 +7,10 @@ import pulpoConFlores from '../images/metaxisdigital.jpg';
 import * as conceptLayoutStyles from '../css/ConceptLayout.module.css';
 
 export const query = graphql`
-  query ($concept: String) {
+  query ($author: String) {
     allMdx(
       sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { concepts: { eq: $concept } } }
+      filter: { frontmatter: { author: { eq: $author } } }
     ) {
       nodes {
         id
@@ -19,38 +19,40 @@ export const query = graphql`
           slug
           date(formatString: "d, MM, YYYY")
           author
+          authorContact
           concepts
           excerpt
-          image {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
         }
       }
     }
   }
 `;
 
-const ConceptLayout = ({ pageContext, data }) => {
+const AuthorLayout = ({ pageContext, data }) => {
   const {
     allMdx: { nodes: posts },
   } = data;
-  const { concept } = pageContext;
+  const { author, authorContact } = pageContext;
+  console.log(authorContact);
   return (
     <Layout>
       <SEO
-        title={concept}
+        title={author}
         description="Filosofía y computación"
         image={pulpoConFlores}
-        metaurl="https://metaxis.digital/"
+        metaurl={`https://metaxis.digital/autores/${author}`}
         type="website"
-        author="Óscar A. Montiel"
+        author={author}
       />
       <main>
         <h2 className={conceptLayoutStyles.text}>
-          Artículos relacionados al concepto de{' '}
-          <span style={{ fontWeight: 'bold' }}>{concept} —</span>
+          Artículos escritos por{' '}
+          <span style={{ fontWeight: 'bold' }}>
+            <a href={authorContact} target="_blank" rel="noreferrer">
+              {author}
+            </a>{' '}
+            —
+          </span>
         </h2>
         <Posts posts={posts} />
       </main>
@@ -58,4 +60,4 @@ const ConceptLayout = ({ pageContext, data }) => {
   );
 };
 
-export default ConceptLayout;
+export default AuthorLayout;

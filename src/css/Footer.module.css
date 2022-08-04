@@ -1,6 +1,6 @@
 /* Footer Styles */
 .footer {
-  background: rgba(255, 255, 255, 0.0);
+  background: rgba(255, 255, 255, 0);
   color: black;
   width: 100vw;
   max-width: 100%;
@@ -32,9 +32,9 @@
   color: #1da1f2;
 }
 
-.ccommons{
+.ccommons {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -54,7 +54,7 @@
 
 @media only screen and (max-width: 600px) {
   .footer {
-    background: rgba(255, 255, 255, 0.0);
+    background: rgba(255, 255, 255, 0);
     color: black;
     width: 100vw;
     max-width: 100%;

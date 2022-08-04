@@ -38,5 +38,8 @@
     "react-helmet": "^6.1.0",
     "styled-components": "^5.3.5",
     "three": "^0.143.0"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
   }
 }
