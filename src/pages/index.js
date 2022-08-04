@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="metaxis.digital"
+        title="génesis"
         description="Filosofía y computación"
         image={pulpoConFlores}
         metaurl="https://metaxis.digital/"

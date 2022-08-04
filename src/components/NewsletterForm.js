@@ -24,7 +24,7 @@ const NewsletterForm = () => {
               name="email"
             />
             <button className={newsletterStyles.button} type="submit">
-              Acepto darle mi email a un extraño
+              Suscribirse
             </button>
           </div>
         </form>

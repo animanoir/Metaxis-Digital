@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as navbarStyles from '../css/Navbar.module.css';
 import { Link } from 'gatsby';
 import WeeklyMix from './WeeklyMix';
-import Telegram from '../images/svg/Telegram.svg';
+import telegramSvg from '../images/svg/Telegram.svg';
 
 const Navbar = () => {
   const tesisPalabras = [
@@ -97,11 +97,7 @@ const Navbar = () => {
           </li>
           <li>
             <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5" rel="noreferrer">
-              <img
-                className={navbarStyles.telegram}
-                src={Telegram}
-                alt="Únete a nuestro canal de Telegram"
-              />
+              <img src={telegramSvg} alt="Únete a nuestro canal de Telegram" />
             </a>
           </li>
         </ul>
