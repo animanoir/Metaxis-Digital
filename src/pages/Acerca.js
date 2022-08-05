@@ -52,7 +52,7 @@ const AcercaPage = () => {
             </a>
             del blog está público para que la comunidad interesada pueda mejorarlo, así como incluir
             sus propios artículos al sitio. También se puede proponer a través de un correo
-            electrónico{' '}
+            electrónico a{' '}
             <a
               target="_blank"
               rel="noopener noreferrer"

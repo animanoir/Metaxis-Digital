@@ -60,6 +60,12 @@ const PostLayout = ({ data }) => {
       />
       <article className={postStyles.container}>
         <div className={postStyles.infocontainer}>
+          <GatsbyImage
+            objectPosition="center"
+            className={postStyles.featuredimage}
+            image={getImage(image)}
+            alt={title}
+          />
           <h1 className={postStyles.title}>{title}</h1>
           <h3 className={postStyles.author}>
             escrito por{' '}
@@ -69,7 +75,6 @@ const PostLayout = ({ data }) => {
           </h3>
           <h3 className={postStyles.date}>{date}</h3>
         </div>
-        <GatsbyImage className={postStyles.featuredimage} image={getImage(image)} alt={title} />
         <PostStyleWrapper>
           <MDXRenderer>{body}</MDXRenderer>
         </PostStyleWrapper>

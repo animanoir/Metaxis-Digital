@@ -3,11 +3,11 @@
 }
 
 .cardcontainer {
-  padding: 3rem 0;
+  padding: 2.5rem 0;
 }
 
 .date {
-  font-family: "Karla", "sans-serif";
+  font-family: 'Karla', 'sans-serif';
   font-size: 1.1rem;
   margin: 0;
 }
@@ -19,15 +19,20 @@
   word-wrap: break-word;
 }
 
+.title:hover {
+  color: #dc143c;
+}
+
 .excerpt {
   font-family: 'Lora', serif;
   font-weight: normal;
   font-size: 1.3rem;
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .author {
-  font-family: "Karla", "sans-serif";
+  font-family: 'Karla', 'sans-serif';
   font-size: 1.1rem;
   margin: 0.8rem 0;
   color: rgb(30, 30, 30);
@@ -43,12 +48,11 @@
 .singleconcept {
   background-color: black;
   color: white;
-  margin-right: 0.5rem;
   padding: 0.3rem;
 }
 
 .singleconcept:hover {
-  color:#dc143c;
+  color: #dc143c;
 }
 
 @media only screen and (max-width: 600px) {

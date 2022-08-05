@@ -10,7 +10,7 @@
 }
 
 .title {
-  font-size: 7rem;
+  font-size: 6rem;
   /* transform: rotateX(180deg); */
   /* animation-name: title;
   animation-duration: 10s;
@@ -50,6 +50,7 @@
 
 .featuredimage {
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .disqus {

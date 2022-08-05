@@ -12,9 +12,6 @@ const Post = ({ frontmatter }) => {
         <h2 className={postsStyles.title}>{title}</h2>
       </Link>
       <h4 className={postsStyles.excerpt}>{excerpt}</h4>
-      <h5 className={postsStyles.author}>
-        por <Link to={`/autores/${author}`}>{author}</Link>
-      </h5>
       <h6 className={postsStyles.concepts}>
         {concepts.map((concept) => {
           return (
@@ -24,6 +21,9 @@ const Post = ({ frontmatter }) => {
           );
         })}
       </h6>
+      <h5 className={postsStyles.author}>
+        por <Link to={`/autores/${author}`}>{author}</Link>
+      </h5>
     </article>
   );
 };
