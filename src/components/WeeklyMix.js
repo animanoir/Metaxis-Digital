@@ -11,9 +11,9 @@ const WeeklyMix = () => {
           className={weeklymixStyles.link}
           target="_blank"
           rel="noreferrer"
-          href="https://soundcloud.com/cminuss/gi-gi-extended-mix"
+          href="https://soundcloud.com/vowel_rec/gi-gi-sunburst-outburst?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         >
-          Gi Gi - extended mix
+          Gi Gi - Sunburst Outburst
         </a>
       </Marquee>
     </section>
