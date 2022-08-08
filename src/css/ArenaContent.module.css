@@ -1,11 +1,11 @@
 .container {
   display: grid;
   padding: 10rem 5rem 1rem 5rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   justify-content: center;
   align-content: center;
   place-items: center;
-  grid-gap: 1rem;
+  max-height: 1fr;
 }
 
 .image {
@@ -18,10 +18,12 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  text-align: justify !important;
   text-align: center;
   font-family: 'Karla', sans-serif;
+  cursor: pointer;
 }
 
 .loading {

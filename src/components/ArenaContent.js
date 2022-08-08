@@ -4,6 +4,14 @@ import * as arenaContentStyles from '../css/ArenaContent.module.css';
 const ArenaContent = () => {
   const [arenaContent, setArenaContent] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [hovering, setHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setHovering(true);
+  };
+  const handleMouseOut = () => {
+    setHovering(false);
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -24,7 +32,21 @@ const ArenaContent = () => {
 
   return (
     <div className={arenaContentStyles.container}>
-      <h2 className={arenaContentStyles.title}>Inspiración:</h2>
+      <h2
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+        onFocus={handleMouseOver}
+        onBlur={handleMouseOut}
+        className={arenaContentStyles.title}
+      >
+        <a
+          href="https://www.are.na/degrees-degrees-bullet-period/metaxis-digital"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {hovering ? '+++++++++++' : 'inspiración'}
+        </a>
+      </h2>
       {arenaContent.map((content) => {
         return (
           <div key={content.id}>

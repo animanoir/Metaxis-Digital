@@ -21,13 +21,8 @@ const AcercaPage = () => {
         <div>
           <h2 className={acercaStyles.title}>Acerca</h2>
           <p className={acercaStyles.text}>
-            <b>metaxis.digital</b> es un blog dedicado a la difusión de ideas que entrelazan la
-            filosofía y computación y cómo es que interactúan una con la otra a través de una
-            perspectiva{' '}
-            <Link style={{ color: 'black' }} to="/posts/la-metamodernidad">
-              metamoderna
-            </Link>
-            . Intentamos abrir nuevas panoramas de pensamiento para incitar metamorfosis social.
+            <b>metaxis.digital</b> es un archivo dedicado a la difusión de ideas que abran panoramas
+            de conciencia distintos a los acosumbrados.
           </p>
         </div>
         <StaticImage
