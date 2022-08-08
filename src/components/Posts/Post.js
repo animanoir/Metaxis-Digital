@@ -22,7 +22,8 @@ const Post = ({ frontmatter }) => {
         })}
       </h6>
       <h5 className={postsStyles.author}>
-        por <Link to={`/autores/${author}`}>{author}</Link>
+        <span style={{ fontWeight: 'normal' }}>por</span>{' '}
+        <Link to={`/autores/${author}`}>{author}</Link>
       </h5>
     </article>
   );
