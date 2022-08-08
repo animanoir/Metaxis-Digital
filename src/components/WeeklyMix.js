@@ -6,16 +6,15 @@ const WeeklyMix = () => {
   return (
     <section className={weeklymixStyles.container}>
       <Marquee pauseOnHover speed={34}>
-        MIX DE LA SEMANA (31·7·22)—
+        MIX DE LA SEMANA (7·8·22)—
         <a
           className={weeklymixStyles.link}
           target="_blank"
           rel="noreferrer"
-          href="https://soundcloud.com/pleasuregallery/pleasure-gallery-w-alec-noods-radio-july-2022"
+          href="https://soundcloud.com/cminuss/gi-gi-extended-mix"
         >
-          pleasure gallery w/ alec - noods radio - july 2022
+          Gi Gi - extended mix
         </a>
-        —
       </Marquee>
     </section>
   );
