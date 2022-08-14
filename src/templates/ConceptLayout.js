@@ -50,7 +50,7 @@ const ConceptLayout = ({ pageContext, data }) => {
       <main>
         <h2 className={conceptLayoutStyles.text}>
           Artículos relacionados al concepto de{' '}
-          <span style={{ fontWeight: 'bold' }}>{concept} —</span>
+          <span style={{ fontWeight: 'bold' }}>{concept}:</span>
         </h2>
         <Posts posts={posts} />
       </main>

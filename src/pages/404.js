@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/Layout';
-import { Center } from '@react-three/drei';
 
 // styles
 const pageStyles = {

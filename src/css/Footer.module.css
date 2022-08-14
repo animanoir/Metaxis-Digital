@@ -48,7 +48,7 @@
 }
 
 .fantasma:hover {
-  color: white;
+  color: white !important;
   transition: all 0.3s ease;
 }
 

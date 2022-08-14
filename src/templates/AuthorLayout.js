@@ -50,8 +50,7 @@ const AuthorLayout = ({ pageContext, data }) => {
           <span style={{ fontWeight: 'bold' }}>
             <a href={authorContact} target="_blank" rel="noreferrer">
               {author}
-            </a>{' '}
-            —
+            </a>
           </span>
         </h2>
         <Posts posts={posts} />

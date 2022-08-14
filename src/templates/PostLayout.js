@@ -13,13 +13,13 @@ export const postQuery = graphql`
   query GetSinglePost($slug: String) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
-        date(formatString: "d, MM, YYYY")
+        date(formatString: "d—MM—YYYY")
         title
         excerpt
         slug
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(quality: 100)
             parent {
               ... on File {
                 relativePath
@@ -66,14 +66,16 @@ const PostLayout = ({ data }) => {
             image={getImage(image)}
             alt={title}
           />
-          <h1 className={postStyles.title}>{title}</h1>
-          <h3 className={postStyles.author}>
-            escrito por{' '}
-            <Link to={`/autores/${author}`}>
-              <b>{author}</b>
-            </Link>
-          </h3>
-          <h3 className={postStyles.date}>{date}</h3>
+          <div className={postStyles.titleContainer}>
+            <h1 className={postStyles.title}>{title}</h1>
+            <h4 className={postStyles.author}>
+              escrito por{' '}
+              <Link to={`/autores/${author}`}>
+                <b>{author}</b>
+              </Link>
+            </h4>
+            <h4 className={postStyles.date}>{date}</h4>
+          </div>
         </div>
         <PostStyleWrapper>
           <MDXRenderer>{body}</MDXRenderer>
@@ -87,7 +89,7 @@ const PostLayout = ({ data }) => {
 };
 
 const PostStyleWrapper = styled.div`
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   font-family: 'Lora', serif;
   line-height: 1.55;
@@ -115,10 +117,11 @@ const PostStyleWrapper = styled.div`
     font-size: 1.8rem;
   }
   p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-align: justify;
     font-family: 'Lora', serif;
     color: #000;
+    margin-bottom: 5rem;
   }
   list {
     margin-left: 1.5rem;

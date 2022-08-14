@@ -1,9 +1,9 @@
 .container {
-  padding: 0 10rem 0;
+  padding: 5vh 20rem 0;
 }
 
 .cardcontainer {
-  padding: 2.5rem 0;
+  padding: 2.2rem 0;
 }
 
 .date {
@@ -13,6 +13,7 @@
 }
 
 .title {
+  letter-spacing: -0.1rem;
   font-family: 'Karla', sans-serif;
   font-size: 2.5rem;
   color: black;

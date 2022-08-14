@@ -27,7 +27,7 @@ const ArenaContent = () => {
   }, []);
 
   if (isLoading) {
-    return <p className={arenaContentStyles.loading}>Cargando inspiración...</p>;
+    return <p className={arenaContentStyles.loading}>〇 cargando inspiración 〇</p>;
   }
 
   return (
@@ -58,7 +58,7 @@ const ArenaContent = () => {
               >
                 <img
                   className={arenaContentStyles.image}
-                  src={content.image.original.url}
+                  src={content.image.square.url}
                   alt={content.title}
                 />
               </a>

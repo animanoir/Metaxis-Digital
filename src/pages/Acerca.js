@@ -2,7 +2,6 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import * as acercaStyles from '../css/Acerca.module.css';
-import { Link } from 'gatsby';
 import pulpoConFlores from '../images/metaxisdigital.jpg';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -17,22 +16,23 @@ const AcercaPage = () => {
         type="website"
         author="Óscar A. Montiel"
       />
+      <h2 className={acercaStyles.title}>Acerca</h2>
       <div className={acercaStyles.container}>
-        <div>
-          <h2 className={acercaStyles.title}>Acerca</h2>
+        <div className={acercaStyles.contentContainer}>
+          <StaticImage
+            placeholder="blurred"
+            layout="fullWidth"
+            className={acercaStyles.image}
+            src="../images/metaxisdigital.jpg"
+            alt="Pulpo con flores"
+            width={600}
+            height={600}
+          />
           <p className={acercaStyles.text}>
             <b>metaxis.digital</b> es un archivo dedicado a la difusión de ideas que abran panoramas
             de conciencia distintos a los acosumbrados.
           </p>
         </div>
-        <StaticImage
-          placeholder="blurred"
-          layout="fixed"
-          width={600}
-          className={acercaStyles.image}
-          src="../images/metaxisdigital.jpg"
-          alt="Pulpo con flores"
-        />
       </div>
       <div className={acercaStyles.container}>
         <div>
