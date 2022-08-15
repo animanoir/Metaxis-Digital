@@ -31,7 +31,7 @@ const ArenaContent = () => {
   }
 
   return (
-    <div className={arenaContentStyles.container}>
+    <div id="inspiración" className={arenaContentStyles.container}>
       <h2
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}

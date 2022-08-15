@@ -29,13 +29,14 @@ const AcercaPage = () => {
             height={600}
           />
           <p className={acercaStyles.text}>
-            <b>metaxis.digital</b> es un archivo dedicado a la difusión de ideas que abran panoramas
-            de conciencia distintos a los acosumbrados.
+            <b>metaxis.digital</b> es un sitio dedicado a la difusión de ideas que abran panoramas
+            de conciencia distintos a los acosumbrados. Está enfocado en cuestionamientos
+            meta(modernos) y futuristas.
           </p>
         </div>
       </div>
       <div className={acercaStyles.container}>
-        <div>
+        <div className={acercaStyles.contentContainer}>
           <p className={acercaStyles.text}>
             <a
               href="https://github.com/animanoir/metaxisdigital2022"
@@ -46,7 +47,7 @@ const AcercaPage = () => {
               El código fuente{' '}
             </a>
             del blog está público para que la comunidad interesada pueda mejorarlo, así como incluir
-            sus propios artículos al sitio. También se puede proponer a través de un correo
+            sus propios artículos al sitio. También se puede proponer ideas a través de un correo
             electrónico a{' '}
             <a
               target="_blank"
@@ -58,6 +59,15 @@ const AcercaPage = () => {
             </a>
             .
           </p>
+          <StaticImage
+            placeholder="blurred"
+            layout="fullWidth"
+            className={acercaStyles.image}
+            src="../images/metaxis-digital-acerca-2.jpg"
+            alt="Pulpo con flores al estilo de masao yamamoto"
+            width={600}
+            height={600}
+          />
         </div>
       </div>
     </Layout>

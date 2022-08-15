@@ -89,7 +89,7 @@ const PostLayout = ({ data }) => {
 };
 
 const PostStyleWrapper = styled.div`
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   font-family: 'Lora', serif;
   line-height: 1.55;
