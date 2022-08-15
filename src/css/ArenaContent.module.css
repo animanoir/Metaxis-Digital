@@ -24,6 +24,13 @@
   text-align: center;
   font-family: 'Karla', sans-serif;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  font-size: 1.5rem;
+  font-weight: initial;
 }
 
 .loading {

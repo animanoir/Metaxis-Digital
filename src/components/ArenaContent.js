@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import * as arenaContentStyles from '../css/ArenaContent.module.css';
 
+const getTime = () => {
+  const date = new Date();
+  const currentTime = [date.getHours(), date.getMinutes(), date.getSeconds()].map((a) =>
+    a < 10 ? '0' + a : a
+  );
+  return currentTime.join(' : ');
+};
+
 const ArenaContent = () => {
   const [arenaContent, setArenaContent] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hovering, setHovering] = useState(false);
+  const [time, setTime] = useState(getTime());
 
   const handleMouseOver = () => {
     setHovering(true);
@@ -26,6 +35,13 @@ const ArenaContent = () => {
       });
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(getTime());
+    }, 1);
+    return () => clearInterval(interval);
+  }, []);
+
   if (isLoading) {
     return <p className={arenaContentStyles.loading}>〇 cargando inspiración 〇</p>;
   }
@@ -44,8 +60,9 @@ const ArenaContent = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {hovering ? '+++++++++++' : 'inspiración'}
+          {hovering ? '++++++++++' : 'inspiración'}
         </a>
+        <p className={arenaContentStyles.time}>{time}</p>
       </h2>
       {arenaContent.map((content) => {
         return (
