@@ -37,7 +37,7 @@ const AcercaPage = () => {
       </div>
       <div className={acercaStyles.container}>
         <div className={acercaStyles.contentContainer}>
-          <p className={acercaStyles.text}>
+          <p className={acercaStyles.text} style={{ paddingRight: '2rem' }}>
             <a
               href="https://github.com/animanoir/metaxisdigital2022"
               target="_blank"
