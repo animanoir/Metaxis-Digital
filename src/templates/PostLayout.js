@@ -121,7 +121,7 @@ const PostStyleWrapper = styled.div`
     text-align: justify;
     font-family: 'Lora', serif;
     color: #000;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
   list {
     margin-left: 1.5rem;

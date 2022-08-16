@@ -3,6 +3,7 @@ import * as navbarStyles from '../css/Navbar.module.css';
 import { Link } from 'gatsby';
 import WeeklyMix from './WeeklyMix';
 import telegramSvg from '../images/svg/Telegram.svg';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Navbar = () => {
   const tesisPalabras = [
@@ -60,9 +61,7 @@ const Navbar = () => {
     function watchScroll() {
       window.addEventListener('scroll', logit);
     }
-
     watchScroll();
-
     return () => {
       window.removeEventListener('scroll', logit);
     };
