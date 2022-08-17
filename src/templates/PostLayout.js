@@ -25,8 +25,10 @@ export const postQuery = graphql`
                 relativePath
               }
             }
+            original {
+              src
+            }
           }
-          absolutePath
         }
         author
       }
@@ -42,6 +44,13 @@ const PostLayout = ({ data }) => {
       frontmatter: { title, date, author, image, excerpt, slug },
       body,
       id,
+      frontmatter: {
+        image: {
+          childImageSharp: {
+            original: { src },
+          },
+        },
+      },
     },
   } = data;
   let disqusConfig = {
@@ -54,7 +63,7 @@ const PostLayout = ({ data }) => {
       <SEO
         title={title}
         description={excerpt}
-        image={image.absolutePath}
+        image={src}
         metaurl={`https://metaxis.digital/posts/${slug}`}
         type="article"
         author={author}

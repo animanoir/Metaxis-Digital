@@ -420,7 +420,7 @@ a:hover {
 
 .verticalineleft {
   border-left: 6px solid black;
-  height: 35%;
+  height: 40%;
   position: fixed;
   left: 1.5%;
   top: 30%;
@@ -429,7 +429,7 @@ a:hover {
 
 .verticalineright {
   border-left: 6px solid black;
-  height: 35%;
+  height: 40%;
   position: fixed;
   right: 1.5%;
   top: 30%;
