@@ -32,7 +32,9 @@
   list-style-type: none;
   font-weight: normal;
   font-size: 1.25rem;
-  margin-bottom: 0;
+  margin: 0;
+  align-items: baseline;
+  padding-left: 0;
 }
 
 .menulist li {
@@ -107,7 +109,7 @@
   }
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 800px) {
   .container {
     padding: 0;
   }

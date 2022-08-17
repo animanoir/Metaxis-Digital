@@ -26,6 +26,7 @@ export const postQuery = graphql`
               }
             }
           }
+          absolutePath
         }
         author
       }
@@ -53,7 +54,7 @@ const PostLayout = ({ data }) => {
       <SEO
         title={title}
         description={excerpt}
-        image={image.childImageSharp.parent.relativePath}
+        image={image.absolutePath}
         metaurl={`https://metaxis.digital/posts/${slug}`}
         type="article"
         author={author}

@@ -420,10 +420,10 @@ a:hover {
 
 .verticalineleft {
   border-left: 6px solid black;
-  height: 30%;
+  height: 35%;
   position: fixed;
   left: 1.5%;
-  top: 35%;
+  top: 30%;
   z-index: 100;
 }
 
