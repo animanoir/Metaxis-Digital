@@ -80,7 +80,7 @@ const Navbar = () => {
             <h1 className={navbarStyles.title}>
               <b>metaxis.digital</b>{' '}
               <span className={navbarStyles.antitesis} style={{ fontWeight: 'normal' }}>
-                | {tesis} y {antitesis}
+                | {tesis} — {antitesis}
               </span>{' '}
               <small></small>
             </h1>

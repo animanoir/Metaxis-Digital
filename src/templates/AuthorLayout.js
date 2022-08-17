@@ -17,11 +17,16 @@ export const query = graphql`
         frontmatter {
           title
           slug
-          date(formatString: "d, MM, YYYY")
+          date(formatString: "d—MM—YYYY")
           author
           authorContact
           concepts
           excerpt
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }

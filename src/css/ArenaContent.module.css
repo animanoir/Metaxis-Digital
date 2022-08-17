@@ -1,12 +1,14 @@
 .container {
   display: grid;
   position: relative;
-  padding: 0 5rem 1rem 5rem;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   justify-content: center;
   align-content: center;
   place-items: center;
   max-height: 1fr;
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 10rem;
 }
 
 .image {

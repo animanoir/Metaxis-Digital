@@ -1,5 +1,10 @@
 .featuredContainer {
   padding: 40vh 20vw;
+  margin-bottom: 10rem;
+}
+
+.featuredContainer h2 {
+  font-size: 3rem;
 }
 
 .simpleContainer {
@@ -8,7 +13,7 @@
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 10rem 0;
+  padding-bottom: 5rem;
 }
 
 .simpleImage {
