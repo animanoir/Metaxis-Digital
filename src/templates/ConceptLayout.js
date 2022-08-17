@@ -47,8 +47,8 @@ const ConceptLayout = ({ pageContext, data }) => {
         type="website"
         author="Óscar A. Montiel"
       />
-      <main>
-        <h2 className={conceptLayoutStyles.text}>
+      <main className={conceptLayoutStyles.container}>
+        <h2 className={conceptLayoutStyles.info}>
           Artículos relacionados al concepto de{' '}
           <span style={{ fontWeight: 'bold' }}>{concept}:</span>
         </h2>

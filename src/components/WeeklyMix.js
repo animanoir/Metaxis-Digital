@@ -5,7 +5,7 @@ import Marquee from 'react-fast-marquee';
 const WeeklyMix = () => {
   return (
     <section className={weeklymixStyles.container}>
-      <Marquee pauseOnHover speed={34}>
+      <Marquee pauseOnHover speed={34} gradient={false}>
         MIX DE LA SEMANA (14·8·22)—
         <a
           className={weeklymixStyles.link}

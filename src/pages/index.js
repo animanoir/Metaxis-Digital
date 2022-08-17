@@ -7,7 +7,7 @@ import pulpoConFlores from '../images/metaxisdigital.jpg';
 import ArenaContent from '../components/ArenaContent';
 
 export const query = graphql`
-  query {
+  {
     allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         id
@@ -20,9 +20,10 @@ export const query = graphql`
           excerpt
           image {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(quality: 100, placeholder: BLURRED)
             }
           }
+          featuredArticle
         }
       }
     }

@@ -16,7 +16,6 @@ const AcercaPage = () => {
         type="website"
         author="Óscar A. Montiel"
       />
-      <h2 className={acercaStyles.title}>Acerca</h2>
       <div className={acercaStyles.container}>
         <div className={acercaStyles.contentContainer}>
           <StaticImage
@@ -29,6 +28,7 @@ const AcercaPage = () => {
             height={600}
           />
           <p className={acercaStyles.text}>
+            <h2 className={acercaStyles.title}>Acerca</h2>
             <b>metaxis.digital</b> es un sitio dedicado a la difusión de ideas que abran panoramas
             de conciencia distintos a los acosumbrados. Está enfocado en cuestionamientos
             meta(modernos) y futuristas.

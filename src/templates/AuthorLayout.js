@@ -44,8 +44,8 @@ const AuthorLayout = ({ pageContext, data }) => {
         type="website"
         author={author}
       />
-      <main>
-        <h2 className={conceptLayoutStyles.text}>
+      <main className={conceptLayoutStyles.container}>
+        <h2 className={conceptLayoutStyles.info}>
           Artículos escritos por{' '}
           <span style={{ fontWeight: 'bold' }}>
             <a href={authorContact} target="_blank" rel="noreferrer">

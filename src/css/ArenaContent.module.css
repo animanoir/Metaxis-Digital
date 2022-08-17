@@ -1,6 +1,7 @@
 .container {
   display: grid;
-  padding: 10rem 5rem 1rem 5rem;
+  position: relative;
+  padding: 0 5rem 1rem 5rem;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   justify-content: center;
   align-content: center;

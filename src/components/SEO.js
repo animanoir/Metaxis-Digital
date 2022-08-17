@@ -26,6 +26,8 @@ const SEO = ({ title, description, image, metaurl, type, author }) => {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={metaurl} />
+      <meta property="og:site_name" content="metaxis.digital" />
+      <meta property="og:locale" content="es_MX" />
     </Helmet>
   );
 };

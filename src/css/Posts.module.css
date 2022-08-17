@@ -1,15 +1,33 @@
-.container {
-  padding: 5vh 20rem 0;
+.featuredContainer {
+  padding: 40vh 20vw;
 }
 
-.cardcontainer {
-  padding: 2.2rem 0;
+.simpleContainer {
+  width: 65%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5rem;
 }
 
+.simpleImage {
+  width: 60%;
+}
 .date {
   font-family: 'Karla', 'sans-serif';
   font-size: 1.1rem;
   margin: 0;
+}
+
+.featuredImage {
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
 }
 
 .title {
