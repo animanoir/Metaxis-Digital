@@ -13,7 +13,7 @@ const SEO = ({ title, description, image, metaurl, type, author }) => {
       <meta name="twitter:creator" content="@metaxisdigital" />
       <meta name="twitter:title" content={`${title} | metaxis.digital`} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={`https://metaxis.digital${image}`} />
       <meta name="twitter:url" content={metaurl} />
       <meta name="robots" content="max-image-preview:large" />
       <meta name="keywords" content="filosofía, computación, tecnología, sociedad" />
