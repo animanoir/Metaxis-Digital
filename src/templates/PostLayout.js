@@ -31,6 +31,9 @@ export const postQuery = graphql`
           }
         }
         author
+        imageTwitter {
+          publicURL
+        }
       }
       body
       id
@@ -50,6 +53,7 @@ const PostLayout = ({ data }) => {
             original: { src },
           },
         },
+        imageTwitter: { publicURL: imageTwitter },
       },
     },
   } = data;
@@ -64,6 +68,7 @@ const PostLayout = ({ data }) => {
         title={title}
         description={excerpt}
         image={src}
+        imageTwitter={imageTwitter}
         metaurl={`https://metaxis.digital/posts/${slug}`}
         type="article"
         author={author}
