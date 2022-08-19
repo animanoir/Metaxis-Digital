@@ -18,6 +18,7 @@ const SEO = ({ title, description, image, metaurl, type, author, imageTwitter })
       <meta property="og:title" content={`${title} | metaxis.digital`} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={`https://metaxis.digital${image}`} />
+      <meta property="og:image:alt" content={description} />
       <meta property="og:url" content={metaurl} />
       <meta property="og:site_name" content="metaxis.digital" />
       <meta property="og:locale" content="es_MX" />
