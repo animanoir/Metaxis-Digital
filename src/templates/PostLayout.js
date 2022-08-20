@@ -13,7 +13,7 @@ export const postQuery = graphql`
   query GetSinglePost($slug: String) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
-        date(formatString: "d—MM—YYYY")
+        date(formatString: "YYYY—MM—DD")
         title
         excerpt
         slug

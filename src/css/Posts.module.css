@@ -86,8 +86,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .featuredContainer {
+    padding: 20vh 10vw;
+    margin-bottom: 0;
+  }
   .container {
-    padding: 1rem 0.5rem 5rem 0.5rem;
+    padding: 1rem 0.5rem 0 0.5rem;
   }
   .cardcontainer {
     padding: 2rem 0;
