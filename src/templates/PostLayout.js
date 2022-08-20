@@ -109,6 +109,9 @@ const PostStyleWrapper = styled.div`
   font-family: 'Lora', serif;
   line-height: 1.55;
   text-align: justify;
+  a {
+    text-decoration: underline;
+  }
   h1 {
     font-size: 2.5rem;
   }
@@ -132,7 +135,7 @@ const PostStyleWrapper = styled.div`
     font-size: 1.8rem;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: justify;
     font-family: 'Lora', serif;
     color: #000;
@@ -142,7 +145,7 @@ const PostStyleWrapper = styled.div`
     margin-left: 1.5rem;
   }
   li {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   @media only screen and (max-width: 600px) {
