@@ -71,6 +71,10 @@
     margin: 0 auto;
     flex-direction: column;
   }
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+  }
   .title {
     font-family: 'Karla', sans-serif;
     font-size: 4rem;
