@@ -44,7 +44,6 @@ const AuthorLayout = ({ pageContext, data }) => {
     site: { description },
   } = data;
   const { author, authorContact } = pageContext;
-  console.log(authorContact);
   return (
     <Layout>
       <SEO

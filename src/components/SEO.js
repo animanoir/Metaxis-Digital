@@ -11,7 +11,6 @@ const SEO = ({
   imageTwitter,
   keywords = ['futurismo', 'metamodernidad', 'metaxis', 'digital', 'blog'],
 }) => {
-  console.log(keywords);
   return (
     <Helmet htmlAttributes={{ lang: 'es' }} title={`${title} | metaxis.digital`}>
       <meta name="description" content={description} />
