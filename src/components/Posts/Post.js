@@ -10,7 +10,11 @@ const Post = ({ frontmatter }) => {
     <div>
       {featuredArticle ? (
         <div className={postsStyles.featuredContainer}>
-          <GatsbyImage className={postsStyles.featuredImage} image={getImage(image)}></GatsbyImage>
+          <GatsbyImage
+            alt={title}
+            className={postsStyles.featuredImage}
+            image={getImage(image)}
+          ></GatsbyImage>
           <p className={postsStyles.date}>{date}</p>
           <AniLink fade to={`/posts/${slug}`}>
             <h2 className={postsStyles.title}>{title}</h2>
@@ -32,7 +36,11 @@ const Post = ({ frontmatter }) => {
         </div>
       ) : (
         <div className={postsStyles.simpleContainer}>
-          <GatsbyImage className={postsStyles.simpleImage} image={getImage(image)}></GatsbyImage>
+          <GatsbyImage
+            alt={title}
+            className={postsStyles.simpleImage}
+            image={getImage(image)}
+          ></GatsbyImage>
           <div style={{ paddingLeft: '5rem' }}>
             <p className={postsStyles.date}>{date}</p>
             <AniLink fade to={`/posts/${slug}`}>

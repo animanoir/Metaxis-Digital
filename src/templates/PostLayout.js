@@ -34,6 +34,7 @@ export const postQuery = graphql`
         imageTwitter {
           publicURL
         }
+        concepts
       }
       body
       id
@@ -44,7 +45,7 @@ export const postQuery = graphql`
 const PostLayout = ({ data }) => {
   const {
     mdx: {
-      frontmatter: { title, date, author, image, excerpt, slug },
+      frontmatter: { title, date, author, image, excerpt, slug, concepts },
       body,
       id,
       frontmatter: {
@@ -65,6 +66,7 @@ const PostLayout = ({ data }) => {
   return (
     <Layout>
       <SEO
+        keywords={concepts}
         title={title}
         description={excerpt}
         image={src}
@@ -109,6 +111,13 @@ const PostStyleWrapper = styled.div`
   font-family: 'Lora', serif;
   line-height: 1.55;
   text-align: justify;
+  hr {
+    width: 25%;
+    background-color: black;
+    borders: none;
+    height: 1px;
+    margin: 4rem auto;
+  }
   a {
     text-decoration: underline;
   }

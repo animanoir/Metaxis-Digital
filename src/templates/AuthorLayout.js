@@ -30,12 +30,18 @@ export const query = graphql`
         }
       }
     }
+    site {
+      siteMetadata {
+        description
+      }
+    }
   }
 `;
 
 const AuthorLayout = ({ pageContext, data }) => {
   const {
     allMdx: { nodes: posts },
+    site: { description },
   } = data;
   const { author, authorContact } = pageContext;
   console.log(authorContact);
@@ -43,7 +49,7 @@ const AuthorLayout = ({ pageContext, data }) => {
     <Layout>
       <SEO
         title={author}
-        description="Filosofía y computación"
+        description={description}
         image={pulpoConFlores}
         metaurl={`https://metaxis.digital/autores/${author}`}
         type="website"

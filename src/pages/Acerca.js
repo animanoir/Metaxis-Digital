@@ -1,16 +1,30 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import { graphql } from 'gatsby';
 import * as acercaStyles from '../css/Acerca.module.css';
 import pulpoConFlores from '../images/metaxisdigital.jpg';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const AcercaPage = () => {
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`;
+
+const AcercaPage = ({ data }) => {
+  const {
+    site: { description },
+  } = data;
   return (
     <Layout>
       <SEO
         title="Acerca(te) | metaxis.digital"
-        description="Filosofía y computación"
+        description={description}
         image={pulpoConFlores}
         metaurl="https://metaxis.digital/Acerca"
         type="website"
@@ -37,7 +51,7 @@ const AcercaPage = () => {
       </div>
       <div className={acercaStyles.container}>
         <div className={acercaStyles.contentContainer}>
-          <p className={acercaStyles.text} style={{ paddingRight: '2rem' }}>
+          <p className={acercaStyles.text}>
             <a
               href="https://github.com/animanoir/metaxisdigital2022"
               target="_blank"
@@ -67,6 +81,7 @@ const AcercaPage = () => {
             alt="Pulpo con flores al estilo de masao yamamoto"
             width={600}
             height={600}
+            style={{ marginLeft: '2rem' }}
           />
         </div>
       </div>

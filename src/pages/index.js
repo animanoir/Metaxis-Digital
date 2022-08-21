@@ -27,18 +27,24 @@ export const query = graphql`
         }
       }
     }
+    site {
+      siteMetadata {
+        description
+      }
+    }
   }
 `;
 
 const IndexPage = ({ data }) => {
   const {
     allMdx: { nodes: posts },
+    site: { description },
   } = data;
   return (
     <Layout>
       <SEO
         title="génesis"
-        description="Filosofía y computación"
+        description={description}
         image={pulpoConFlores}
         metaurl="https://metaxis.digital/"
         type="website"

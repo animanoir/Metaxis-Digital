@@ -1,15 +1,27 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-const SEO = ({ title, description, image, metaurl, type, author, imageTwitter }) => {
+const SEO = ({
+  title,
+  description,
+  image,
+  metaurl,
+  type,
+  author,
+  imageTwitter,
+  keywords = ['futurismo', 'metamodernidad', 'metaxis', 'digital', 'blog'],
+}) => {
+  console.log(keywords);
   return (
-    <Helmet
-      htmlAttributes={{ lang: 'es' }}
-      title={`${title} | metaxis.digital`}
-      meta={[{ name: `description`, content: description }]}
-    >
+    <Helmet htmlAttributes={{ lang: 'es' }} title={`${title} | metaxis.digital`}>
+      <meta name="description" content={description} />
       <meta name="robots" content="max-image-preview:large" />
-      <meta name="keywords" content="filosofía, computación, tecnología, sociedad" />
+      <meta
+        name="keywords"
+        content={keywords.map((keyword) => {
+          return keyword;
+        })}
+      />
       <meta name="author" content={author} />
       <link rel="canonical" href="https://metaxis.digital/" />
       <meta name="robots" content="index" />

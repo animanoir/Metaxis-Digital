@@ -15,19 +15,25 @@ export const query = graphql`
         totalCount
       }
     }
+    site {
+      siteMetadata {
+        description
+      }
+    }
   }
 `;
 
 const Conceptos = ({
   data: {
     allMdx: { group },
+    site: { description },
   },
 }) => {
   return (
     <Layout>
       <SEO
         title="conceptos"
-        description="Filosofía y computación"
+        description={description}
         image={pulpoConFlores}
         metaurl="https://metaxis.digital/Conceptos"
         type="website"

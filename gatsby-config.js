@@ -3,6 +3,7 @@ module.exports = {
     title: `metaxis.digital`,
     siteUrl: `https://metaxis.digital`,
     author: `Óscar A. Montiel`,
+    description: `Un espacio abierto a la comunidad para difundir futurismos metamodernos que existen o que se nos ocurrirán.`,
     twitterUrl: `https://twitter.com/metaxisdigital`,
   },
   plugins: [
