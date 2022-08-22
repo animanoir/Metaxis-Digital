@@ -6,14 +6,21 @@ const WeeklyMix = () => {
   return (
     <section className={weeklymixStyles.container}>
       <Marquee pauseOnHover speed={34} gradient={false}>
-        MIX DE LA SEMANA (14·8·22)—
+        <a
+          href="https://www.are.na/degrees-degrees-bullet-period/metaxis-digital-mixes"
+          target="_blank"
+          rel="noreferrer"
+        >
+          MIX DE LA SEMANA
+        </a>
+        (21·8·22)—
         <a
           className={weeklymixStyles.link}
           target="_blank"
           rel="noreferrer"
-          href="https://soundcloud.com/living_roooom/living-room-n39-joanna-oj"
+          href="https://soundcloud.com/vowel_rec/xtclvr-live-under-sirens"
         >
-          Living Room n°39 - Joanna OJ
+          xtclvr - live under sirens
         </a>
       </Marquee>
     </section>
