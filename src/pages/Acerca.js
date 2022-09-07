@@ -3,8 +3,6 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
 import * as acercaStyles from '../css/Acerca.module.css';
-import pulpoConFlores from '../images/metaxisdigital.jpg';
-import { StaticImage } from 'gatsby-plugin-image';
 
 export const query = graphql`
   query {
@@ -25,22 +23,12 @@ const AcercaPage = ({ data }) => {
       <SEO
         title="Acerca(te) | metaxis.digital"
         description={description}
-        image={pulpoConFlores}
         metaurl="https://metaxis.digital/Acerca"
         type="website"
         author="Óscar A. Montiel"
       />
       <div className={acercaStyles.container}>
         <div className={acercaStyles.contentContainer}>
-          <StaticImage
-            placeholder="blurred"
-            layout="fullWidth"
-            className={acercaStyles.image}
-            src="../images/metaxisdigital.jpg"
-            alt="Pulpo con flores"
-            width={600}
-            height={600}
-          />
           <p className={acercaStyles.text}>
             <h2 className={acercaStyles.title}>Acerca</h2>
             <b>metaxis.digital</b> es un sitio dedicado a la difusión de ideas que abran panoramas
@@ -73,16 +61,6 @@ const AcercaPage = ({ data }) => {
             </a>
             .
           </p>
-          <StaticImage
-            placeholder="blurred"
-            layout="fullWidth"
-            className={acercaStyles.image}
-            src="../images/metaxis-digital-acerca-2.jpg"
-            alt="Pulpo con flores al estilo de masao yamamoto"
-            width={600}
-            height={600}
-            style={{ marginLeft: '2rem' }}
-          />
         </div>
       </div>
     </Layout>
