@@ -13,14 +13,14 @@ const WeeklyMix = () => {
         >
           MIX DE LA SEMANA
         </a>
-        (21·8·22)—
+        (6·9·22)—
         <a
           className={weeklymixStyles.link}
           target="_blank"
           rel="noreferrer"
-          href="https://soundcloud.com/vowel_rec/xtclvr-live-under-sirens"
+          href="https://soundcloud.com/perila/support-stream-mix"
         >
-          xtclvr - live under sirens
+          support stream mix~
         </a>
       </Marquee>
     </section>
