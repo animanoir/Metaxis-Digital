@@ -32,7 +32,7 @@ const AcercaPage = ({ data }) => {
           <p className={acercaStyles.text}>
             <h2 className={acercaStyles.title}>Acerca</h2>
             <b>metaxis.digital</b> es un sitio dedicado a la difusión de ideas que abran panoramas
-            de conciencia distintos a los acosumbrados. Está enfocado en cuestionamientos
+            de conciencia distintos a los acostumbrados. Está enfocado en cuestionamientos
             meta(modernos) y futuristas.
           </p>
         </div>

@@ -117,6 +117,7 @@ const PostStyleWrapper = styled.div`
     borders: none;
     height: 1px;
     margin: 4rem auto;
+    margin-bottom: 5rem;
   }
   a {
     text-decoration: underline;
@@ -156,7 +157,10 @@ const PostStyleWrapper = styled.div`
   li {
     font-size: 1.2rem;
   }
-
+  iframe {
+    width: 100%;
+    margin: 1rem 0;
+  }
   @media only screen and (max-width: 600px) {
     width: 90%;
     padding: 0 1rem;
