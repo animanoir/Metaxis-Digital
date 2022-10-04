@@ -4,7 +4,7 @@
 }
 
 .featuredContainer h2 {
-  font-size: 3rem;
+  font-size: 4.5rem;
 }
 
 .simpleContainer {
@@ -17,7 +17,7 @@
 }
 
 .simpleImage {
-  width: 60%;
+  width: 100%;
 }
 .date {
   font-family: 'Karla', 'sans-serif';
@@ -40,7 +40,7 @@
   font-family: 'Karla', sans-serif;
   font-size: 2.5rem;
   color: black;
-  width: 75%;
+  /* width: 75%; */
   word-wrap: break-word;
   backdrop-filter: blur(5px);
 }

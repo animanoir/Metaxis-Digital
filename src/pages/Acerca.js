@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
 import * as acercaStyles from '../css/Acerca.module.css';
+import img from '../images/metaxisdigital.jpg';
 
 export const query = graphql`
   query {
@@ -36,6 +37,9 @@ const AcercaPage = ({ data }) => {
             meta(modernos) y futuristas.
           </p>
         </div>
+      </div>
+      <div style={{ display: 'flex', marginTop: '3rem' }}>
+        <img src={img} alt="metaxis.digital" className={acercaStyles.img} />
       </div>
       <div className={acercaStyles.container}>
         <div className={acercaStyles.contentContainer}>
