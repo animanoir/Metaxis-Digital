@@ -41,7 +41,7 @@ const Post = ({ frontmatter }) => {
             className={postsStyles.simpleImage}
             image={getImage(image)}
           ></GatsbyImage>
-          <div style={{ paddingLeft: '5rem' }}>
+          <div>
             <p className={postsStyles.date}>{date}</p>
             <AniLink fade to={`/posts/${slug}`}>
               <h2 className={postsStyles.title}>{title}</h2>
