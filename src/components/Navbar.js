@@ -3,6 +3,7 @@ import * as navbarStyles from '../css/Navbar.module.css';
 import { Link } from 'gatsby';
 import WeeklyMix from './WeeklyMix';
 import telegramSvg from '../images/svg/Telegram.svg';
+import discordSvg from '../images/svg/Discord.svg';
 
 const Navbar = () => {
   const tesisPalabras = [
@@ -44,7 +45,7 @@ const Navbar = () => {
     'yo',
     'yang',
     'ludismo',
-    'odio',
+    'amor',
     'negro',
     'ceros',
   ];
@@ -96,6 +97,11 @@ const Navbar = () => {
           <li>
             <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5" rel="noreferrer">
               <img src={telegramSvg} alt="Únete a nuestro canal de Telegram" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://discord.gg/tGFhfTH9" rel="noreferrer">
+              <img src={discordSvg} alt="Únete nuestro foro en Discord" />
             </a>
           </li>
         </ul>
