@@ -3,7 +3,7 @@ import * as navbarStyles from '../css/Navbar.module.css';
 import { Link } from 'gatsby';
 import WeeklyMix from './WeeklyMix';
 import telegramSvg from '../images/svg/Telegram.svg';
-import discordSvg from '../images/svg/Discord.svg';
+import discordSvg from '../images/svg/DiscordSVG.svg';
 
 const Navbar = () => {
   const tesisPalabras = [
