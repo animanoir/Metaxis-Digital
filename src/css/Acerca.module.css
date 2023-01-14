@@ -1,11 +1,11 @@
 .container {
-  width: 80%;
   margin: 0 auto;
-  margin-top: 18vh;
+  margin-top: 12vh;
 }
 
 .contentContainer {
   display: flex;
+  flex-direction: column;
   width: 50%;
   margin: 0 auto;
 }
@@ -17,13 +17,13 @@
 
 .title {
   font-family: 'Karla', sans-serif;
-  font-size: 8rem;
+  font-size: 7rem;
   animation-name: title;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  width: 85%;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 @keyframes title {
@@ -52,7 +52,6 @@
   font-family: 'Karla', sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
-  padding-left: 2rem;
   align-self: center;
   text-align: justify;
 }

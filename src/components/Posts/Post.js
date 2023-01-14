@@ -1,11 +1,19 @@
-import * as React from 'react';
+import React, { memo, useCallback } from 'react';
 import * as postsStyles from '../../css/Posts.module.css';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-const Post = ({ frontmatter }) => {
+const Post = memo(({ frontmatter }) => {
   const { title, concepts, slug, excerpt, date, author, image, featuredArticle } = frontmatter;
+  const handleConcepts = useCallback(
+    (concept) => (
+      <Link to={`/concepts/${concept}`} key={concept}>
+        <span className={postsStyles.singleconcept}>{concept} </span>
+      </Link>
+    ),
+    []
+  );
   return (
     <div>
       {featuredArticle ? (
@@ -21,13 +29,7 @@ const Post = ({ frontmatter }) => {
           </AniLink>
           <h4 className={postsStyles.excerpt}>{excerpt}</h4>
           <h6 className={postsStyles.concepts}>
-            {concepts.map((concept) => {
-              return (
-                <Link to={`/concepts/${concept}`} key={concept}>
-                  <span className={postsStyles.singleconcept}>{concept}.</span>
-                </Link>
-              );
-            })}
+            {concepts.map((concept) => handleConcepts(concept))}
           </h6>
           <h5 className={postsStyles.author}>
             <span style={{ fontWeight: 'normal' }}>por</span>{' '}
@@ -65,6 +67,6 @@ const Post = ({ frontmatter }) => {
       )}
     </div>
   );
-};
+});
 
 export default Post;

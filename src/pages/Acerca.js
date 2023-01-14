@@ -31,7 +31,7 @@ const AcercaPage = ({ data }) => {
       <div className={acercaStyles.container}>
         <div className={acercaStyles.contentContainer}>
           <p className={acercaStyles.text}>
-            <h2 className={acercaStyles.title}>Acerca</h2>
+            <h1 className={acercaStyles.title}>Acerca</h1>
             <b>metaxis.digital</b> es un sitio dedicado a la difusión de ideas que abran panoramas
             de conciencia distintos a los acostumbrados. Está enfocado en cuestionamientos
             meta(modernos) y futuristas.
@@ -53,17 +53,14 @@ const AcercaPage = ({ data }) => {
               El código fuente{' '}
             </a>
             del blog está público para que la comunidad interesada pueda mejorarlo, así como incluir
-            sus propios artículos al sitio. También se puede proponer ideas a través de un correo
-            electrónico a{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:etherealflux94@gmail.com"
-              style={{ textDecoration: 'underline' }}
-            >
-              etherealflux94@gmail
-            </a>
-            .
+            sus propios artículos al sitio.
+          </p>
+          <p className={acercaStyles.text}>
+            También te invitamos a unirte a nuestro{' '}
+            <a style={{ textDecoration: 'underline' }} href="https://discord.gg/tGFhfTH9">
+              servidor en Discord
+            </a>{' '}
+            para discutir nuevas ideas.
           </p>
         </div>
       </div>

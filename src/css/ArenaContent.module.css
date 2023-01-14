@@ -18,6 +18,7 @@
 
 .image:hover {
   filter: invert(100%);
+  transition: filter 0.3s ease;
 }
 
 .title {

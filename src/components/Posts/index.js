@@ -1,9 +1,8 @@
-import * as React from 'react';
+import React, { memo } from 'react';
 import * as postsStyles from '../../css/Posts.module.css';
 import Post from './Post';
 
-// markup
-const Posts = ({ posts }) => {
+const Posts = memo(({ posts }) => {
   return (
     <section className={postsStyles.container}>
       {posts.map((post) => {
@@ -11,6 +10,6 @@ const Posts = ({ posts }) => {
       })}
     </section>
   );
-};
+});
 
 export default Posts;
