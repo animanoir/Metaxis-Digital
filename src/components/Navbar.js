@@ -1,9 +1,7 @@
-import * as React from 'react';
+import React, { useState, useEffect, Fragment, useCallback } from 'react';
 import * as navbarStyles from '../css/Navbar.module.css';
 import { Link } from 'gatsby';
-import WeeklyMix from './WeeklyMix';
 import telegramSvg from '../images/svg/Telegram.svg';
-import discordSvg from '../images/svg/DiscordSVG.svg';
 
 const Navbar = () => {
   const tesisPalabras = [
@@ -49,39 +47,44 @@ const Navbar = () => {
     'negro',
     'ceros',
   ];
-  const [scrollY, setScrollY] = React.useState(0);
-  const [tesis, setTesis] = React.useState('filosofía');
-  const [antitesis, setAntitesis] = React.useState('computación');
 
-  function logit() {
+  const [tesisAntitesis, setTesisAntitesis] = useState({
+    tesis: 'filosofía',
+    antitesis: 'computación',
+  });
+  const [scrollY, setScrollY] = useState(0);
+
+  const logit = useCallback(() => {
     setScrollY(window.pageYOffset);
-  }
+  }, []);
 
-  React.useEffect(() => {
-    function watchScroll() {
-      window.addEventListener('scroll', logit);
-    }
-    watchScroll();
+  useEffect(() => {
+    window.addEventListener('scroll', logit);
     return () => {
       window.removeEventListener('scroll', logit);
     };
-  });
+  }, [logit]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let selectedTesis = tesisPalabras[Math.floor(Math.random() * tesisPalabras.length)];
     let selectedAntitesis = antitesisPalabras[Math.floor(Math.random() * antitesisPalabras.length)];
-    return setTesis(selectedTesis), setAntitesis(selectedAntitesis);
+
+    while (selectedTesis === selectedAntitesis) {
+      selectedAntitesis = antitesisPalabras[Math.floor(Math.random() * antitesisPalabras.length)];
+    }
+
+    setTesisAntitesis({ tesis: selectedTesis, antitesis: selectedAntitesis });
   }, [scrollY]);
 
   return (
-    <React.Fragment>
+    <Fragment>
       <nav className={navbarStyles.container}>
         <div>
           <Link to="/">
             <h1 className={navbarStyles.title}>
               <b>metaxis.digital</b>{' '}
               <span className={navbarStyles.antitesis} style={{ fontWeight: 'normal' }}>
-                | {tesis} — {antitesis}
+                | {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}
               </span>{' '}
               <small></small>
             </h1>
@@ -99,17 +102,9 @@ const Navbar = () => {
               <img src={telegramSvg} alt="Únete a nuestro canal de Telegram" />
             </a>
           </li>
-          <li>
-            <a target="_blank" href="https://discord.gg/tGFhfTH9" rel="noreferrer">
-              <img src={discordSvg} alt="Únete nuestro foro en Discord" />
-            </a>
-          </li>
         </ul>
       </nav>
-      <div>
-        <WeeklyMix />
-      </div>
-    </React.Fragment>
+    </Fragment>
   );
 };
 

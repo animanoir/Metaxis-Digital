@@ -41,29 +41,6 @@ const AcercaPage = ({ data }) => {
       <div style={{ display: 'flex', marginTop: '3rem' }}>
         <img src={img} alt="metaxis.digital" className={acercaStyles.img} />
       </div>
-      <div className={acercaStyles.container}>
-        <div className={acercaStyles.contentContainer}>
-          <p className={acercaStyles.text}>
-            <a
-              href="https://github.com/animanoir/metaxisdigital2022"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: 'underline' }}
-            >
-              El código fuente{' '}
-            </a>
-            del blog está público para que la comunidad interesada pueda mejorarlo, así como incluir
-            sus propios artículos al sitio.
-          </p>
-          <p className={acercaStyles.text}>
-            También te invitamos a unirte a nuestro{' '}
-            <a style={{ textDecoration: 'underline' }} href="https://discord.gg/tGFhfTH9">
-              servidor en Discord
-            </a>{' '}
-            para discutir nuevas ideas.
-          </p>
-        </div>
-      </div>
     </Layout>
   );
 };

@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as newsletterStyles from '../css/NewsletterForm.module.css';
 
 const NewsletterForm = () => {
+  const [email, setEmail] = useState('');
+
+  const handleChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Aquí puedes realizar cualquier validación antes de enviar
+    // el formulario o enviar los datos tú mismo
+  };
+
   return (
     <section>
       <div className={newsletterStyles.container}>
@@ -12,6 +24,7 @@ const NewsletterForm = () => {
           netlify-honeypot="bot-field"
           data-netlify="true"
           action="/NewsletterSubscribe"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="NewsletterForm" />
@@ -22,6 +35,8 @@ const NewsletterForm = () => {
               type="email"
               placeholder="Email"
               name="email"
+              value={email}
+              onChange={handleChange}
             />
             <button className={newsletterStyles.button} type="submit">
               Suscribirse

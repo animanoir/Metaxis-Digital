@@ -20,7 +20,7 @@ export const query = graphql`
           excerpt
           image {
             childImageSharp {
-              gatsbyImageData(quality: 100, placeholder: BLURRED)
+              gatsbyImageData(quality: 80, placeholder: BLURRED)
             }
           }
           featuredArticle
@@ -35,11 +35,14 @@ export const query = graphql`
   }
 `;
 
-const IndexPage = ({ data }) => {
-  const {
+const IndexPage = ({
+  data: {
     allMdx: { nodes: posts },
-    site: { description },
-  } = data;
+    site: {
+      siteMetadata: { description },
+    },
+  },
+}) => {
   return (
     <Layout>
       <SEO

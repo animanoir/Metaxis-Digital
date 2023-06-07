@@ -12,6 +12,7 @@ const getTime = () => {
 const ArenaContent = () => {
   const [arenaContent, setArenaContent] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [hovering, setHovering] = useState(false);
   const [time, setTime] = useState(getTime());
 
@@ -24,21 +25,29 @@ const ArenaContent = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(
-      `https://api.are.na/v2/channels/metaxis-digital/contents?per=19?sort=position&direction=desc`
-    )
-      .then((response) => response.json())
-      .then((data) => {
+    setError(null);
+    const fetchData = async () => {
+      // 7. Uso de async/await
+      try {
+        const response = await fetch(
+          `https://api.are.na/v2/channels/metaxis-digital/contents?per=19?sort=position&direction=desc`
+        );
+        const data = await response.json();
         const { contents } = data;
         setArenaContent(contents);
+      } catch (error) {
+        setError(error);
+      } finally {
         setIsLoading(false);
-      });
+      }
+    };
+    fetchData();
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(getTime());
-    }, 1);
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -46,19 +55,21 @@ const ArenaContent = () => {
     return <p className={arenaContentStyles.loading}>〇 cargando inspiración 〇</p>;
   }
 
+  if (error) {
+    return <p>Hubo un error al cargar la inspiración.</p>;
+  }
+
   return (
     <div id="inspiración" className={arenaContentStyles.container}>
-      <h2
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-        onFocus={handleMouseOver}
-        onBlur={handleMouseOut}
-        className={arenaContentStyles.title}
-      >
+      <h2 className={arenaContentStyles.title}>
         <a
           href="https://www.are.na/degrees-degrees-bullet-period/metaxis-digital"
           target="_blank"
           rel="noopener noreferrer"
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+          onFocus={handleMouseOver}
+          onBlur={handleMouseOut}
         >
           {hovering ? '++++++++++' : 'inspiración'}
         </a>
@@ -72,6 +83,7 @@ const ArenaContent = () => {
                 href={content.source?.url ? content.source.url : content.image.original.url}
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Enlace a inspiración"
               >
                 <img
                   className={arenaContentStyles.image}

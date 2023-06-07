@@ -9,22 +9,27 @@ const SEO = ({
   type,
   author,
   imageTwitter,
-  keywords = ['futurismo', 'metamodernidad', 'metaxis', 'digital', 'blog'],
+  keywords = [
+    'futurismo',
+    'metamodernidad',
+    'metaxis',
+    'digital',
+    'blog',
+    'qualia',
+    'filosofía',
+    'metta',
+    'budismo',
+    'qualia',
+    'matemáticas',
+  ],
 }) => {
   return (
     <Helmet htmlAttributes={{ lang: 'es' }} title={`${title} | metaxis.digital`}>
       <meta name="description" content={description} />
-      <meta name="robots" content="max-image-preview:large" />
-      <meta
-        name="keywords"
-        content={keywords.map((keyword) => {
-          return keyword;
-        })}
-      />
+      <meta name="robots" content="index, follow, max-image-preview:large" />
+      <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
-      <link rel="canonical" href="https://metaxis.digital/" />
-      <meta name="robots" content="index" />
-      <meta name="robots" content="follow" />
+      <link rel="canonical" href={metaurl} />
       <meta property="og:type" content={type} />
       <meta property="og:title" content={`${title} | metaxis.digital`} />
       <meta property="og:description" content={description} />
