@@ -3,7 +3,8 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
 import * as acercaStyles from '../css/Acerca.module.css';
-import img from '../images/metaxisdigital.jpg';
+import pulpoMeta from '../images/metaxisdigital.jpg';
+import qrAmalgalmas from '../images/qrAmalgalmas.png';
 
 export const query = graphql`
   query {
@@ -32,14 +33,18 @@ const AcercaPage = ({ data }) => {
         <div className={acercaStyles.contentContainer}>
           <p className={acercaStyles.text}>
             <h1 className={acercaStyles.title}>Acerca</h1>
-            <b>metaxis.digital</b> es un sitio dedicado a la difusión de ideas que abran panoramas
-            de conciencia distintos a los acostumbrados. Está enfocado en cuestionamientos
-            meta(modernos) y futuristas.
+            El espacio digital de <b>metaxis.digital</b> se erige como un portal al pensamiento
+            metamoderno, combinando elementos del futurismo, filosofía, matemáticas, y la
+            espiritualidad oriental. Nuestra misión es difundir ideas que expandan los horizontes de
+            conciencia y promover diálogos que retan las normas establecidas.
           </p>
         </div>
       </div>
       <div style={{ display: 'flex', marginTop: '3rem' }}>
-        <img src={img} alt="metaxis.digital" className={acercaStyles.img} />
+        <img src={pulpoMeta} alt="metaxis.digital" className={acercaStyles.img} />
+      </div>
+      <div style={{ display: 'flex', marginTop: '3rem' }}>
+        <img src={qrAmalgalmas} alt="metaxis.digital" className={acercaStyles.img} />
       </div>
     </Layout>
   );

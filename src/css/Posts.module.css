@@ -28,6 +28,7 @@
 
 .featuredImage {
   position: absolute !important;
+  filter: brightness(1.2);
   z-index: -100;
   top: 0;
   left: 0;
@@ -41,7 +42,6 @@
   font-family: 'Karla', sans-serif;
   font-size: 2.5rem;
   color: black;
-  /* width: 75%; */
   word-wrap: break-word;
   backdrop-filter: blur(5px);
 }

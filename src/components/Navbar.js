@@ -1,10 +1,11 @@
-import React, { useState, useEffect, Fragment, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import * as navbarStyles from '../css/Navbar.module.css';
 import { Link } from 'gatsby';
 import telegramSvg from '../images/svg/Telegram.svg';
+import { throttle } from 'lodash';
 
 const Navbar = () => {
-  const tesisPalabras = [
+  const tesisWords = [
     'filosofía',
     'arte',
     'fantasmas',
@@ -28,7 +29,7 @@ const Navbar = () => {
     'blanco',
     'unos',
   ];
-  const antitesisPalabras = [
+  const antitesisWords = [
     'computación',
     'psicología',
     'matemáticas',
@@ -48,63 +49,68 @@ const Navbar = () => {
     'ceros',
   ];
 
+  const getRandomWord = (words) => {
+    return words[Math.floor(Math.random() * words.length)];
+  };
+
   const [tesisAntitesis, setTesisAntitesis] = useState({
-    tesis: 'filosofía',
-    antitesis: 'computación',
+    tesis: getRandomWord(tesisWords),
+    antitesis: getRandomWord(antitesisWords),
   });
   const [scrollY, setScrollY] = useState(0);
 
-  const logit = useCallback(() => {
-    setScrollY(window.pageYOffset);
-  }, []);
+  const updateScrollPosition = useCallback(
+    throttle(() => {
+      setScrollY(window.pageYOffset);
+    }, 50),
+    []
+  );
 
   useEffect(() => {
-    window.addEventListener('scroll', logit);
+    window.addEventListener('scroll', updateScrollPosition);
     return () => {
-      window.removeEventListener('scroll', logit);
+      window.removeEventListener('scroll', updateScrollPosition);
     };
-  }, [logit]);
+  }, [updateScrollPosition]);
 
   useEffect(() => {
-    let selectedTesis = tesisPalabras[Math.floor(Math.random() * tesisPalabras.length)];
-    let selectedAntitesis = antitesisPalabras[Math.floor(Math.random() * antitesisPalabras.length)];
+    let selectedTesis = getRandomWord(tesisWords);
+    let selectedAntitesis = getRandomWord(antitesisWords);
 
     while (selectedTesis === selectedAntitesis) {
-      selectedAntitesis = antitesisPalabras[Math.floor(Math.random() * antitesisPalabras.length)];
+      selectedAntitesis = getRandomWord(antitesisWords);
     }
 
     setTesisAntitesis({ tesis: selectedTesis, antitesis: selectedAntitesis });
   }, [scrollY]);
 
   return (
-    <Fragment>
-      <nav className={navbarStyles.container}>
-        <div>
-          <Link to="/">
-            <h1 className={navbarStyles.title}>
-              <b>metaxis.digital</b>{' '}
-              <span className={navbarStyles.antitesis} style={{ fontWeight: 'normal' }}>
-                | {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}
-              </span>{' '}
-              <small></small>
-            </h1>
-          </Link>
-        </div>
-        <ul className={navbarStyles.menulist}>
-          <li>
-            <Link to="/Acerca">Acerca</Link>
-          </li>
-          <li>
-            <Link to="/Conceptos">Conceptos</Link>
-          </li>
-          <li>
-            <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5" rel="noreferrer">
-              <img src={telegramSvg} alt="Únete a nuestro canal de Telegram" />
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </Fragment>
+    <nav className={navbarStyles.container}>
+      <div>
+        <Link to="/">
+          <h1 className={navbarStyles.title}>
+            <b>metaxis.digital</b>{' '}
+            <span className={navbarStyles.antitesis} style={{ fontWeight: 'normal' }}>
+              | {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}
+            </span>{' '}
+            <small></small>
+          </h1>
+        </Link>
+      </div>
+      <ul className={navbarStyles.menulist}>
+        <li>
+          <Link to="/Acerca">Acerca</Link>
+        </li>
+        <li>
+          <Link to="/Conceptos">Conceptos</Link>
+        </li>
+        <li>
+          <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5" rel="noreferrer">
+            <img src={telegramSvg} alt="Únete a nuestro canal de Telegram" />
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

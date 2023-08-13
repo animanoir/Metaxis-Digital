@@ -15,7 +15,6 @@ const SEO = ({
     'metaxis',
     'digital',
     'blog',
-    'qualia',
     'filosofía',
     'metta',
     'budismo',

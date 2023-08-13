@@ -26,6 +26,7 @@
   margin: 0;
   word-break: break-word;
   letter-spacing: -0.1rem;
+  line-height: 1;
 }
 
 /* @keyframes title {
@@ -44,8 +45,11 @@
 
 .author {
   font-family: 'Karla', sans-serif;
+  padding-top: 1rem;
   font-weight: normal;
   text-align: end;
+  font-size: 2rem;
+  color: gray;
 }
 
 .date {
