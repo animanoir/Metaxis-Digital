@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
-import pulpoConFlores from '../images/metaxisdigital.jpg';
+import entesTw from '../images/entes-tw.png';
 import ArenaContent from '../components/ArenaContent';
 
 export const query = graphql`
@@ -48,7 +48,7 @@ const IndexPage = ({
       <SEO
         title="génesis"
         description={description}
-        image={pulpoConFlores}
+        image={entesTw}
         metaurl="https://metaxis.digital/"
         type="website"
         author="Óscar A. Montiel"
