@@ -8,17 +8,14 @@
 }
 
 .simpleContainer {
-  width: 65%;
-  display: flex;
+  width: 50%;
   margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
   padding-bottom: 5rem;
 }
 
 .simpleImage {
   width: 100%;
-  margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 .date {
   font-family: 'Karla', 'sans-serif';
@@ -27,7 +24,7 @@
 }
 
 .featuredImage {
-  position: absolute !important;
+  position: absolute;
   filter: brightness(1.2);
   z-index: -100;
   top: 0;

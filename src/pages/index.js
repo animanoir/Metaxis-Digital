@@ -20,7 +20,7 @@ export const query = graphql`
           excerpt
           image {
             childImageSharp {
-              gatsbyImageData(quality: 80, placeholder: BLURRED)
+              gatsbyImageData(quality: 90, placeholder: BLURRED)
             }
           }
           featuredArticle
