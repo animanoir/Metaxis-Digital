@@ -24,7 +24,7 @@
 }
 
 .featuredImage {
-  position: absolute;
+  position: absolute !important;
   filter: brightness(1.2);
   z-index: -100;
   top: 0;
