@@ -1,7 +1,7 @@
 .container {
   width: 85%;
   margin: 0 auto;
-  margin-top: 18vh;
+  margin-top: 14vh;
 }
 
 .infocontainer {
@@ -17,11 +17,6 @@
 
 .title {
   font-size: 5rem;
-  /* transform: rotateX(180deg); */
-  /* animation-name: title;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; */
   font-family: 'Karla', sans-serif;
   margin: 0;
   word-break: break-word;
@@ -29,26 +24,12 @@
   line-height: 1;
 }
 
-/* @keyframes title {
-  0% {
-    transform: rotateX(0deg);
-  }
-
-  50% {
-    transform: rotateX(180deg)
-  }
-
-  100% {
-    transform: rotateX(1deg)
-  }
-} */
-
 .author {
   font-family: 'Karla', sans-serif;
   padding-top: 1rem;
   font-weight: normal;
   text-align: end;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: gray;
 }
 

@@ -49,6 +49,7 @@ const IndexPage = ({
         title="génesis"
         description={description}
         image={entesTw}
+        imageTwitter={entesTw}
         metaurl="https://metaxis.digital/"
         type="website"
         author="Óscar A. Montiel"

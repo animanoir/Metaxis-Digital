@@ -99,10 +99,15 @@ const Navbar = () => {
       </div>
       <ul className={navbarStyles.menulist}>
         <li>
+          <Link to="/Conceptos">Conceptos</Link>
+        </li>
+        <li>
           <Link to="/Acerca">Acerca</Link>
         </li>
         <li>
-          <Link to="/Conceptos">Conceptos</Link>
+          <Link to="/Colabora">
+            <b id="glowText">¡Colabora!</b>
+          </Link>
         </li>
         <li>
           <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5" rel="noreferrer">
