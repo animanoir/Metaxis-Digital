@@ -24,7 +24,7 @@ const AcercaPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Acerca(te) | metaxis.digital"
+        title="Acerca(te)"
         description={description}
         metaurl="https://metaxis.digital/Acerca"
         type="website"

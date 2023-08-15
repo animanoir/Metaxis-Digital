@@ -23,7 +23,7 @@ const ColaboraPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Colabora | metaxis.digital"
+        title="Colabora"
         image={amalgalmas}
         imageTwitter={amalgalmasTw}
         description={description}
