@@ -54,7 +54,7 @@ const ColaboraPage = ({ data }) => {
                 href="https://t.me/+0ViSuNGeQ-JmZTcx"
               >
                 <b style={{ marginBottom: '1rem' }}>【 a m a l g a m a s 】</b>
-                <img src={amalgalmas}></img>
+                <img style={{ width: '100%' }} src={amalgalmas}></img>
               </a>
             </p>
             <h2 style={{ marginBottom: '1rem' }}>¿Deseas colaborar?</h2>

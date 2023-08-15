@@ -17,7 +17,7 @@
 
 .title {
   font-family: 'Karla', sans-serif;
-  font-size: 5.5rem;
+  font-size: 5rem;
   animation-name: title;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -30,16 +30,15 @@
 
 @keyframes title {
   0% {
-    /* transform: rotateX(0deg); */
+    transform: rotateZ(1deg);
   }
 
   50% {
-    /* transform: rotateX(180deg); */
     transform: rotateZ(-1deg);
   }
 
   100% {
-    /* transform: rotateX(1deg) */
+    transform: rotateZ(1deg);
   }
 }
 
@@ -82,6 +81,9 @@
     font-size: 1.5rem;
     margin-bottom: 8rem;
     width: 100%;
+  }
+  .img {
+    width: 90%;
   }
 }
 

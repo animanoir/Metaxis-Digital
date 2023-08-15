@@ -3,6 +3,7 @@ import * as navbarStyles from '../css/Navbar.module.css';
 import { Link } from 'gatsby';
 import telegramSvg from '../images/svg/Telegram.svg';
 import { throttle } from 'lodash';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Navbar = () => {
   const tesisWords = [
@@ -89,28 +90,33 @@ const Navbar = () => {
       <div>
         <Link to="/">
           <h1 className={navbarStyles.title}>
-            <b>metaxis.digital</b>{' '}
-            <span className={navbarStyles.antitesis} style={{ fontWeight: 'normal' }}>
-              | {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}
-            </span>{' '}
-            <small></small>
+            <AniLink fade to="/">
+              <b>metaxis.digital</b>
+              <span className={navbarStyles.antitesis} style={{ fontWeight: 'normal' }}>
+                | {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}
+              </span>{' '}
+            </AniLink>{' '}
           </h1>
         </Link>
       </div>
       <ul className={navbarStyles.menulist}>
         <li>
-          <Link to="/Conceptos">Conceptos</Link>
+          <AniLink fade to="/Conceptos">
+            Conceptos
+          </AniLink>
         </li>
         <li>
-          <Link to="/Acerca">Acerca</Link>
+          <AniLink fade to="/Acerca">
+            Acerca
+          </AniLink>
         </li>
         <li>
-          <Link to="/Colabora">
-            <b id="glowText">¡Colabora!</b>
-          </Link>
+          <AniLink fade to="/Colabora">
+            <b>¡Colabora!</b>
+          </AniLink>
         </li>
         <li>
-          <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5" rel="noreferrer">
+          <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5">
             <img src={telegramSvg} alt="Únete a nuestro canal de Telegram" />
           </a>
         </li>

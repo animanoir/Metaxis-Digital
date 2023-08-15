@@ -46,7 +46,7 @@ const AcercaPage = ({ data }) => {
       <div style={{ display: 'flex', marginTop: '3rem' }}>
         <img src={pulpoFlores} alt="metaxis.digital" className={acercaStyles.img} />
       </div>
-      <div style={{ display: 'flex', marginTop: '3rem' }}>
+      <div style={{ display: 'flex', marginBottom: '5rem' }}>
         <img src={qrAmalgalmas} alt="metaxis.digital" className={acercaStyles.img} />
       </div>
     </Layout>

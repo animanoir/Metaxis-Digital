@@ -3,6 +3,10 @@
   margin-bottom: 10rem;
 }
 
+.authorPrefix {
+  font-weight: normal;
+}
+
 .featuredContainer h2 {
   font-size: 4.5rem;
 }

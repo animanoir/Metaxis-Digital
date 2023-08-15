@@ -6,6 +6,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Post = memo(({ frontmatter }) => {
   const { title, concepts, slug, excerpt, date, author, image, featuredArticle } = frontmatter;
+
   const handleConcepts = useCallback(
     (concept) => (
       <Link to={`/concepts/${concept}`} key={concept}>
@@ -14,59 +15,32 @@ const Post = memo(({ frontmatter }) => {
     ),
     []
   );
-  return (
-    <div>
-      {featuredArticle ? (
-        <div className={postsStyles.featuredContainer}>
-          <GatsbyImage
-            alt={title}
-            className={postsStyles.featuredImage}
-            image={getImage(image)}
-          ></GatsbyImage>
-          <p className={postsStyles.date}>{date}</p>
-          <AniLink fade to={`/posts/${slug}`}>
-            <h2 className={postsStyles.title}>{title}</h2>
-          </AniLink>
-          <h4 className={postsStyles.excerpt}>{excerpt}</h4>
-          <h6 className={postsStyles.concepts}>
-            {concepts.map((concept) => handleConcepts(concept))}
-          </h6>
-          <h5 className={postsStyles.author}>
-            <span style={{ fontWeight: 'normal' }}>por</span>{' '}
-            <Link to={`/autores/${author}`}>{author}</Link>
-          </h5>
-        </div>
-      ) : (
-        <div className={postsStyles.simpleContainer}>
-          <GatsbyImage
-            alt={title}
-            className={postsStyles.simpleImage}
-            image={getImage(image)}
-          ></GatsbyImage>
-          <div>
-            <p className={postsStyles.date}>{date}</p>
-            <AniLink fade to={`/posts/${slug}`}>
-              <h2 className={postsStyles.title}>{title}</h2>
-            </AniLink>
-            <h4 className={postsStyles.excerpt}>{excerpt}</h4>
-            <h6 className={postsStyles.concepts}>
-              {concepts.map((concept) => {
-                return (
-                  <Link to={`/concepts/${concept}`} key={concept}>
-                    <span className={postsStyles.singleconcept}>{concept} </span>
-                  </Link>
-                );
-              })}
-            </h6>
-            <h5 className={postsStyles.author}>
-              <span style={{ fontWeight: 'normal' }}>por</span>{' '}
-              <Link to={`/autores/${author}`}>{author}</Link>
-            </h5>
-          </div>
-        </div>
-      )}
+
+  const renderPostContent = (isFeatured) => (
+    <div className={isFeatured ? postsStyles.featuredContainer : postsStyles.simpleContainer}>
+      <GatsbyImage
+        alt={title}
+        className={isFeatured ? postsStyles.featuredImage : postsStyles.simpleImage}
+        image={getImage(image)}
+      />
+      <div>
+        <p className={postsStyles.date}>{date}</p>
+        <AniLink fade to={`/posts/${slug}`}>
+          <h2 className={postsStyles.title}>{title}</h2>
+        </AniLink>
+        <h4 className={postsStyles.excerpt}>{excerpt}</h4>
+        <h6 className={postsStyles.concepts}>
+          {concepts.map((concept) => handleConcepts(concept))}
+        </h6>
+        <h5 className={postsStyles.author}>
+          <span className={postsStyles.authorPrefix}>por</span>
+          <Link to={`/autores/${author}`}>{author}</Link>
+        </h5>
+      </div>
     </div>
   );
+
+  return <div>{featuredArticle ? renderPostContent(true) : renderPostContent(false)}</div>;
 });
 
 export default Post;
