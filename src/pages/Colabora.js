@@ -62,8 +62,8 @@ const ColaboraPage = ({ data }) => {
             <p>
               Si tienes la habilidad de plasmar pensamientos en palabras a través de ensayos,
               artículos y poemas, o capturar emociones y visiones en medios visuales, ya sea
-              pintura, dibujo, arte generativo, música, etc., te invitamos a ser parte de nuestro
-              espacio. El arte en todas sus formas es bienvenido y valorado.
+              pintura, dibujo, arte generativo o incluso música, escultura, etc. te invitamos a ser
+              parte de nuestro espacio. El arte en todas sus formas es bienvenido y valorado.
             </p>
             <iframe
               width="100%"
