@@ -1,13 +1,15 @@
 import * as React from 'react';
 import * as weeklymixStyles from '../css/WeeklyMix.module.css';
 import Marquee from 'react-fast-marquee';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const WeeklyMix = () => {
   return (
     <section className={weeklymixStyles.container}>
       <Marquee pauseOnHover speed={50} gradient={false}>
-        <Link to="/Colabora"> Anuncio (15 · 08 · 23): ¡Buscamos colaboradores!</Link>
+        <AniLink fade to="/Colabora">
+          Anuncio (15 · 08 · 23): ¡Buscamos colaboradores!
+        </AniLink>
       </Marquee>
     </section>
   );
