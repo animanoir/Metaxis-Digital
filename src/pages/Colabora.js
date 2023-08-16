@@ -53,7 +53,7 @@ const ColaboraPage = ({ data }) => {
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                 href="https://t.me/+0ViSuNGeQ-JmZTcx"
               >
-                <b style={{ marginBottom: '1rem' }}>【 a m a l g a m a s 】</b>
+                <b style={{ marginBottom: '1rem' }}>【 a m a l g a l m a s 】</b>
                 <img style={{ width: '100%' }} src={amalgalmas}></img>
               </a>
             </p>
