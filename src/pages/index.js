@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import entesTw from '../images/entes-tw.png';
 import ArenaContent from '../components/ArenaContent';
+import WeeklyMix from '../components/WeeklyMix';
 
 export const query = graphql`
   {
@@ -55,6 +56,7 @@ const IndexPage = ({
         author="Óscar A. Montiel"
       />
       <main>
+        <WeeklyMix />
         <Posts posts={posts} />
       </main>
       <ArenaContent />

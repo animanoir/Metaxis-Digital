@@ -33,6 +33,22 @@
   color: gray;
 }
 
+.authorContact {
+  margin-top: 5px;
+  font-size: 0.8em;
+  text-align: end;
+}
+
+.authorContact a {
+  color: black;
+  text-decoration: none;
+}
+
+.authorContact a:hover {
+  color: #dc143c;
+  text-decoration: underline;
+}
+
 .date {
   text-align: end;
   font-family: 'Karla', sans-serif;

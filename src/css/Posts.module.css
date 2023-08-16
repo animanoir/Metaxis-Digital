@@ -1,24 +1,111 @@
 .featuredContainer {
   padding: 40vh 20vw;
   margin-bottom: 10rem;
+  font-family: 'Karla', 'sans-serif';
 }
 
-.authorPrefix {
-  font-weight: normal;
+.featuredContainer p {
+  font-size: 1.1rem;
+  margin: 0;
+  background-color: black;
+  width: fit-content;
+  color: #fffff0;
+  margin-bottom: 1rem;
 }
 
 .featuredContainer h2 {
   font-size: 4.5rem;
+  color: #fffff0;
+  background-color: black;
+  width: fit-content;
 }
 
+h2:hover {
+  color: #dc143c;
+}
+
+/* Excerpt */
+.featuredContainer h4 {
+  font-family: 'lora', serif;
+  font-weight: normal;
+  font-size: 1.1rem;
+  margin: 0.8rem 0;
+  color: #fffff0;
+  background-color: black;
+  padding: 0.5rem;
+  width: fit-content;
+  rotate: -0.5deg;
+}
+
+.featuredContainer h6 {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #fffff0;
+}
+
+.featuredContainer h5 {
+  font-family: 'lora', serif;
+  font-weight: normal;
+  font-size: 1.1rem;
+  margin: 0.8rem 0;
+  color: #fffff0;
+  background-color: black;
+  padding: 0.5rem;
+  width: fit-content;
+}
+.featuredContainer h5 a {
+  color: #fffff0;
+  font-weight: bold;
+}
+
+/* Simple container */
+
 .simpleContainer {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   padding-bottom: 5rem;
+  font-family: 'Karla', sans-serif;
+}
+
+.simpleContainer h2 {
+  color: black;
+  font-size: 2rem;
+}
+
+.simpleContainer h2:hover {
+  color: #dc143c;
+}
+
+.simpleContainer h4 {
+  padding: 0 !important;
+  margin: 0.5rem 0;
+  font-family: 'lora', serif;
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: black;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+.simpleContainer h6 {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  color: black;
+  text-align: end;
+}
+
+.simpleContainer h5 {
+  font-size: 1.2rem;
+  text-align: end;
 }
 
 .simpleImage {
   width: 100%;
+  background-size: cover;
   margin-bottom: 1rem;
 }
 .date {
@@ -38,48 +125,9 @@
   height: 100vh;
 }
 
-.title {
-  letter-spacing: -0.1rem;
-  font-family: 'Karla', sans-serif;
-  font-size: 2.5rem;
-  color: black;
-  word-wrap: break-word;
-  backdrop-filter: blur(5px);
-}
-
-.title:hover {
-  color: #dc143c;
-}
-
-.excerpt {
-  font-family: 'Lora', serif;
-  font-weight: normal;
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-  width: fit-content;
-  padding: 5px;
-  margin-bottom: 1rem;
-  color: black;
-  backdrop-filter: blur(5px);
-}
-
-.author {
-  font-family: 'Karla', 'sans-serif';
-  font-size: 1.1rem;
-  margin: 0.8rem 0;
-  color: rgb(30, 30, 30);
-}
-
-.concepts {
-  font-family: 'Karla', sans-serif;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: normal;
-}
-
 .singleconcept {
   background-color: black;
-  color: white;
+  color: #fffff0;
   padding: 0.3rem;
 }
 

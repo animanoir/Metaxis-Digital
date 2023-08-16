@@ -22,7 +22,7 @@ const Footer = () => {
           </a>
           <div className={footerStyles.fantasmacontainer}>
             <p>
-              Una iniciativa de{' '}
+              Una proyecto de{' '}
               <a className={footerStyles.fantasma} href="https://fantasma.rip/">
                 <b>fantasma</b>
               </a>

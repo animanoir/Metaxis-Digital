@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Disqus } from 'gatsby-plugin-disqus';
-import { Link } from 'gatsby';
 import * as postStyles from '../css/PostLayout.module.css';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
+import linkSvg from '../images/svg/Link.svg';
 
 export const postQuery = graphql`
   query GetSinglePost($slug: String) {
@@ -17,6 +17,7 @@ export const postQuery = graphql`
         title
         excerpt
         slug
+        authorContact
         image {
           childImageSharp {
             gatsbyImageData(quality: 100)
@@ -45,7 +46,7 @@ export const postQuery = graphql`
 const PostLayout = ({ data }) => {
   const {
     mdx: {
-      frontmatter: { title, date, author, image, excerpt, slug, concepts },
+      frontmatter: { title, date, author, image, excerpt, slug, concepts, authorContact },
       body,
       id,
       frontmatter: {
@@ -85,13 +86,22 @@ const PostLayout = ({ data }) => {
           />
           <div className={postStyles.titleContainer}>
             <h1 className={postStyles.title}>{title}</h1>
+            <h4 className={postStyles.date}>{date}</h4>
             <h4 className={postStyles.author}>
               escrito por{' '}
               <Link to={`/autores/${author}`}>
                 <b>{author}</b>
               </Link>
             </h4>
-            <h4 className={postStyles.date}>{date}</h4>
+
+            {/* Add the author's contact link here */}
+            {authorContact && (
+              <div className={postStyles.authorContact}>
+                <a href={authorContact} target="_blank" rel="noopener noreferrer">
+                  <img src={linkSvg} alt={`Más información de ${author}: ${authorContact}`} />
+                </a>
+              </div>
+            )}
           </div>
         </div>
         <PostStyleWrapper>
