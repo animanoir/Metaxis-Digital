@@ -54,11 +54,7 @@ const ColaboraPage = ({ data }) => {
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                 href="https://t.me/+0ViSuNGeQ-JmZTcx"
               >
-                <b style={{ marginBottom: '1rem' }}>【 a m a l g a l m a s 】</b>
-                <StaticImage
-                  src={'../images/amalgalmas.jpg'}
-                  alt="El metapulpo de metaxis.digital."
-                />
+                <b style={{ margin: '5rem 0' }}>【 a m a l g a l m a s 】</b>
               </a>
             </p>
             <h2 style={{ marginBottom: '1rem' }}>¿Deseas colaborar?</h2>
