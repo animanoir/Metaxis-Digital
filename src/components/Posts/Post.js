@@ -29,7 +29,9 @@ const Post = ({ frontmatter }) => {
         <h4>{excerpt}</h4>
         <h5>
           <span style={{ fontWeight: 'normal' }}>por </span>
-          <Link to={`/autores/${author}`}>{author}</Link>
+          <AniLink fade to={`/autores/${author}`}>
+            {author}
+          </AniLink>
         </h5>
         <h6>{concepts.map((concept) => handleConcepts(concept))}</h6>
       </div>

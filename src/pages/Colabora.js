@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import amalgalmas from '../images/amalgalmas.jpg';
 import amalgalmasTw from '../images/amalgalmas-tw.jpg';
 import * as acercaStyles from '../css/Acerca.module.css';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export const query = graphql`
   query {
@@ -54,7 +55,10 @@ const ColaboraPage = ({ data }) => {
                 href="https://t.me/+0ViSuNGeQ-JmZTcx"
               >
                 <b style={{ marginBottom: '1rem' }}>【 a m a l g a l m a s 】</b>
-                <img style={{ width: '100%' }} src={amalgalmas}></img>
+                <StaticImage
+                  src={'../images/amalgalmas.jpg'}
+                  alt="El metapulpo de metaxis.digital."
+                />
               </a>
             </p>
             <h2 style={{ marginBottom: '1rem' }}>¿Deseas colaborar?</h2>

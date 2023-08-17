@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import * as acercaStyles from '../css/Acerca.module.css';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
-import qrAmalgalmas from '../images/qrAmalgalmas.png';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export const query = graphql`
   query {
@@ -41,13 +41,16 @@ const AcercaPage = ({ data }) => {
             oriental. Nuestra misión es difundir ideas que expandan los horizontes de conciencia y
             promover diálogos que retan las normas establecidas.
           </p>
+          <StaticImage
+            height={1000}
+            src={'../images/metaxis-digital-pulpo.jpg'}
+            alt="El metapulpo de metaxis.digital."
+          />
+          <StaticImage
+            src={'../images/qrAmalgalmas.png'}
+            alt="Código QR para entrar a AMALGALMAS."
+          />
         </div>
-      </div>
-      <div style={{ display: 'flex', marginTop: '3rem' }}>
-        <img src={pulpoFlores} alt="metaxis.digital" className={acercaStyles.img} />
-      </div>
-      <div style={{ display: 'flex', marginBottom: '5rem' }}>
-        <img src={qrAmalgalmas} alt="metaxis.digital" className={acercaStyles.img} />
       </div>
     </Layout>
   );

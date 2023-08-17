@@ -3,7 +3,8 @@ import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
-import entesTw from '../images/entes-tw.png';
+import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
+import pulpoFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import ArenaContent from '../components/ArenaContent';
 import WeeklyMix from '../components/WeeklyMix';
 
@@ -47,10 +48,10 @@ const IndexPage = ({
   return (
     <Layout>
       <SEO
-        title="génesis"
+        title="〇"
         description={description}
-        image={entesTw}
-        imageTwitter={entesTw}
+        image={pulpoFlores}
+        imageTwitter={pulpoFloresTw}
         metaurl="https://metaxis.digital/"
         type="website"
         author="Óscar A. Montiel"

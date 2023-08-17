@@ -27,7 +27,6 @@ const ArenaContent = () => {
     setIsLoading(true);
     setError(null);
     const fetchData = async () => {
-      // 7. Uso de async/await
       try {
         const response = await fetch(
           `https://api.are.na/v2/channels/metaxis-digital/contents?per=19?sort=position&direction=desc`
@@ -52,7 +51,7 @@ const ArenaContent = () => {
   }, []);
 
   if (isLoading) {
-    return <p className={arenaContentStyles.loading}>〇 cargando inspiración 〇</p>;
+    return <p className={arenaContentStyles.loading}>~·:| ⡷⠂ cargando inspiración ⠐⢾ |:·~</p>;
   }
 
   if (error) {

@@ -93,8 +93,6 @@ const PostLayout = ({ data }) => {
                 <b>{author}</b>
               </Link>
             </h4>
-
-            {/* Add the author's contact link here */}
             {authorContact && (
               <div className={postStyles.authorContact}>
                 <a href={authorContact} target="_blank" rel="noopener noreferrer">
