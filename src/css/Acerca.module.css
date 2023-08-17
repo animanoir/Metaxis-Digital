@@ -6,7 +6,7 @@
 .contentContainer {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 43%;
   margin: 0 auto;
 }
 
@@ -52,7 +52,7 @@
 .text {
   font-family: 'Karla', sans-serif;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 3rem 0;
   align-self: center;
   text-align: justify;
 }

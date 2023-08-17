@@ -34,8 +34,9 @@ const AcercaPage = ({ data }) => {
       />
       <div className={acercaStyles.container}>
         <div className={acercaStyles.contentContainer}>
+          <h1 className={acercaStyles.title}>Acerca</h1>
+
           <p className={acercaStyles.text}>
-            <h1 className={acercaStyles.title}>Acerca</h1>
             El espacio de <b>metaxis.digital</b> se erige como un portal al pensamiento metamoderno,
             combinando elementos del futurismo, filosofía, matemáticas, y la espiritualidad
             oriental. Nuestra misión es difundir ideas que expandan los horizontes de conciencia y

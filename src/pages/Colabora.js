@@ -54,7 +54,7 @@ const ColaboraPage = ({ data }) => {
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                 href="https://t.me/+0ViSuNGeQ-JmZTcx"
               >
-                <b style={{ margin: '5rem 0' }}>【 a m a l g a l m a s 】</b>
+                <b style={{ margin: '5rem 0', fontSize: '3rem' }}>【 a m a l g a l m a s 】</b>
               </a>
             </p>
             <h2 style={{ marginBottom: '1rem' }}>¿Deseas colaborar?</h2>
