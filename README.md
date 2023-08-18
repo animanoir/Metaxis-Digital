@@ -1,8 +1,8 @@
 # metaxis.digital
 
-**metaxis.digital** es un blog dedicado a la difusión de ideas que entrelazan la filosofía y la computación y cómo es que interactúan una con la otra a través de una perspectiva metamoderna.
+**metaxis.digital** es un portal donde la filosofía converge con la computación a través del lente metamoderno. Este espacio busca explorar, analizar y descifrar las múltiples maneras en las que estos dos campos interactúan y co-evolucionan en nuestro mundo actual.
 
-El código fuente del blog está público para que la comunidad interesada pueda mejorarlo, así como incluir sus propios artículos al sitio. El motor del mismo es **Gatsby**, que a su vez funciona con **React**.
+El código fuente del blog es completamente abierto, permitiendo a nuestra creciente comunidad no sólo mejorar y optimizar la plataforma, sino también contribuir con sus propias reflexiones y artículos. La dinámica y versatilidad del sitio es impulsada por **React/Gatsby**.
 
 ---
 

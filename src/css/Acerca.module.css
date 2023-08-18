@@ -18,7 +18,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   margin: 0 auto;
-  margin-bottom: 2rem;
   line-height: 1;
   word-break: break-all;
 }
@@ -52,7 +51,6 @@
 .text {
   font-family: 'Karla', sans-serif;
   font-size: 1.5rem;
-  margin: 3rem 0;
   align-self: center;
   text-align: justify;
 }
@@ -62,6 +60,7 @@
     width: 100%;
     margin: 0 auto;
     flex-direction: column;
+    margin-top: 3rem;
   }
   .contentContainer {
     display: flex;
@@ -70,8 +69,9 @@
   }
   .title {
     font-family: 'Karla', sans-serif;
-    font-size: 4rem;
+    font-size: 4.5rem;
     animation-name: title;
+    margin-bottom: 3rem;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -83,7 +83,7 @@
     width: 100%;
   }
   .img {
-    width: 90%;
+    width: 100%;
   }
 }
 

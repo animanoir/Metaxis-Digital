@@ -5,7 +5,6 @@ import { graphql } from 'gatsby';
 import amalgalmas from '../images/amalgalmas.jpg';
 import amalgalmasTw from '../images/amalgalmas-tw.jpg';
 import * as acercaStyles from '../css/Acerca.module.css';
-import { StaticImage } from 'gatsby-plugin-image';
 
 export const query = graphql`
   query {
@@ -36,18 +35,20 @@ const ColaboraPage = ({ data }) => {
         <div className={acercaStyles.contentContainer}>
           <div className={acercaStyles.text}>
             <h1 className={acercaStyles.title}>Colabora con nosotr∞s :)</h1>
-            En el umbral de una nueva era, donde la frontera entre lo moderno y lo postmoderno se
-            desvanece, se encuentra <b>metaxis.digital</b>, un santuario para la <b>reflexión</b> y
-            exploración de <b>ideas metamodernas</b>.
+            <p>
+              En el umbral de una nueva era, donde la frontera entre lo moderno y lo postmoderno se
+              desvanece, se encuentra <b>metaxis.digital</b>, un santuario para la <b>reflexión</b>{' '}
+              y exploración de <b>ideas metamodernas</b>.
+            </p>
             <p>
               Nos adentramos en los vastos dominios del <b>futurismo</b>, la <b>filosofía</b>, las
               matemáticas y la <b>espiritualidad</b> oriental, forjando un puente entre tradición y
               tecnología, ciencia y esencia, razón y emoción.
             </p>
             <p>
-              Para conocer a más personas en la misma frecuencia, así como resolver dudas, pedir
-              libros difíciles de encontrar, entre otras cosas, puedes unirte a{' '}
-              <b>nuestro grupo en Telegram</b>:
+              Para profundizar en este viaje y conectar con almas afines, para intercambiar
+              perspectivas, descubrir obras esenciales o simplemente resolver inquietudes, te
+              invitamos a unirte a nuestro <b>grupo en Telegram</b>:
             </p>
             <p>
               <a

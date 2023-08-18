@@ -60,12 +60,6 @@
   transform: translate(2px, 2px);
 }
 
-@media (min-width: 768px) {
-  .button {
-    padding: 12px 50px;
-  }
-}
-
 .small {
   font-family: 'Karla', sans-serif;
 }
@@ -73,9 +67,14 @@
 @media only screen and (max-width: 769px) {
   .container {
     padding: 5rem;
+    margin-top: 5rem;
   }
   .emailinput {
     width: initial;
+  }
+
+  .button {
+    padding: 12px 50px;
   }
 }
 
