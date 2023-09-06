@@ -96,6 +96,7 @@ h2:hover {
   font-weight: normal;
   color: black;
   text-align: end;
+  line-height: 2;
 }
 
 .simpleContainer h5 {

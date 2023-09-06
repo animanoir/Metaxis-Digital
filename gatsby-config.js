@@ -7,6 +7,12 @@ module.exports = {
     twitterUrl: `https://twitter.com/metaxisdigital`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-3904053781748611`,
+      },
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
