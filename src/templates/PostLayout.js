@@ -169,6 +169,10 @@ const PostStyleWrapper = styled.div`
     width: 100%;
     margin: 1rem 0;
   }
+
+  i {
+    font-style: italic;
+  }
   @media only screen and (max-width: 600px) {
     width: 90%;
     padding: 0 1rem;

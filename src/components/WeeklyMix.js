@@ -8,7 +8,7 @@ const WeeklyMix = () => {
     <section className={weeklymixStyles.container}>
       <Marquee pauseOnHover speed={50} gradient={false}>
         <AniLink fade to="/Colabora">
-          Anuncio (15 · 08 · 23): ¡Buscamos colaboradores!
+          Anuncio (06 · 09 · 23): ¡Seguimops buscando colaboradores!
         </AniLink>
       </Marquee>
     </section>
