@@ -46,11 +46,11 @@ const Conceptos = ({
         <h1 className={conceptosStyle.title}>Todos los conceptos:</h1>
         <ul className={conceptosStyle.container}>
           {group.map(({ fieldValue: conceptName, totalCount }) => (
-            <li className={conceptosStyle.conceptcard} key={conceptName}>
-              <Link to={`/concepts/${conceptName}/`}>
+            <Link className={conceptosStyle.conceptcard} to={`/concepts/${conceptName}/`}>
+              <li key={conceptName}>
                 {conceptName} ({totalCount})
-              </Link>
-            </li>
+              </li>
+            </Link>
           ))}
         </ul>
       </main>
