@@ -116,7 +116,7 @@ const Navbar = () => {
           </AniLink>
         </li>
         <li>
-          <a target="_blank" href="https://t.me/+M6xJftfBovoyMGY5">
+          <a target="_blank" href="https://t.me/+Kuivv8Wpl2EyMTkx">
             <img src={telegramSvg} alt="Únete a nuestro canal de Telegram." />
           </a>
         </li>
