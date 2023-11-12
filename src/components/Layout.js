@@ -11,7 +11,6 @@ const IndexPage = ({ children }) => {
       <div className={layoutStyles.verticalineleft} />
       {children}
       <div className={layoutStyles.verticalineright} />
-      <NewsletterForm />
       <Footer />
     </div>
   );
