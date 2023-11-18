@@ -8,7 +8,7 @@ const Footer = () => {
         <div>
           <a target="_blank" href="https://twitter.com/metaxisdigital" rel="noopener noreferrer">
             <span className={footerStyles.twittericon} id="tw-icon">
-              .tw
+              .x
             </span>
           </a>
         </div>

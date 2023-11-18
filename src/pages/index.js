@@ -2,7 +2,7 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 import { graphql } from 'gatsby';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import ArenaContent from '../components/ArenaContent';
@@ -10,7 +10,10 @@ import WeeklyMix from '../components/WeeklyMix';
 
 export const query = graphql`
   {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { type: { ne: "libro" } } }
+    ) {
       nodes {
         id
         frontmatter {
@@ -47,7 +50,7 @@ const IndexPage = ({
 }) => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="〇"
         description={description}
         image={pulpoFlores}

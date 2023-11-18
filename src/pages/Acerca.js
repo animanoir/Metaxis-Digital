@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 import { graphql } from 'gatsby';
 import * as acercaStyles from '../css/Acerca.module.css';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
@@ -23,7 +23,7 @@ const AcercaPage = ({ data }) => {
   } = data;
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Acerca(te)"
         description={description}
         metaurl="https://metaxis.digital/Acerca"

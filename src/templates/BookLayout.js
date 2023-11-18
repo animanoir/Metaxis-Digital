@@ -1,23 +1,24 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Disqus } from 'gatsby-plugin-disqus';
-import * as postStyles from '../css/PostLayout.module.css';
+import * as bookStyles from '../css/BookLayout.module.css';
 import styled from 'styled-components';
 import Seo from '../components/Seo';
-import linkSvg from '../images/svg/Link.svg';
 
-export const postQuery = graphql`
-  query GetSinglePost($slug: String) {
+export const bookQuery = graphql`
+  query GetSingleBook($slug: String) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         date(formatString: "YYYY—MM—DD")
         title
         excerpt
         slug
-        authorContact
+        description
+        downloadLink
+        publishedYear
         image {
           childImageSharp {
             gatsbyImageData(quality: 100)
@@ -43,10 +44,20 @@ export const postQuery = graphql`
   }
 `;
 
-const PostLayout = ({ data }) => {
+const BookLayout = ({ data }) => {
   const {
     mdx: {
-      frontmatter: { title, date, author, image, excerpt, slug, concepts, authorContact },
+      frontmatter: {
+        title,
+        author,
+        image,
+        excerpt,
+        slug,
+        concepts,
+        downloadLink,
+        publishedYear,
+        description,
+      },
       body,
       id,
       frontmatter: {
@@ -60,7 +71,7 @@ const PostLayout = ({ data }) => {
     },
   } = data;
   let disqusConfig = {
-    url: `https://metaxis.digital/posts/${slug}`,
+    url: `https://metaxis.digital/libro/${slug}`,
     identifier: id,
     title: title,
   };
@@ -68,46 +79,41 @@ const PostLayout = ({ data }) => {
     <Layout>
       <Seo
         keywords={concepts}
-        title={title}
+        title={`${title} por ${author}`}
         description={excerpt}
         image={src}
         imageTwitter={imageTwitter}
-        metaurl={`https://metaxis.digital/posts/${slug}`}
+        metaurl={`https://metaxis.digital/libro/${slug}`}
         type="article"
         author={author}
       />
-      <article className={postStyles.container}>
-        <div className={postStyles.infocontainer}>
-          <GatsbyImage
-            objectPosition="center"
-            className={postStyles.featuredimage}
-            image={getImage(image)}
-            alt={title}
-          />
-          <div className={postStyles.titleContainer}>
-            <h1 className={postStyles.title}>{title}</h1>
-            <h4 className={postStyles.date}>{date}</h4>
-            <h4 className={postStyles.author}>
-              escrito por{' '}
-              <Link to={`/autores/${author}`}>
-                <b>{author}</b>
-              </Link>
-            </h4>
-            {authorContact && (
-              <div className={postStyles.authorContact}>
-                <a href={authorContact} target="_blank" rel="noopener noreferrer">
-                  <img src={linkSvg} alt={`Más información de ${author}: ${authorContact}`} />
-                </a>
-              </div>
-            )}
+      <article className={bookStyles.container}>
+        <div className={bookStyles.infoContainer}>
+          <div className={bookStyles.metaInfo}>
+            <h1 className={bookStyles.title}>
+              {title}, <span style={{ fontWeight: 'normal' }}>{author}</span>
+            </h1>
+            <h3 className={bookStyles.title}>{publishedYear}</h3>
+            <h4 className={bookStyles.description}>{description}</h4>
           </div>
+          <GatsbyImage className={bookStyles.bookCover} image={getImage(image)} alt={title} />
         </div>
         <PostStyleWrapper>
           <MDXRenderer>{body}</MDXRenderer>
+          <div>
+            <h4 className={bookStyles.downloadWrapper}>
+              <a
+                className={bookStyles.downloadLink}
+                href={downloadLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                📥 → Descarga
+              </a>
+            </h4>
+            <Disqus config={disqusConfig} />
+          </div>
         </PostStyleWrapper>
-        <div className={postStyles.disqus}>
-          <Disqus config={disqusConfig} />
-        </div>
       </article>
     </Layout>
   );
@@ -118,7 +124,6 @@ const PostStyleWrapper = styled.div`
   margin: 0 auto;
   font-family: 'Lora', serif;
   line-height: 1.55;
-  text-align: justify;
   hr {
     width: 25%;
     background-color: black;
@@ -132,9 +137,11 @@ const PostStyleWrapper = styled.div`
   }
   h1 {
     font-size: 2.5rem;
+    font-family: 'Karla', sans-serif;
   }
   h2 {
     font-size: 2rem;
+    font-family: 'Karla', sans-serif;
   }
   h3 {
     font-size: 1.5rem;
@@ -176,10 +183,6 @@ const PostStyleWrapper = styled.div`
   @media only screen and (max-width: 600px) {
     width: 90%;
     padding: 0 1rem;
-    blockquote {
-      font-family: 'Karla', serif;
-      font-size: 1.5rem;
-    }
     .container {
       padding: 0 0.5rem 5rem 0.5rem;
     }
@@ -195,4 +198,4 @@ const PostStyleWrapper = styled.div`
   }
 `;
 
-export default PostLayout;
+export default BookLayout;

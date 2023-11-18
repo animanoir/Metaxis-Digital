@@ -1,13 +1,11 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 import pulpoConFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoConFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
-
 import { Link } from 'gatsby';
 import * as conceptosStyle from '../css/Conceptos.module.css';
-import ArenaContent from '../components/ArenaContent';
 
 export const query = graphql`
   {
@@ -33,7 +31,7 @@ const Conceptos = ({
 }) => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Conceptos"
         description={description}
         image={pulpoConFlores}

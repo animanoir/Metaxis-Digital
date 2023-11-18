@@ -1,0 +1,110 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 14vh;
+  margin-bottom: 14vh;
+}
+
+.infoContainer {
+  width: 70%;
+  margin: 3vh auto 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.metaInfo {
+  width: 50%;
+  padding-right: 5%;
+}
+
+.bookContainer {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  word-break: break-word;
+  letter-spacing: -0.1rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+.bookCover {
+  width: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  object-position: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.description {
+  font-family: 'Karla', 'sans-serif';
+  font-weight: normal;
+  line-height: 2;
+}
+
+.downloadLink {
+  margin-top: 5px;
+  font-size: 1.5em;
+  text-align: end;
+  font-family: 'Karla', sans-serif;
+}
+
+.downloadWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+blockquote p {
+  font-family: 'Karla', serif !important;
+  font-size: 1.8rem; /* Tamaño grande para destacar */
+  color: #0dba7e; /* A color taken from the image for the text */
+  background-color: #0db97e; /* A slightly different color from the image for the background */
+  border-left: 5px solid #0eb97f; /* A contrasting color for the border */
+  padding: 2rem; /* Espaciado interno para una mejor lectura */
+  margin: 20px 0; /* Margen para separar del texto circundante */
+  line-height: 1.6; /* Espaciado de línea para mejorar la legibilidad */
+  text-align: justify; /* Alineación justificada para un aspecto elegante */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+  border-radius: 4px; /* Bordes redondeados para suavizar el aspecto */
+  transition: all 1s ease-in-out; /* Transición suave para efectos de hover */
+  font-weight: bold;
+}
+
+blockquote p:hover {
+  filter: invert(100%);
+  cursor: progress;
+}
+
+@media (max-width: 768px) {
+  .bookContainer {
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .metaInfo {
+    width: 100%;
+    padding-right: initial;
+  }
+
+  .infoContainer {
+    width: 90%;
+    margin: 2vh auto 5vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+  .bookCover {
+    width: 100%;
+  }
+}
