@@ -80,9 +80,12 @@ blockquote p {
   font-weight: bold;
 }
 
+blockquote:hover {
+  cursor: url('/butterfly32.gif'), auto;
+}
+
 blockquote p:hover {
   filter: invert(100%);
-  cursor: progress;
 }
 
 @media (max-width: 768px) {

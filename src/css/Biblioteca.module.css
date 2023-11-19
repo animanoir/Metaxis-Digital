@@ -1,0 +1,169 @@
+.container {
+  margin: 0 auto;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Karla', sans-serif;
+  font-size: 5rem;
+  animation-name: title;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin: 0 auto;
+  line-height: 1;
+  word-break: break-all;
+}
+
+@keyframes title {
+  0% {
+    transform: rotateZ(1deg);
+  }
+
+  50% {
+    transform: rotateZ(-1deg);
+  }
+
+  100% {
+    transform: rotateZ(1deg);
+  }
+}
+
+.image {
+  max-width: 100%;
+  width: 50%;
+  height: 50%;
+  height: auto;
+}
+
+.image:hover {
+  filter: invert(1);
+  transition: filter 0.3s ease;
+}
+
+.text {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5rem;
+  align-self: center;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .title {
+    font-family: 'Karla', sans-serif;
+    font-size: 4.5rem;
+    animation-name: title;
+    margin-bottom: 3rem;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .text {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 8rem;
+    width: 100%;
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Ajusta el tamaño mínimo de la columna */
+  gap: 20px; /* Espacio entre los elementos del grid */
+  padding: 0;
+  list-style: none;
+}
+
+.booksGrid li {
+  background-color: #f9f9f9; /* Color de fondo de cada elemento del grid */
+  border: 1px solid #ddd; /* Borde para cada libro */
+  padding: 15px; /* Espacio interno de cada libro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booksGrid li:hover {
+  transform: translateY(-5px); /* Efecto de elevación al hacer hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.booksGrid h2 {
+  font-size: 1.2rem; /* Tamaño del título */
+  margin-bottom: 10px;
+  font-family: 'Karla', sans-serif;
+  padding-top: 1rem;
+}
+
+.booksGrid p {
+  font-size: 0.9rem; /* Tamaño de la descripción */
+  line-height: 1.4;
+  color: #333; /* Color del texto */
+  font-family: 'lora', serif;
+}
+
+/* Estilos para la imagen de Gatsby */
+.gatsby-image-wrapper {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para el link */
+.booksGrid a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.booksGrid a:hover {
+  background-color: #e0e0e0;
+}
+
+@media only screen and (max-width: 769px) {
+  .text {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}

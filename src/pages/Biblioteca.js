@@ -2,7 +2,7 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import { graphql } from 'gatsby';
-import * as acercaStyles from '../css/Acerca.module.css';
+import * as bibliotecaStyles from '../css/Biblioteca.module.css';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import { Link } from 'gatsby';
@@ -22,7 +22,8 @@ export const query = graphql`
           date(formatString: "YYYY—MM—DD")
           author
           concepts
-          excerpt
+          description
+          publishedYear
           image {
             childImageSharp {
               gatsbyImageData(quality: 90, placeholder: BLURRED)
@@ -57,26 +58,33 @@ const Biblioteca = ({ data }) => {
         image={pulpoFlores}
         imageTwitter={pulpoFloresTw}
       />
-      <div className={acercaStyles.container}>
-        <div className={acercaStyles.contentContainer}>
-          <h1 className={acercaStyles.title}>Biblioteca</h1>
-          <p className={acercaStyles.text}>La gran biblioteca de metaxis.digital.</p>
+      <div className={bibliotecaStyles.container}>
+        <div className={bibliotecaStyles.contentContainer}>
+          <h1 className={bibliotecaStyles.title}>Biblioteca</h1>
+          <p className={bibliotecaStyles.text}>La gran biblioteca de metaxis.digital.</p>
           {/* Book List */}
-          <ul>
+          <ul className={bibliotecaStyles.booksGrid}>
             {libros.map((libro) => (
-              <li key={libro.id}>
-                <h2>{libro.frontmatter.title}</h2>
-                <p>Author: {libro.frontmatter.author}</p>
-                <p>Date: {libro.frontmatter.date}</p>
-                <p>{libro.frontmatter.excerpt}</p>
-                <Link to={`/libro/${libro.frontmatter.slug}`}>Read More</Link>
-                {libro.frontmatter.image && (
-                  <GatsbyImage
-                    image={getImage(libro.frontmatter.image.childImageSharp.gatsbyImageData)}
-                    alt={libro.frontmatter.title}
-                  />
-                )}
-              </li>
+              <Link
+                to={`/libro/${libro.frontmatter.slug}`}
+                className={bibliotecaStyles.bookContainer}
+              >
+                <li key={libro.id}>
+                  {libro.frontmatter.image && (
+                    <GatsbyImage
+                      image={getImage(libro.frontmatter.image.childImageSharp.gatsbyImageData)}
+                      alt={libro.frontmatter.title}
+                    />
+                  )}
+                  <h2>{libro.frontmatter.title}</h2>
+                  <p>
+                    <i>
+                      {libro.frontmatter.author}—{libro.frontmatter.publishedYear}
+                    </i>
+                  </p>
+                  <p>{libro.frontmatter.description}</p>
+                </li>
+              </Link>
             ))}
           </ul>
         </div>
@@ -86,3 +94,11 @@ const Biblioteca = ({ data }) => {
 };
 
 export default Biblioteca;
+
+// {libro.frontmatter.concepts && (
+//   <ul>
+//     {libro.frontmatter.concepts.map((concept, index) => (
+//       <li key={index}>{concept}</li>
+//     ))}
+//   </ul>
+// )}

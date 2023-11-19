@@ -14,9 +14,8 @@ export const bookQuery = graphql`
       frontmatter {
         date(formatString: "YYYY—MM—DD")
         title
-        excerpt
-        slug
         description
+        slug
         downloadLink
         publishedYear
         image {
@@ -51,7 +50,6 @@ const BookLayout = ({ data }) => {
         title,
         author,
         image,
-        excerpt,
         slug,
         concepts,
         downloadLink,
@@ -80,7 +78,7 @@ const BookLayout = ({ data }) => {
       <Seo
         keywords={concepts}
         title={`${title} por ${author}`}
-        description={excerpt}
+        description={description}
         image={src}
         imageTwitter={imageTwitter}
         metaurl={`https://metaxis.digital/libro/${slug}`}
@@ -145,22 +143,27 @@ const PostStyleWrapper = styled.div`
   }
   h3 {
     font-size: 1.5rem;
+    font-family: 'Karla', sans-serif;
+    margin-top: 5rem;
   }
   h4 {
     font-size: 1.25rem;
+    font-family: 'Karla', sans-serif;
   }
   h5 {
     font-size: 1rem;
+    font-family: 'Karla', sans-serif;
   }
   h6 {
     font-size: 0.75rem;
+    font-family: 'Karla', sans-serif;
   }
   blockquote {
     font-family: 'Karla', serif;
     font-size: 1.8rem;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: justify;
     font-family: 'Lora', serif;
     color: #000;
