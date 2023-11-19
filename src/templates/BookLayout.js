@@ -99,16 +99,6 @@ const BookLayout = ({ data }) => {
         <PostStyleWrapper>
           <MDXRenderer>{body}</MDXRenderer>
           <div>
-            <h4 className={bookStyles.downloadWrapper}>
-              <a
-                className={bookStyles.downloadLink}
-                href={downloadLink}
-                target="_blank"
-                rel="noreferrer"
-              >
-                📥 → Descarga
-              </a>
-            </h4>
             <Disqus config={disqusConfig} />
           </div>
         </PostStyleWrapper>
