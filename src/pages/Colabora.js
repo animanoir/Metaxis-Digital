@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import Seo from '../components/Seo';
+import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
 import amalgalmas from '../images/amalgalmas.jpg';
 import amalgalmasTw from '../images/amalgalmas-tw.jpg';
@@ -22,7 +22,7 @@ const ColaboraPage = ({ data }) => {
   } = data;
   return (
     <Layout>
-      <Seo
+      <SEO
         title="Colabora"
         image={amalgalmas}
         imageTwitter={amalgalmasTw}

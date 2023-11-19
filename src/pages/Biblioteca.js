@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import Seo from '../components/Seo';
+import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
 import * as bibliotecaStyles from '../css/Biblioteca.module.css';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
@@ -49,7 +49,7 @@ const Biblioteca = ({ data }) => {
   }
   return (
     <Layout>
-      <Seo
+      <SEO
         title="Biblioteca"
         description={description}
         metaurl="https://metaxis.digital/Biblioteca"

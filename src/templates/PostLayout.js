@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Disqus } from 'gatsby-plugin-disqus';
 import * as postStyles from '../css/PostLayout.module.css';
 import styled from 'styled-components';
-import Seo from '../components/Seo';
+import SEO from '../components/SEO';
 import linkSvg from '../images/svg/Link.svg';
 
 export const postQuery = graphql`
@@ -66,7 +66,7 @@ const PostLayout = ({ data }) => {
   };
   return (
     <Layout>
-      <Seo
+      <SEO
         keywords={concepts}
         title={title}
         description={excerpt}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-const Seo = ({
+const SEO = ({
   title,
   description,
   image,
@@ -68,4 +68,4 @@ const Seo = ({
   );
 };
 
-export default Seo;
+export default SEO;

@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Disqus } from 'gatsby-plugin-disqus';
 import * as bookStyles from '../css/BookLayout.module.css';
 import styled from 'styled-components';
-import Seo from '../components/Seo';
+import SEO from '../components/SEO';
 
 export const bookQuery = graphql`
   query GetSingleBook($slug: String) {
@@ -75,7 +75,7 @@ const BookLayout = ({ data }) => {
   };
   return (
     <Layout>
-      <Seo
+      <SEO
         keywords={concepts}
         title={`${title} por ${author}`}
         description={description}

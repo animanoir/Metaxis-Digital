@@ -2,7 +2,7 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 import { graphql } from 'gatsby';
-import Seo from '../components/Seo';
+import SEO from '../components/SEO';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import ArenaContent from '../components/ArenaContent';
@@ -50,7 +50,7 @@ const IndexPage = ({
 }) => {
   return (
     <Layout>
-      <Seo
+      <SEO
         title="〇"
         description={description}
         image={pulpoFlores}

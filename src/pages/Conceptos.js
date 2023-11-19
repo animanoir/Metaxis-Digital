@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
-import Seo from '../components/Seo';
+import SEO from '../components/SEO';
 import pulpoConFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoConFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import { Link } from 'gatsby';
@@ -31,7 +31,7 @@ const Conceptos = ({
 }) => {
   return (
     <Layout>
-      <Seo
+      <SEO
         title="Conceptos"
         description={description}
         image={pulpoConFlores}

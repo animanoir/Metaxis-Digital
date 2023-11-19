@@ -2,7 +2,7 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 import { graphql } from 'gatsby';
-import Seo from '../components/Seo';
+import SEO from '../components/SEO';
 import pulpoConFlores from '../images/metaxisdigital.jpg';
 import * as conceptLayoutStyles from '../css/ConceptLayout.module.css';
 
@@ -46,7 +46,7 @@ const AuthorLayout = ({ pageContext, data }) => {
   const { author, authorContact } = pageContext;
   return (
     <Layout>
-      <Seo
+      <SEO
         title={author}
         description={description}
         image={pulpoConFlores}
