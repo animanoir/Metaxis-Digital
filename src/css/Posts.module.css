@@ -71,7 +71,7 @@ h2:hover {
 
 .simpleContainer h2 {
   color: black;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .simpleContainer h2:hover {
@@ -83,7 +83,7 @@ h2:hover {
   margin: 0.5rem 0;
   font-family: 'lora', serif;
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: black;
   padding: 0.5rem;
   width: fit-content;

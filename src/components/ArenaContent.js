@@ -70,7 +70,7 @@ const ArenaContent = () => {
           onFocus={handleMouseOver}
           onBlur={handleMouseOut}
         >
-          {hovering ? '++++++++++' : 'inspiración'}
+          {hovering ? '++++++++++' : '( are.na)'}
         </a>
         <p className={arenaContentStyles.time}>{time}</p>
       </h2>

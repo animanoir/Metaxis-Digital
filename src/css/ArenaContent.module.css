@@ -1,35 +1,32 @@
 .container {
   display: grid;
-  position: relative;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-content: center;
   place-items: center;
-  width: 85%;
-  gap: 0;
-  margin: 0 auto;
+  width: 75%;
+  gap: 1rem;
   margin-top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image {
   width: 100%;
   height: auto;
+  transition: filter 0.3s ease;
 }
 
 .image:hover {
   filter: invert(100%);
-  transition: filter 0.3s ease;
 }
 
 .title {
   font-size: 2.5rem;
   font-weight: bold;
-  text-align: justify !important;
   text-align: center;
   font-family: 'Karla', sans-serif;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
 }
 
 .time {
@@ -52,31 +49,11 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .container {
-    display: grid;
-    padding: 0 1rem 10rem 1rem;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-content: center;
-    place-items: center;
-    grid-gap: 0;
-  }
-  .title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
 @media only screen and (max-width: 769px) {
   .container {
-    display: grid;
-    padding: 0 1rem 10rem 1rem;
+    padding: 0 1rem 10rem;
     grid-template-columns: 1fr;
-    justify-content: center;
-    align-content: center;
-    place-items: center;
-    grid-gap: 0;
+    gap: 0;
   }
   .title {
     font-size: 2rem;
