@@ -26,7 +26,7 @@ export const query = graphql`
           publishedYear
           image {
             childImageSharp {
-              gatsbyImageData(quality: 90, placeholder: BLURRED)
+              gatsbyImageData(quality: 60, placeholder: BLURRED)
             }
           }
         }

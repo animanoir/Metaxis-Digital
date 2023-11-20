@@ -20,7 +20,7 @@ export const bookQuery = graphql`
         publishedYear
         image {
           childImageSharp {
-            gatsbyImageData(quality: 100)
+            gatsbyImageData(quality: 50)
             parent {
               ... on File {
                 relativePath
