@@ -15,7 +15,7 @@
 }
 
 .title {
-  font-size: 1.48rem;
+  font-size: 1.3rem;
   color: black;
 }
 
@@ -27,7 +27,7 @@
   display: flex;
   list-style-type: none;
   font-weight: normal;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   margin: 0;
   align-items: baseline;
   padding-left: 0;
