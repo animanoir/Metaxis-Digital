@@ -65,13 +65,15 @@ const Biblioteca = ({ data }) => {
           {/* Book List */}
           <ul className={bibliotecaStyles.booksGrid}>
             {libros.map((libro) => (
-              <Link
-                to={`/libro/${libro.frontmatter.slug}`}
-                className={bibliotecaStyles.bookContainer}
-              >
-                <li key={libro.id}>
+              <li>
+                <Link
+                  key={libro.id}
+                  to={`/libro/${libro.frontmatter.slug}`}
+                  className={bibliotecaStyles.bookContainer}
+                >
                   {libro.frontmatter.image && (
                     <GatsbyImage
+                      quality={50}
                       image={getImage(libro.frontmatter.image.childImageSharp.gatsbyImageData)}
                       alt={libro.frontmatter.title}
                     />
@@ -83,8 +85,8 @@ const Biblioteca = ({ data }) => {
                     </i>
                   </p>
                   <p>{libro.frontmatter.description}</p>
-                </li>
-              </Link>
+                </Link>
+              </li>
             ))}
           </ul>
         </div>

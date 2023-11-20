@@ -136,6 +136,20 @@ h2:hover {
   color: #dc143c;
 }
 
+/* Estilos para tabletas */
+@media only screen and (max-width: 768px) {
+  .featuredContainer {
+    padding: 30vh 15vw;
+  }
+  .featuredContainer h2 {
+    font-size: 3rem;
+  }
+  .simpleContainer {
+    width: 60%;
+  }
+}
+
+/* Estilos para dispositivos móviles */
 @media only screen and (max-width: 650px) {
   .featuredContainer {
     padding: 20vh 10vw;
