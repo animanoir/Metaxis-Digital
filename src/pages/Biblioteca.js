@@ -61,7 +61,9 @@ const Biblioteca = ({ data }) => {
       <div className={bibliotecaStyles.container}>
         <div className={bibliotecaStyles.contentContainer}>
           <h1 className={bibliotecaStyles.title}>Biblioteca</h1>
-          <p className={bibliotecaStyles.text}>La gran biblioteca de metaxis.digital.</p>
+          <p className={bibliotecaStyles.text}>
+            La gran biblioteca de <b>metaxis.digital</b> (en construcción 🙂).
+          </p>
           {/* Book List */}
           <ul className={bibliotecaStyles.booksGrid}>
             {libros.map((libro) => (
