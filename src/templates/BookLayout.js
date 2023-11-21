@@ -118,6 +118,10 @@ const BookLayout = ({ data }) => {
 };
 
 const PostStyleWrapper = styled.div`
+  .rotado {
+    transform: rotate(180deg);
+  }
+
   width: 55%;
   margin: 0 auto;
   font-family: 'Lora', serif;
@@ -136,6 +140,7 @@ const PostStyleWrapper = styled.div`
   h1 {
     font-size: 2.5rem;
     font-family: 'Karla', sans-serif;
+    line-height: 1.1;
   }
   h2 {
     font-size: 2rem;
