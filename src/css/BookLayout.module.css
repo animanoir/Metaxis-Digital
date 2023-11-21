@@ -97,6 +97,11 @@ blockquote p:hover {
   .metaInfo {
     width: 100%;
     padding-right: initial;
+    padding-bottom: 2rem;
+  }
+
+  blockquote {
+    margin: 0;
   }
 
   .infoContainer {
