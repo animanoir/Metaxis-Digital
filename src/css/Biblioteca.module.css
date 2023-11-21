@@ -103,13 +103,14 @@
   .container,
   .contentContainer {
     flex-direction: column;
-    width: 100%;
+    width: 95%;
   }
   .title {
     font-size: 4.5rem;
   }
   .text,
   .image {
+    font-size: 1.3rem;
     width: 100%;
     margin-bottom: 2rem;
   }
