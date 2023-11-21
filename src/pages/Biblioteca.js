@@ -51,7 +51,7 @@ const Biblioteca = ({ data }) => {
     <Layout>
       <SEO
         title="Biblioteca"
-        description={description}
+        description="La gran biblioteca de metaxis.digital"
         metaurl="https://metaxis.digital/Biblioteca"
         type="website"
         author="Óscar A. Montiel"
