@@ -121,7 +121,16 @@ const PostStyleWrapper = styled.div`
   .rotado {
     transform: rotate(180deg);
   }
+  .separado {
+    letter-spacing: 2rem;
+  }
 
+  .a {
+    font-size: 5.5rem !important;
+  }
+  .b {
+    font-size: 5rem !important;
+  }
   width: 55%;
   margin: 0 auto;
   font-family: 'Lora', serif;
