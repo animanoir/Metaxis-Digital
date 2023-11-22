@@ -188,6 +188,7 @@ const PostStyleWrapper = styled.div`
   }
   li {
     font-size: 1.2rem;
+    padding: 0.5rem 0;
   }
   iframe {
     width: 100%;
