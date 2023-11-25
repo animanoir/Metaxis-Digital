@@ -6,10 +6,10 @@
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
-  grid-auto-rows: minmax(75px, auto);
+  /* grid-auto-rows: minmax(75px, auto); */
   grid-auto-flow: dense;
   gap: 1rem;
-  width: 100%;
+  width: 50%;
   margin: 0 auto;
   justify-content: center;
   align-items: start; /* Alineación al inicio para manejar alturas variables */
@@ -54,7 +54,7 @@
 }
 
 .conceptName {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: normal;
 }
 
@@ -120,6 +120,7 @@
 @media only screen and (max-width: 600px) {
   .container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 0;
   }
   .conceptcard {
     grid-column: span 1;
