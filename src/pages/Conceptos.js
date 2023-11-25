@@ -41,11 +41,14 @@ const Conceptos = ({
         author="Óscar A. Montiel"
       />
       <main className={conceptosStyle.maincontainer}>
-        <h1 className={conceptosStyle.title}>Todos los conceptos:</h1>
         <ul className={conceptosStyle.container}>
           {group.map(({ fieldValue: conceptName, totalCount }) => (
-            <Link className={conceptosStyle.conceptcard} to={`/concepts/${conceptName}/`}>
-              <li key={conceptName}>
+            <Link
+              className={conceptosStyle.conceptcard}
+              to={`/concepts/${conceptName}/`}
+              data-tooltip="Información adicional aquí"
+            >
+              <li key={conceptName} className={conceptosStyle.conceptTitle}>
                 {conceptName} ({totalCount})
               </li>
             </Link>
