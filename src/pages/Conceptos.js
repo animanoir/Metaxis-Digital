@@ -37,7 +37,7 @@ const Conceptos = ({
     cards.forEach((card) => {
       const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
-      const amplitude = Math.random() * 7;
+      const amplitude = Math.random() * 7.5;
       const frequency = Math.random() * 10.0;
       let time = 0;
 
