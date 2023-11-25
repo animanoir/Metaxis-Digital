@@ -46,10 +46,10 @@ const Conceptos = ({
             <Link
               className={conceptosStyle.conceptcard}
               to={`/concepts/${conceptName}/`}
-              data-tooltip="Información adicional aquí"
+              // data-tooltip="Información adicional aquí"
             >
               <li key={conceptName} className={conceptosStyle.conceptTitle}>
-                {conceptName} ({totalCount})
+                <span className={conceptosStyle.conceptName}>{conceptName}</span> = {totalCount}
               </li>
             </Link>
           ))}

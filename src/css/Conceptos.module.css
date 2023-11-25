@@ -1,15 +1,15 @@
 .maincontainer {
-  margin: 7.5rem 10rem;
-  margin-top: 15vh;
+  margin: 7.5rem 20rem;
+  margin-top: 10vh;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
   grid-auto-rows: minmax(75px, auto);
   grid-auto-flow: dense;
   gap: 1rem;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   justify-content: center;
   align-items: start; /* Alineación al inicio para manejar alturas variables */
@@ -47,16 +47,27 @@
   background-color: black;
   color: white;
   font-family: 'Karla', sans-serif;
-  font-size: 1.5rem;
-  padding: 1rem;
+  padding: 0.8rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.2s ease-in, box-shadow 0.2s ease-in, background-color 0.2s ease-in;
+  word-wrap: break-word;
+}
+
+.conceptName {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.conceptName:hover {
+  font-weight: bold;
 }
 
 .conceptcard:hover {
   transform: scale(1.05);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  background-color: #333; /* Cambiar según el esquema de color deseado */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Shadow with blur effect */
+  transition: box-shadow 0.3s ease;
+  color: black;
 }
 
 .conceptcard a {
