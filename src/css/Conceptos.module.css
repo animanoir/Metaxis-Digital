@@ -91,8 +91,8 @@
 }
 
 /* Tooltip */
-.conceptcard:hover::after {
-  content: attr(data-tooltip); /* Asegúrate de agregar un atributo 'data-tooltip' en tu HTML */
+/* .conceptcard:hover::after {
+  content: attr(data-tooltip);
   position: absolute;
   bottom: -30px;
   left: 50%;
@@ -103,7 +103,7 @@
   border-radius: 4px;
   font-size: 0.8rem;
   white-space: nowrap;
-}
+} */
 
 /* Adaptaciones para dispositivos móviles */
 @media only screen and (max-width: 600px) {
