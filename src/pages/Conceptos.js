@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
@@ -29,6 +30,27 @@ const Conceptos = ({
     site: { description },
   },
 }) => {
+  useEffect(() => {
+    // Tu código de aleatoriedad aquí
+    const cards = document.querySelectorAll(`.${conceptosStyle.conceptcard}`);
+
+    cards.forEach((card) => {
+      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+      const amplitude = Math.random() * 7;
+      const frequency = Math.random() * 10.0;
+      let time = 0;
+
+      setInterval(() => {
+        time += frequency;
+        const rotation = amplitude * Math.sin(time) * 0.5;
+        card.style.transform = `rotate(${rotation}deg)`; // Ejemplo: Rotación aleatoria entre -10 y 10 grados
+      }, 100);
+
+      // card.style.backgroundColor = randomColor;
+    });
+  }, []);
+
   return (
     <Layout>
       <SEO
