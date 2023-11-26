@@ -30,16 +30,18 @@ const Conceptos = ({
     site: { description },
   },
 }) => {
-  useEffect(() => {
-    // Tu código de aleatoriedad aquí
-    const cards = document.querySelectorAll(`.${conceptosStyle.conceptcard}`);
+  // useEffect(() => {
+  //   // Tu código de aleatoriedad aquí
+  //   const cards = document.querySelectorAll(`.${conceptosStyle.conceptcard}`);
 
-    cards.forEach((card) => {
-      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Ejemplo: Color aleatorio
+  //   cards.forEach((card) => {
+  //     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Ejemplo: Color aleatorio
 
-      card.style.backgroundColor = randomColor;
-    });
-  }, []);
+  //     card.style.backgroundColor = randomColor;
+  //   });
+  // }, []);
+
+  const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
   return (
     <Layout>
@@ -58,6 +60,7 @@ const Conceptos = ({
             <Link
               className={conceptosStyle.conceptcard}
               to={`/concepts/${conceptName}/`}
+              style={{ backgroundColor: getRandomColor() }}
               // data-tooltip="Información adicional aquí"
             >
               <li key={conceptName} className={conceptosStyle.conceptTitle}>
