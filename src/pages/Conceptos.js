@@ -35,19 +35,9 @@ const Conceptos = ({
     const cards = document.querySelectorAll(`.${conceptosStyle.conceptcard}`);
 
     cards.forEach((card) => {
-      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Ejemplo: Color aleatorio
 
-      const amplitude = Math.random() * 7.5;
-      const frequency = Math.random() * 10.0;
-      let time = 0;
-
-      setInterval(() => {
-        time += frequency;
-        const rotation = amplitude * Math.sin(time) * 0.5;
-        card.style.transform = `rotate(${rotation}deg)`; // Ejemplo: Rotación aleatoria entre -10 y 10 grados
-      }, 100);
-
-      // card.style.backgroundColor = randomColor;
+      card.style.backgroundColor = randomColor;
     });
   }, []);
 
