@@ -24,54 +24,56 @@ export const query = graphql`
   }
 `;
 
-const Conceptos = ({
-  data: {
-    allMdx: { group },
-    site: { description },
-  },
-}) => {
-  // useEffect(() => {
-  //   // Tu código de aleatoriedad aquí
-  //   const cards = document.querySelectorAll(`.${conceptosStyle.conceptcard}`);
+const Conceptos = React.memo(
+  ({
+    data: {
+      allMdx: { group },
+      site: { description },
+    },
+  }) => {
+    // useEffect(() => {
+    //   // Tu código de aleatoriedad aquí
+    //   const cards = document.querySelectorAll(`.${conceptosStyle.conceptcard}`);
 
-  //   cards.forEach((card) => {
-  //     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Ejemplo: Color aleatorio
+    //   cards.forEach((card) => {
+    //     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Ejemplo: Color aleatorio
 
-  //     card.style.backgroundColor = randomColor;
-  //   });
-  // }, []);
+    //     card.style.backgroundColor = randomColor;
+    //   });
+    // }, []);
 
-  const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
-  return (
-    <Layout>
-      <SEO
-        title="Conceptos"
-        description={description}
-        image={pulpoConFlores}
-        imageTwitter={pulpoConFloresTw}
-        metaurl="https://metaxis.digital/Conceptos"
-        type="website"
-        author="Óscar A. Montiel"
-      />
-      <main className={conceptosStyle.maincontainer}>
-        <ul className={conceptosStyle.container}>
-          {group.map(({ fieldValue: conceptName, totalCount }) => (
-            <Link
-              className={conceptosStyle.conceptcard}
-              to={`/concepts/${conceptName}/`}
-              style={{ backgroundColor: getRandomColor() }}
-              // data-tooltip="Información adicional aquí"
-            >
-              <li key={conceptName} className={conceptosStyle.conceptTitle}>
-                <span className={conceptosStyle.conceptName}>{conceptName}</span> = {totalCount}
-              </li>
-            </Link>
-          ))}
-        </ul>
-      </main>
-    </Layout>
-  );
-};
+    return (
+      <Layout>
+        <SEO
+          title="Conceptos"
+          description={description}
+          image={pulpoConFlores}
+          imageTwitter={pulpoConFloresTw}
+          metaurl="https://metaxis.digital/Conceptos"
+          type="website"
+          author="Óscar A. Montiel"
+        />
+        <main className={conceptosStyle.maincontainer}>
+          <ul className={conceptosStyle.container}>
+            {group.map(({ fieldValue: conceptName, totalCount }) => (
+              <Link
+                className={conceptosStyle.conceptcard}
+                to={`/concepts/${conceptName}/`}
+                style={{ backgroundColor: getRandomColor() }}
+                // data-tooltip="Información adicional aquí"
+              >
+                <li key={conceptName} className={conceptosStyle.conceptTitle}>
+                  <span className={conceptosStyle.conceptName}>{conceptName}</span> = {totalCount}
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </main>
+      </Layout>
+    );
+  }
+);
 
 export default Conceptos;
