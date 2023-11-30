@@ -176,6 +176,12 @@ const PostStyleWrapper = styled.div`
     font-family: 'Karla', serif;
     font-size: 1.8rem;
   }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    filter: invert(1);
+  }
   p {
     font-size: 1.2rem;
     text-align: justify;
