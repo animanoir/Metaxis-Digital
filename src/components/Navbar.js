@@ -29,6 +29,27 @@ const Navbar = () => {
     'amor',
     'blanco',
     'unos',
+    'existencialismo',
+    'creatividad',
+    'leyendas',
+    'ultraterrenal',
+    'investigación',
+    'estrellas',
+    'existencia',
+    'renacimiento',
+    'alma',
+    'contemplaciones',
+    'analogías',
+    'onirismo',
+    'percepción',
+    'energía oscura',
+    'esencia',
+    'individualismo',
+    'equilibrio',
+    'transhumanismo',
+    'pasión',
+    'claridad',
+    'pluralidad',
   ];
   const antitesisWords = [
     'computación',
@@ -44,10 +65,26 @@ const Navbar = () => {
     'metamorfosis',
     'yo',
     'yang',
-    'ludismo',
+    'capitalismo',
     'amor',
     'negro',
     'ceros',
+    'cibernética',
+    'neurociencia',
+    'lógica',
+    'contraposición',
+    'partículas',
+    'robots',
+    'comunismo',
+    'galaxias',
+    'vacío',
+    'transformación',
+    'ego',
+    'dualidad',
+    'tecnocracia',
+    'ontología',
+    'oscuridad',
+    'singularidad',
   ];
 
   const getRandomWord = (words) => {
@@ -91,9 +128,9 @@ const Navbar = () => {
         <Link to="/">
           <h1 className={navbarStyles.title}>
             <AniLink fade to="/">
-              <b>metaxis.digital</b>
+              {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}
               <span className={navbarStyles.antitesis} style={{ fontWeight: 'normal' }}>
-                | {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}
+                | <b>metaxis.digital</b>
               </span>{' '}
             </AniLink>{' '}
           </h1>
