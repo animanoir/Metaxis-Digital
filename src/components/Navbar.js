@@ -128,7 +128,10 @@ const Navbar = () => {
         <Link to="/">
           <h1 className={navbarStyles.title}>
             <AniLink fade to="/">
-              {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}
+              <span style={{ fontWeight: 'normal' }}>
+                {' '}
+                {tesisAntitesis.tesis} — {tesisAntitesis.antitesis}{' '}
+              </span>
               <span className={navbarStyles.antitesis} style={{ fontWeight: 'normal' }}>
                 | <b>metaxis.digital</b>
               </span>{' '}
