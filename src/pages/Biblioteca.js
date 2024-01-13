@@ -84,7 +84,8 @@ const Biblioteca = ({ data }) => {
                   <h2>{libro.frontmatter.title}</h2>
                   <p>
                     <i>
-                      {libro.frontmatter.author}—{libro.frontmatter.publishedYear}
+                      {libro.frontmatter.author}
+                      {libro.frontmatter.publishedYear ? `—${libro.frontmatter.publishedYear}` : ''}
                     </i>
                   </p>
                   <p>{libro.frontmatter.description}</p>
