@@ -1,35 +1,31 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import Posts from '../components/Posts';
 import { graphql } from 'gatsby';
 
-export const query = graphql`
-  query {
-    allMdx {
-      nodes {
-        id
-        frontmatter {
-          title
-          slug
-          date
-          author
-          concepts
-          excerpt
-          image {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     allMdx {
+//       nodes {
+//         id
+//         frontmatter {
+//           title
+//           slug
+//           date
+//           author
+//           concepts
+//           excerpt
+//           image {
+//             childImageSharp {
+//               gatsbyImageData
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 const BoletinSubscribe = ({ data }) => {
-  const {
-    allMdx: { nodes: posts },
-  } = data;
   return (
     <Layout>
       <h1

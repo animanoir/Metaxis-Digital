@@ -6,8 +6,8 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 const WeeklyMix = () => {
   return (
     <section className={weeklymixStyles.container}>
-      <Marquee style={{ textDecoration: 'none' }} pauseOnHover speed={50} gradient={false}>
-        <AniLink style={{ textDecoration: 'none' }} fade to="/Colabora">
+      <Marquee style={{ width: '100vw' }} pauseOnHover speed={50} gradient={false}>
+        <AniLink fade to="/Colabora">
           💕 ¡Buscamos colaboradores! 💞
         </AniLink>
       </Marquee>

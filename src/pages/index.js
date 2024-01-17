@@ -52,7 +52,7 @@ const IndexPage = ({
   return (
     <Layout>
       <Seo
-        title="metaxis.digital"
+        title="Génesis"
         description={description}
         image={pulpoFlores}
         imageTwitter={pulpoFloresTw}
