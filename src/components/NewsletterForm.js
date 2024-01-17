@@ -8,11 +8,6 @@ const NewsletterForm = ({ smallDescription }) => {
     setEmail(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('hola');
-  };
-
   return (
     <section>
       <div className={newsletterStyles.container}>
@@ -22,8 +17,7 @@ const NewsletterForm = ({ smallDescription }) => {
           method="post"
           netlify-honeypot="bot-field"
           data-netlify="true"
-          action="/NewsletterSubscribe"
-          onSubmit={handleSubmit}
+          action="/BoletinSubscribe"
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="BoletinForm" />

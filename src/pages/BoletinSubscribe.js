@@ -26,7 +26,7 @@ export const query = graphql`
   }
 `;
 
-const NewsletterSubscribe = ({ data }) => {
+const BoletinSubscribe = ({ data }) => {
   const {
     allMdx: { nodes: posts },
   } = data;
@@ -42,4 +42,4 @@ const NewsletterSubscribe = ({ data }) => {
   );
 };
 
-export default NewsletterSubscribe;
+export default BoletinSubscribe;
