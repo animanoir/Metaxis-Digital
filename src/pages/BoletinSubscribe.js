@@ -32,12 +32,11 @@ const BoletinSubscribe = ({ data }) => {
   } = data;
   return (
     <Layout>
-      <h1 style={{ fontSize: '2rem', textAlign: 'center', fontFamily: 'Karla' }}>
-        ¡Estás suscrito!
+      <h1
+        style={{ fontSize: '2rem', textAlign: 'center', fontFamily: 'Karla', marginTop: '10rem' }}
+      >
+        ¡Estás suscrito! Continúa explorando el sitio 🙂👍.
       </h1>
-      <main>
-        <Posts posts={posts} />
-      </main>
     </Layout>
   );
 };
