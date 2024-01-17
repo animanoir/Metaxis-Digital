@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import pulpoConFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoConFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import { Link } from 'gatsby';
 import * as conceptosStyle from '../css/Conceptos.module.css';
+import NewsletterForm from '../components/NewsletterForm';
 
 export const query = graphql`
   {
@@ -46,7 +46,7 @@ const Conceptos = React.memo(
 
     return (
       <Layout>
-        <SEO
+        <Seo
           title="Conceptos"
           description={description}
           image={pulpoConFlores}
@@ -71,6 +71,10 @@ const Conceptos = React.memo(
             ))}
           </ul>
         </main>
+        <NewsletterForm
+          smallDescription="Nunca recibirás spam de nuestra parte, sólo boletines, de vez en cuando, sobre artículos y
+  novedades del sitio."
+        />
       </Layout>
     );
   }

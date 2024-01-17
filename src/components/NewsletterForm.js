@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as newsletterStyles from '../css/NewsletterForm.module.css';
 
-const NewsletterForm = () => {
+const NewsletterForm = ({ smallDescription }) => {
   const [email, setEmail] = useState('');
 
   const handleChange = (event) => {
@@ -43,10 +43,7 @@ const NewsletterForm = () => {
             </button>
           </div>
         </form>
-        <small className={newsletterStyles.small}>
-          Nunca recibirás spam de nuestra parte, sólo boletines de vez en cuando sobre artículos del
-          sitio.
-        </small>
+        <small className={newsletterStyles.small}>{smallDescription}</small>
       </div>
     </section>
   );

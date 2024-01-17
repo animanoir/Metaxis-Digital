@@ -1,12 +1,13 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import { graphql } from 'gatsby';
 import * as bibliotecaStyles from '../css/Biblioteca.module.css';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import NewsletterForm from '../components/NewsletterForm';
 
 export const query = graphql`
   {
@@ -32,24 +33,14 @@ export const query = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        description
-      }
-    }
   }
 `;
 
 const Biblioteca = ({ data }) => {
-  const {
-    site: { description },
-  } = data;
   const libros = data.allMdx.nodes;
-  data: {
-  }
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Biblioteca"
         description="La gran biblioteca de metaxis.digital"
         metaurl="https://metaxis.digital/Biblioteca"
@@ -69,11 +60,7 @@ const Biblioteca = ({ data }) => {
           <ul className={bibliotecaStyles.booksGrid}>
             {libros.map((libro) => (
               <li>
-                <Link
-                  key={libro.id}
-                  to={`/libro/${libro.frontmatter.slug}`}
-                  className={bibliotecaStyles.bookContainer}
-                >
+                <Link key={libro.id} to={`/libro/${libro.frontmatter.slug}`}>
                   {libro.frontmatter.image && (
                     <GatsbyImage
                       quality={50}
@@ -95,6 +82,7 @@ const Biblioteca = ({ data }) => {
           </ul>
         </div>
       </div>
+      <NewsletterForm smallDescription="Nunca recibirás spam de nuestra parte, sólo boletines, de vez en cuando, de los libros publicados en el sitio." />
     </Layout>
   );
 };

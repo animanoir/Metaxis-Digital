@@ -6,7 +6,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Disqus } from 'gatsby-plugin-disqus';
 import * as bookStyles from '../css/BookLayout.module.css';
 import styled from 'styled-components';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
+import NewsletterForm from '../components/NewsletterForm';
 
 export const bookQuery = graphql`
   query GetSingleBook($slug: String) {
@@ -75,7 +76,7 @@ const BookLayout = ({ data }) => {
   };
   return (
     <Layout>
-      <SEO
+      <Seo
         keywords={concepts}
         title={`${title} por ${author}`}
         description={description}
@@ -117,6 +118,10 @@ const BookLayout = ({ data }) => {
           </div>
         </PostStyleWrapper>
       </article>
+      <NewsletterForm
+        smallDescription="Nunca recibirás spam de nuestra parte, sólo boletines, de vez en cuando, sobre artículos y
+novedades del sitio."
+      />
     </Layout>
   );
 };

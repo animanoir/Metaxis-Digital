@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import { graphql } from 'gatsby';
 import amalgalmas from '../images/amalgalmas.jpg';
 import amalgalmasTw from '../images/amalgalmas-tw.jpg';
 import * as acercaStyles from '../css/Acerca.module.css';
+import NewsletterForm from '../components/NewsletterForm';
 
 export const query = graphql`
   query {
@@ -22,7 +23,7 @@ const ColaboraPage = ({ data }) => {
   } = data;
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Colabora"
         image={amalgalmas}
         imageTwitter={amalgalmasTw}
@@ -94,6 +95,10 @@ const ColaboraPage = ({ data }) => {
           </div>
         </div>
       </div>
+      <NewsletterForm
+        smallDescription="Nunca recibirás spam de nuestra parte, sólo boletines, de vez en cuando, sobre artículos y
+novedades del sitio."
+      />
     </Layout>
   );
 };

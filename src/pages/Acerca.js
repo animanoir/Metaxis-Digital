@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import { graphql } from 'gatsby';
 import * as acercaStyles from '../css/Acerca.module.css';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import { StaticImage } from 'gatsby-plugin-image';
+import NewsletterForm from '../components/NewsletterForm';
 
 export const query = graphql`
   query {
@@ -23,7 +24,7 @@ const AcercaPage = ({ data }) => {
   } = data;
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Acerca(te)"
         description={description}
         metaurl="https://metaxis.digital/Acerca"
@@ -47,12 +48,12 @@ const AcercaPage = ({ data }) => {
             src={'../images/metaxis-digital-pulpo.jpg'}
             alt="El metapulpo de metaxis.digital."
           />
-          <StaticImage
-            src={'../images/qrAmalgalmas.png'}
-            alt="Código QR para entrar a AMALGALMAS."
-          />
         </div>
       </div>
+      <NewsletterForm
+        smallDescription="Nunca recibirás spam de nuestra parte, sólo boletines, de vez en cuando, sobre artículos y
+    novedades del sitio."
+      />
     </Layout>
   );
 };

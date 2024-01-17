@@ -2,11 +2,12 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 import { graphql } from 'gatsby';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import pulpoFlores from '../images/metaxis-digital-pulpo.jpg';
 import pulpoFloresTw from '../images/metaxis-digital-pulpo-tw.jpg';
 import ArenaContent from '../components/ArenaContent';
 import WeeklyMix from '../components/WeeklyMix';
+import NewsletterForm from '../components/NewsletterForm';
 
 export const query = graphql`
   {
@@ -50,8 +51,8 @@ const IndexPage = ({
 }) => {
   return (
     <Layout>
-      <SEO
-        title="〇"
+      <Seo
+        title="metaxis.digital"
         description={description}
         image={pulpoFlores}
         imageTwitter={pulpoFloresTw}
@@ -64,6 +65,10 @@ const IndexPage = ({
         <Posts posts={posts} />
       </main>
       <ArenaContent />
+      <NewsletterForm
+        smallDescription="Nunca recibirás spam de nuestra parte, sólo boletines, de vez en cuando, sobre artículos y
+      novedades del sitio."
+      />
     </Layout>
   );
 };
