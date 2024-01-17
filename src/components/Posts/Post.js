@@ -36,7 +36,7 @@ const Post = React.memo(({ frontmatter }) => {
           </h5>
           <h6 className={postsStyles.conceptsContainer}>
             {concepts.map((concept) => (
-              <ConceptLink concept={concept} />
+              <ConceptLink key={concept} concept={concept} />
             ))}
           </h6>
         </div>

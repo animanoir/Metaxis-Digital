@@ -10,8 +10,7 @@ const NewsletterForm = ({ smallDescription }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aquí puedes realizar cualquier validación antes de enviar
-    // el formulario o enviar los datos tú mismo
+    console.log('hola');
   };
 
   return (
@@ -19,7 +18,7 @@ const NewsletterForm = ({ smallDescription }) => {
       <div className={newsletterStyles.container}>
         <h2 className={newsletterStyles.title}>Suscríbete al boletín:</h2>
         <form
-          name="NewsletterForm"
+          name="BoletinForm"
           method="post"
           netlify-honeypot="bot-field"
           data-netlify="true"
@@ -27,7 +26,7 @@ const NewsletterForm = ({ smallDescription }) => {
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="NewsletterForm" />
+          <input type="hidden" name="form-name" value="BoletinForm" />
           <div>
             <input
               required
