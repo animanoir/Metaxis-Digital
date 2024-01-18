@@ -89,6 +89,10 @@ blockquote p:hover {
 }
 
 @media (max-width: 768px) {
+  .container {
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+  }
   .bookContainer {
     flex-direction: column;
     padding-right: 0;
@@ -96,8 +100,12 @@ blockquote p:hover {
 
   .metaInfo {
     width: 100%;
-    padding-right: initial;
+    padding-left: initial;
     padding-bottom: 2rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
   }
 
   blockquote {
@@ -114,5 +122,6 @@ blockquote p:hover {
   }
   .bookCover {
     width: 100%;
+    margin-bottom: 1rem;
   }
 }

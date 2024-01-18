@@ -140,7 +140,7 @@ const PostStyleWrapper = styled.div`
   .b {
     font-size: 5rem !important;
   }
-  width: 55%;
+  width: 50%;
   margin: 0 auto;
   font-family: 'Lora', serif;
   line-height: 1.55;
@@ -197,6 +197,7 @@ const PostStyleWrapper = styled.div`
     font-family: 'Lora', serif;
     color: #000;
     margin-bottom: 2rem;
+    line-height: 1.5;
   }
   list {
     margin-left: 1.5rem;
@@ -220,7 +221,7 @@ const PostStyleWrapper = styled.div`
       padding: 0 0.5rem 5rem 0.5rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       text-align: justify;
       font-family: 'Lora', serif;
       color: #000;
