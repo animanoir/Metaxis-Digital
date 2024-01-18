@@ -88,6 +88,7 @@ const BookLayout = ({ data }) => {
       />
       <article className={bookStyles.container}>
         <div className={bookStyles.infoContainer}>
+          <GatsbyImage className={bookStyles.bookCover} image={getImage(image)} alt={title} />
           <div className={bookStyles.metaInfo}>
             <h1 className={bookStyles.title}>
               {title}, <span style={{ fontWeight: 'normal' }}>{author}</span>
@@ -99,7 +100,6 @@ const BookLayout = ({ data }) => {
             )}
             <h4 className={bookStyles.description}>{description}</h4>
           </div>
-          <GatsbyImage className={bookStyles.bookCover} image={getImage(image)} alt={title} />
         </div>
         <PostStyleWrapper>
           <MDXRenderer>{body}</MDXRenderer>
