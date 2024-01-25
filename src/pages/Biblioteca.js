@@ -53,7 +53,7 @@ const Biblioteca = ({ data }) => {
         <div className={bibliotecaStyles.contentContainer}>
           <h1 className={bibliotecaStyles.title}>Biblioteca</h1>
           <p className={bibliotecaStyles.text}>
-            La gran biblioteca de <b>metaxis.digital</b> (en constante actualización)
+            La <b>Gran Biblioteca</b> de <b>metaxis.digital</b> (en constante actualización)
             <span className={bibliotecaStyles.typingDots}></span>
           </p>
           {/* Book List */}
