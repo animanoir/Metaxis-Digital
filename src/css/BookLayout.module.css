@@ -76,7 +76,7 @@ blockquote p {
   text-align: justify; /* Alineación justificada para un aspecto elegante */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
   border-radius: 4px; /* Bordes redondeados para suavizar el aspecto */
-  transition: all 1s ease-in-out; /* Transición suave para efectos de hover */
+  transition: all 0.3s ease-in-out; /* Transición suave para efectos de hover */
   font-weight: bold;
 }
 
