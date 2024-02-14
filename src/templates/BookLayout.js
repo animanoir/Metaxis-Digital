@@ -91,7 +91,8 @@ const BookLayout = ({ data }) => {
           <GatsbyImage className={bookStyles.bookCover} image={getImage(image)} alt={title} />
           <div className={bookStyles.metaInfo}>
             <h1 className={bookStyles.title}>
-              {title}, <span style={{ fontWeight: 'normal' }}>{author}</span>
+              {title}
+              <span style={{ fontWeight: 'normal' }}>, {author}</span>
             </h1>
             {publishedYear && (
               <h3 className={bookStyles.title} style={{ fontSize: '2rem' }}>
