@@ -105,7 +105,6 @@
 .searchbar {
   margin: 0 auto;
   width: 100%;
-  padding: 1rem;
   margin-bottom: 2rem;
   text-align: center;
   font-size: 3rem;
@@ -150,7 +149,6 @@
   }
   .searchbar {
     font-size: 2rem;
-    padding: 0; 
   }
 }
 
