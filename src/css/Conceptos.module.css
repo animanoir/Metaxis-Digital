@@ -150,6 +150,7 @@
   }
   .searchbar {
     font-size: 2rem;
+    padding: 0; 
   }
 }
 
