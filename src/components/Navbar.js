@@ -141,11 +141,6 @@ const Navbar = () => {
       </div>
       <ul className={navbarStyles.menulist}>
         <li>
-          <AniLink fade to="/Conceptos">
-            Conceptos
-          </AniLink>
-        </li>
-        <li>
           <AniLink fade to="/Acerca">
             Acerca
           </AniLink>
@@ -158,6 +153,11 @@ const Navbar = () => {
         <li>
           <AniLink fade to="/Biblioteca">
             <b>Biblioteca</b>
+          </AniLink>
+        </li>
+        <li>
+          <AniLink fade to="/Conceptos">
+            Conceptos
           </AniLink>
         </li>
         <li>
