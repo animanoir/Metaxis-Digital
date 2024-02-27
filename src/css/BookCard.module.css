@@ -1,0 +1,91 @@
+
+
+.text {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.4rem;
+  align-self: center;
+  text-align: justify;
+}
+
+.bookCard {
+  padding: 0;
+  background-color: #f9f9f9;
+  width: 70%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+
+
+.bookCard h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Karla', sans-serif;
+  padding-top: 1rem;
+}
+
+.bookCard p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #333;
+  font-family: 'lora', serif;
+}
+
+.gatsby-image-wrapper {
+  margin: 15px 0;
+}
+
+.bookCard a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.bookCard a:hover {
+  background-color: #e0e0e0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container,
+  .contentContainer {
+    flex-direction: column;
+    width: 95%;
+  }
+  .title {
+    font-size: 4.5rem;
+  }
+  .text,
+  .image {
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+.typingDots::after {
+  display: inline-block;
+  content: '';
+  width: 2ch; /* Adjust the width as necessary */
+  animation: typing 1.5s steps(3, end) infinite;
+}
+
+@keyframes typing {
+  0% {
+    content: '';
+  }
+  25% {
+    content: '.';
+  }
+  50% {
+    content: '..';
+  }
+  75% {
+    content: '...';
+  }
+  100% {
+    content: '';
+  }
+}

@@ -102,6 +102,22 @@
   animation: slideUp 0.5s ease-out;
 }
 
+.searchbar {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Karla', sans-serif;
+  border: none;
+}
+
+.searchbar:focus {
+  outline: none;
+}
+
+
 /* Tooltip */
 /* .conceptcard:hover::after {
   content: attr(data-tooltip);
@@ -131,6 +147,9 @@
   .conceptcard {
     grid-column: span 1;
     grid-row: span 1;
+  }
+  .searchbar {
+    font-size: 2rem;
   }
 }
 

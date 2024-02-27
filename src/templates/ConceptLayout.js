@@ -20,7 +20,10 @@ export const query = graphql`
           date(formatString: "d—MMd—YYYY")
           author
           concepts
+          description
+          publishedYear
           excerpt
+          type
           image {
             childImageSharp {
               gatsbyImageData

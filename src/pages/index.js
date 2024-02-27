@@ -24,6 +24,7 @@ export const query = graphql`
           author
           concepts
           excerpt
+          type
           image {
             childImageSharp {
               gatsbyImageData(quality: 90, placeholder: BLURRED)

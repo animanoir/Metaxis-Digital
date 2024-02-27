@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
 import Seo from '../components/SEO';
@@ -31,16 +31,22 @@ const Conceptos = React.memo(
       site: { description },
     },
   }) => {
-    // useEffect(() => {
-    //   // Tu código de aleatoriedad aquí
-    //   const cards = document.querySelectorAll(`.${conceptosStyle.conceptcard}`);
+    const [searchTerm, setSearchTerm] = useState('');
+    const searchInputRef = useRef(null);
 
-    //   cards.forEach((card) => {
-    //     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Ejemplo: Color aleatorio
+    const filteredConcepts = useMemo(() => {
+      return group.filter(({ fieldValue }) =>
+        fieldValue.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }, [searchTerm, group]);
 
-    //     card.style.backgroundColor = randomColor;
-    //   });
-    // }, []);
+    const handleSearchChange = (e) => {
+      setSearchTerm(e.target.value);
+    };
+
+    useEffect(() => {
+      searchInputRef.current.focus();
+    }, []);
 
     const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
@@ -56,16 +62,25 @@ const Conceptos = React.memo(
           author="Óscar A. Montiel"
         />
         <main className={conceptosStyle.maincontainer}>
+          <input
+            ref={searchInputRef}
+            type="text"
+            placeholder="Buscar concepto..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className={conceptosStyle.searchbar}
+          />
           <ul className={conceptosStyle.container}>
-            {group.map(({ fieldValue: conceptName, totalCount }) => (
+            {filteredConcepts.map(({ fieldValue: conceptName, totalCount }) => (
               <Link
+                key={conceptName}
                 className={conceptosStyle.conceptcard}
                 to={`/concepts/${conceptName}/`}
                 style={{ backgroundColor: getRandomColor() }}
                 // data-tooltip="Información adicional aquí"
               >
-                <li key={conceptName} className={conceptosStyle.conceptTitle}>
-                  <span className={conceptosStyle.conceptName}>{conceptName}</span> = {totalCount}
+                <li className={conceptosStyle.conceptTitle}>
+                  <span className={conceptosStyle.conceptName}>{conceptName}</span> ({totalCount})
                 </li>
               </Link>
             ))}
