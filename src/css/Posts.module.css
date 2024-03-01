@@ -151,6 +151,10 @@ h2:hover {
 
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 650px) {
+.simpleContainer {
+    width: 100%;
+  }
+
   .featuredContainer {
     padding: 20vh 10vw;
     margin-bottom: 0;

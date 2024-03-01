@@ -19,5 +19,10 @@
   }
   .container {
     grid-template-columns: auto;
+    margin-top: 5vh;
+  }
+
+  .info {
+    padding: 0 2rem 3rem 2rem;
   }
 }

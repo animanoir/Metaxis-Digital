@@ -89,3 +89,9 @@
     content: '';
   }
 }
+
+@media only screen and (max-width: 650px) {
+  .bookCard {
+    width: 100%;
+  }
+}
