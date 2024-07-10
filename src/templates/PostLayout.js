@@ -8,6 +8,8 @@ import * as postStyles from '../css/PostLayout.module.css';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
 import linkSvg from '../images/svg/Link.svg';
+import NewsletterForm from '../components/NewsletterForm';
+
 
 export const postQuery = graphql`
   query GetSinglePost($slug: String) {
@@ -109,6 +111,9 @@ const PostLayout = ({ data }) => {
           <Disqus config={disqusConfig} />
         </div>
       </article>
+      <NewsletterForm 
+              smallDescription="¿Quieres recibir más artículos y novedades de metaxis.digital? ¡Suscríbete a nuestro boletín!"
+      />
     </Layout>
   );
 };
@@ -164,6 +169,7 @@ const PostStyleWrapper = styled.div`
   }
   li {
     font-size: 1.2rem;
+    padding-bottom: 1.5rem;
   }
   iframe {
     width: 100%;

@@ -31,7 +31,7 @@ const BoletinSubscribe = ({ data }) => {
       <h1
         style={{ fontSize: '2rem', textAlign: 'center', fontFamily: 'Karla', marginTop: '10rem' }}
       >
-        ¡Estás suscrito! Continúa explorando el sitio 🙂👍.
+        ¡Estás suscrito! Ahora checa tu cuenta bancaria 😉.
       </h1>
     </Layout>
   );
