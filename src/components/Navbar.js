@@ -167,7 +167,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@metaxisdigital">
+          <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@metaxisdigital/videos">
             <img src={youtubeSvg} alt="Únete a nuestro canal de Telegram." />
           </a>
         </li>
