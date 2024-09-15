@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import * as navbarStyles from '../css/Navbar.module.css';
 import { Link } from 'gatsby';
 import telegramSvg from '../images/svg/Telegram.svg';
+import youtubeSvg from '../images/svg/Youtube.svg';
 import { throttle } from 'lodash';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
@@ -161,8 +162,13 @@ const Navbar = () => {
           </AniLink>
         </li>
         <li>
-          <a target="_blank" href="https://t.me/+Kuivv8Wpl2EyMTkx">
+          <a target="_blank" rel="noreferrer" href="https://t.me/+u0btF1H3XaZkNGIx">
             <img src={telegramSvg} alt="Únete a nuestro canal de Telegram." />
+          </a>
+        </li>
+        <li>
+          <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@metaxisdigital">
+            <img src={youtubeSvg} alt="Únete a nuestro canal de Telegram." />
           </a>
         </li>
       </ul>
