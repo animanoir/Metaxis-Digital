@@ -16,20 +16,3 @@ const WeeklyMix = () => {
 };
 
 export default WeeklyMix;
-
-// <a
-// href="https://www.are.na/degrees-degrees-bullet-period/metaxis-digital-mixes"
-// target="_blank"
-// rel="noreferrer"
-// >
-// MIX DE LA SEMANA
-// </a>
-// (2·10·22)—
-// <a
-// className={weeklymixStyles.link}
-// target="_blank"
-// rel="noreferrer"
-// href="https://soundcloud.com/crackmagazine/sunday-mix-lucrecia-dalt"
-// >
-// Sunday Mix: Lucrecia Dalt
-// </a>
