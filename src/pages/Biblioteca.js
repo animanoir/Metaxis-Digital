@@ -56,6 +56,7 @@ const Biblioteca = ({ data }) => {
             La <b>Gran Biblioteca</b> de <b>metaxis.digital</b> (en constante actualización)
             <span className={bibliotecaStyles.typingDots}></span>
           </p>
+          <p className={bibliotecaStyles.smallText}> Puede que algunos enlaces ya no sirvan—esto es por seguridad.</p>
           {/* Book List */}
           <ul className={bibliotecaStyles.booksGrid}>
             {libros.map((libro) => (

@@ -19,10 +19,12 @@
 }
 
 @keyframes title {
+
   0%,
   100% {
     transform: rotateZ(1deg);
   }
+
   50% {
     transform: rotateZ(-1deg);
   }
@@ -44,6 +46,14 @@
   font-size: 1.4rem;
   align-self: center;
   text-align: justify;
+}
+
+.smallText {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.8rem;
+  align-self: center;
+  text-align: justify;
+  margin: 0;
 }
 
 .booksGrid {
@@ -100,14 +110,17 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
   .container,
   .contentContainer {
     flex-direction: column;
     width: 95%;
   }
+
   .title {
     font-size: 4.5rem;
   }
+
   .text,
   .image {
     font-size: 1.3rem;
@@ -119,7 +132,8 @@
 .typingDots::after {
   display: inline-block;
   content: '';
-  width: 2ch; /* Adjust the width as necessary */
+  width: 2ch;
+  /* Adjust the width as necessary */
   animation: typing 1.5s steps(3, end) infinite;
 }
 
@@ -127,15 +141,19 @@
   0% {
     content: '';
   }
+
   25% {
     content: '.';
   }
+
   50% {
     content: '..';
   }
+
   75% {
     content: '...';
   }
+
   100% {
     content: '';
   }
