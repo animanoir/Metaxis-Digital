@@ -51,6 +51,29 @@ const Navbar = () => {
     'pasión',
     'claridad',
     'pluralidad',
+    'sublimación',
+    'catalizador',
+    'espíritu',
+    'navegación',
+    'infinito',
+    'horizonte',
+    'iluminación',
+    'célula',
+    'ecosistema',
+    'destello',
+    'sinestesia',
+    'metáfora',
+    'renovación',
+    'vínculo',
+    'universalidad',
+    'concatenación',
+    'origen',
+    'transición',
+    'expansión',
+    'resiliencia',
+    'introspección',
+    'horizonte',
+    '0'
   ];
   const antitesisWords = [
     'computación',
@@ -86,6 +109,29 @@ const Navbar = () => {
     'ontología',
     'oscuridad',
     'singularidad',
+    'fragmentación',
+    'confinamiento',
+    'vacío existencial',
+    'desconexión',
+    'finito',
+    'horizonte',
+    'anulación',
+    'partícula',
+    'aislamiento',
+    'obscuridad',
+    'desintegración',
+    'paradoja',
+    'recesión',
+    'análisis',
+    'restrictividad',
+    'limitación',
+    'disolución',
+    'saturación',
+    'contradicción',
+    'fusión',
+    'temporalidad',
+    'dispersión',
+    '1'
   ];
 
   const getRandomWord = (words) => {
@@ -159,6 +205,11 @@ const Navbar = () => {
         <li>
           <AniLink fade to="/Conceptos">
             Conceptos
+          </AniLink>
+        </li>
+        <li>
+          <AniLink fade to="/Eventos">
+            Eventos
           </AniLink>
         </li>
         <li>

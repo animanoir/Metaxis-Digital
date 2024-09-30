@@ -40,8 +40,8 @@ const AcercaPage = ({ data }) => {
           <p className={acercaStyles.text}>
             El espacio de <b>metaxis.digital</b> se erige como un portal al pensamiento metamoderno,
             combinando elementos del futurismo, filosofía, matemáticas, y la espiritualidad
-            oriental. Nuestra misión es difundir ideas que expandan los horizontes de conciencia y
-            promover diálogos que retan las normas establecidas.
+            oriental. Nuestra misión es difundir ideas que expandan los horizontes de conciencia y{' '}
+            <b>promover diálogos que retan las normas establecidas</b>.
           </p>
           <StaticImage
             height={1000}
