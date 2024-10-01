@@ -25,7 +25,7 @@ const SuscribirseBoletin = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title="Acerca(te)"
+        title="¡Suscríbete al boletín!"
         description={description}
         metaurl="https://metaxis.digital/Acerca"
         type="website"
