@@ -1,0 +1,125 @@
+.container {
+  width: 100%;
+}
+
+.compactWidth {
+  width: 40%;
+  margin: 5rem auto;
+}
+
+.title {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0 !important;
+}
+
+.container .form {
+  margin: 0 auto;
+}
+
+.emailinput {
+  padding: 12px 40px;
+  font-family: 'lora', serif;
+  width: 100%;
+  font-weight: bold;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.button {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:focus {
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+.small {
+  font-family: 'Karla', sans-serif;
+}
+
+@media only screen and (max-width: 769px) {
+  .container {
+    padding: 5rem;
+    margin-top: 5rem;
+  }
+
+  .emailinput {
+    width: initial;
+  }
+
+  .button {
+    padding: 12px 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 0.5rem 3rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .emailinput {
+    padding: 12px 40px;
+    margin-bottom: 0.5rem;
+    font-family: 'lora', serif;
+    width: -webkit-fill-available;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .compactWidth {
+    width: 100%;
+    margin: 5rem auto;
+  }
+}

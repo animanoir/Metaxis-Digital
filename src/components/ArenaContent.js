@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import * as arenaContentStyles from '../css/ArenaContent.module.css';
 
 const getTime = () => {
@@ -16,32 +16,39 @@ const ArenaContent = () => {
   const [hovering, setHovering] = useState(false);
   const [time, setTime] = useState(getTime());
 
-  const handleMouseOver = () => {
+  const handleMouseOver = useCallback(() => {
     setHovering(true);
-  };
-  const handleMouseOut = () => {
+  }, []);
+
+  const handleMouseOut = useCallback(() => {
     setHovering(false);
-  };
+  }, []);
+
+  const fetchUrl = useMemo(() => 
+    'https://api.are.na/v2/channels/metaxis-digital/contents?per=19&sort=position&direction=desc', 
+    []
+  );
 
   useEffect(() => {
     setIsLoading(true);
     setError(null);
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://api.are.na/v2/channels/metaxis-digital/contents?per=19?sort=position&direction=desc`
-        );
+        const response = await fetch(fetchUrl);
+        if (!response.ok) {
+          throw new Error(`No se pudieron obtener las imágenes por alguna extraña razón..: ${response.status}`);
+        }
         const data = await response.json();
         const { contents } = data;
         setArenaContent(contents);
       } catch (error) {
-        setError(error);
+        setError(error.message);
       } finally {
         setIsLoading(false);
       }
     };
     fetchData();
-  }, []);
+  }, [fetchUrl]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -55,7 +62,7 @@ const ArenaContent = () => {
   }
 
   if (error) {
-    return <p>Hubo un error al cargar la inspiración.</p>;
+    return <p>Hubo un error al cargar la inspiración: {error}</p>;
   }
 
   return (

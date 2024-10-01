@@ -35,30 +35,22 @@ const ColaboraPage = ({ data }) => {
       <div className={acercaStyles.container}>
         <div className={acercaStyles.contentContainer}>
           <div className={acercaStyles.text}>
-            <h1 className={acercaStyles.title}>Colabora con nosotr∞s :)</h1>
+            <h1 className={acercaStyles.title}>Colabora con nosotr∞s</h1>
             <p>
               En el umbral de una nueva era, donde la frontera entre lo moderno y lo postmoderno se
               desvanece, se encuentra <b>metaxis.digital</b>, un santuario para la <b>reflexión</b>{' '}
               y exploración de <b>ideas metamodernas</b>.
             </p>
             <p>
-              Nos adentramos en los vastos dominios del <b>futurismo</b>, la <b>filosofía</b>, las
-              matemáticas y la <b>espiritualidad</b> oriental, forjando un puente entre tradición y
-              tecnología, ciencia y esencia, razón y emoción.
+              Nos adentramos en los vastos dominios del <b>futurismo</b>, la <b>filosofía/ciencia</b>, <b>espiritualidad</b>, forjando un puente entre tradición y tecnología, ciencia y esencia, razón y emoción—<b><i>meta</i></b>, en pocas palabras.
             </p>
             <p>
-              Para profundizar en este viaje y conectar con almas afines, para intercambiar
-              perspectivas, descubrir obras esenciales o simplemente resolver inquietudes, te
-              invitamos a unirte a nuestro <b>grupo en Telegram</b>:
-            </p>
-            <p>
-              <a
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-                href="https://t.me/+0ViSuNGeQ-JmZTcx"
-              >
-                <b style={{ margin: '5rem 0', fontSize: '3rem' }}>【 a m a l g a l m a s 】</b>
+              Para conectar con almas afines e intercambiar perspectivas, descubrir obras esenciales o simplemente resolver inquietudes, te
+              invitamos a unirte a nuestro <b>grupo en Telegram</b>:<a href="https://t.me/+0ViSuNGeQ-JmZTcx">
+              <b>【 a m a l g a l m a s 】</b>.
               </a>
             </p>
+
             <h2 style={{ marginBottom: '1rem' }}>¿Deseas colaborar?</h2>
             <h3>Expresiones Artísticas y Literarias:</h3>
             <p>
@@ -82,16 +74,12 @@ const ColaboraPage = ({ data }) => {
               de metaxis.digital. Nuestro sitio está construido sobre Gatsby con React, y buscamos
               mentes habilidosas que nos ayuden a mejorar, innovar y evolucionar nuestra plataforma.
             </p>
-            <p>Consulta el repositorio aquí: </p>
-            <p>
-              {' '}
-              <a
-                style={{ textDecoration: 'underline' }}
-                href="https://github.com/animanoir/metaxisdigital2023"
-              >
-                GitHub - metaxisdigital2023
-              </a>
-            </p>
+            <p>Consulta el repositorio aquí:{' '}<a
+              style={{ textDecoration: 'underline' }}
+              href="https://github.com/animanoir/metaxisdigital2023"
+            >
+              metaxisdigital2023
+          </a></p>
           </div>
         </div>
       </div>

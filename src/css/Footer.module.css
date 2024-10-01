@@ -9,6 +9,12 @@
   font-family: 'Karla', sans-serif;
 }
 
+.footerLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .container {
   display: flex;
   justify-content: space-between;

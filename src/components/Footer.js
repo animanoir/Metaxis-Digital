@@ -1,12 +1,13 @@
 import React from 'react';
 import * as footerStyles from '../css/Footer.module.css';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Footer = () => {
   return (
     <footer className={footerStyles.footer}>
       <div className={footerStyles.container}>
-        <div>
-          <a target="_blank" href="https://twitter.com/metaxisdigital" rel="noopener noreferrer">
+        <div className={footerStyles.footerLinks}>
+          <a target="_blank" href="https://x.com/metaxisdigital" rel="noopener noreferrer">
             <span className={footerStyles.twittericon} id="tw-icon">
               .x
             </span>

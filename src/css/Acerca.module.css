@@ -2,45 +2,33 @@
   margin: 0 auto;
   margin-top: 10vh;
   margin-bottom: 20vh;
+  line-height: 1.5;
+  width: 40%;
+  max-width: 50%;
 }
 
-.container p {
-  padding: 3rem;
-  padding-top: 0;
-  font-size: 2rem;
+.container h2 {
+  margin: 5rem 0;
 }
 
 .contentContainer {
   display: flex;
   flex-direction: column;
-  width: 60%;
   margin: 0 auto;
 }
 
 .title {
   font-family: 'Karla', sans-serif;
-  font-size: 5rem;
-  animation-name: title;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  margin: 0 auto;
-  line-height: 1;
+  font-size: 3.5rem;
   word-break: break-all;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes title {
-  0% {
-    transform: rotateZ(1deg);
-  }
-
-  50% {
-    transform: rotateZ(-1deg);
-  }
-
-  100% {
-    transform: rotateZ(1deg);
-  }
+iframe {
+  width: 100%;
+  /* height: 100%; */
+  margin: 5rem 0;
 }
 
 .image {
@@ -57,7 +45,7 @@
 
 .text {
   font-family: 'Karla', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   align-self: center;
   text-align: justify;
 }
@@ -68,33 +56,31 @@
     margin: 0 auto;
     flex-direction: column;
     margin-top: 3rem;
+    max-width: 90%;
   }
 
   .contentContainer {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
   }
 
   .title {
     font-family: 'Karla', sans-serif;
-    font-size: 4.5rem;
-    animation-name: title;
-    margin-bottom: 3rem;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .text {
     font-family: 'Karla', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 8rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
     width: 100%;
   }
 
-  .img {
+  .image {
     width: 100%;
+    height: auto;
   }
 }
 
