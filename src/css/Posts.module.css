@@ -6,6 +6,7 @@
 
 .featuredContainer p {
   font-size: 1.1rem;
+  padding: 0.3rem;
   margin: 0;
   background-color: black;
   width: fit-content;
@@ -14,10 +15,12 @@
 }
 
 .featuredContainer h2 {
+  padding: 0.5rem;
   font-size: 4.5rem;
   color: #fffff0;
   background-color: black;
   width: fit-content;
+
 }
 
 h2:hover {
@@ -55,6 +58,7 @@ h2:hover {
   padding: 0.5rem;
   width: fit-content;
 }
+
 .featuredContainer h5 a {
   color: #fffff0;
   font-weight: bold;
@@ -109,10 +113,16 @@ h2:hover {
   background-size: cover;
   margin-bottom: 1rem;
 }
+
+.simpleImage:hover {
+  filter: invert(1);
+}
+
 .date {
   font-family: 'Karla', 'sans-serif';
   font-size: 1.1rem;
   margin: 0;
+  color: black;
 }
 
 .featuredImage {
@@ -141,9 +151,11 @@ h2:hover {
   .featuredContainer {
     padding: 30vh 15vw;
   }
+
   .featuredContainer h2 {
     font-size: 3rem;
   }
+
   .simpleContainer {
     width: 60%;
   }
@@ -151,7 +163,7 @@ h2:hover {
 
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 650px) {
-.simpleContainer {
+  .simpleContainer {
     width: 100%;
   }
 
@@ -159,15 +171,19 @@ h2:hover {
     padding: 20vh 10vw;
     margin-bottom: 0;
   }
+
   .featuredContainer h2 {
     font-size: 2rem;
   }
+
   .container {
     padding: 1rem 0.5rem 0 0.5rem;
   }
+
   .cardcontainer {
     padding: 2rem 0;
   }
+
   .conceptsContainer a {
     line-height: 2;
   }
@@ -179,6 +195,7 @@ h2:hover {
     flex-direction: column;
     width: 100%;
   }
+
   .simpleImage {
     margin: 0;
   }
