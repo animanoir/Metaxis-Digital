@@ -1,17 +1,34 @@
-import React from 'react';
-import * as footerStyles from '../css/Footer.module.css';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import React from 'react'
+import * as footerStyles from '../css/Footer.module.css'
+import telegramSvg from '../images/svg/Telegram.svg'
+import youtubeSvg from '../images/svg/Youtube.svg'
+import twitterSvg from '../images/svg/Twitter.svg'
 
 const Footer = () => {
   return (
     <footer className={footerStyles.footer}>
       <div className={footerStyles.container}>
         <div className={footerStyles.footerLinks}>
-          <a target="_blank" href="https://x.com/metaxisdigital" rel="noopener noreferrer">
-            <span className={footerStyles.twittericon} id="tw-icon">
-              .x
-            </span>
-          </a>
+          <span className={footerStyles.svgIcon} id="tw-icon">
+            <a target="_blank" href="https://x.com/metaxisdigital" rel="noopener noreferrer">
+            <img src={twitterSvg} alt="Sigue nuestro perfil en X." />
+              
+            </a>
+          </span>
+          <span className={footerStyles.svgIcon}>
+            <a target="_blank" rel="noreferrer" href="https://t.me/+u0btF1H3XaZkNGIx">
+              <img src={telegramSvg} alt="Únete a nuestro canal de Telegram." />
+            </a>
+          </span>
+          <span className={footerStyles.svgIcon}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/@metaxisdigital/videos"
+            >
+              <img src={youtubeSvg} alt="Suscríbete a nuestro canal en YouTube." />
+            </a>
+          </span>
         </div>
         <div className={footerStyles.ccommons}>
           <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -32,6 +49,6 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
-export default Footer;
+  )
+}
+export default Footer

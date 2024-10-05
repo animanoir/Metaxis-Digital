@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import * as navbarStyles from '../css/Navbar.module.css';
-import { Link } from 'gatsby';
-import telegramSvg from '../images/svg/Telegram.svg';
-import youtubeSvg from '../images/svg/Youtube.svg';
-import boletinSVG from '../images/svg/BoletinSVG.svg';
-import { throttle } from 'lodash';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import React, { useState, useEffect, useCallback } from 'react'
+import * as navbarStyles from '../css/Navbar.module.css'
+import { Link } from 'gatsby'
+import boletinSVG from '../images/svg/BoletinSVG.svg'
+import { throttle } from 'lodash'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const Navbar = () => {
   const tesisWords = [
@@ -74,8 +72,8 @@ const Navbar = () => {
     'resiliencia',
     'introspección',
     'horizonte',
-    '0'
-  ];
+    '0',
+  ]
   const antitesisWords = [
     'computación',
     'psicología',
@@ -132,43 +130,43 @@ const Navbar = () => {
     'fusión',
     'temporalidad',
     'dispersión',
-    '1'
-  ];
+    '1',
+  ]
 
   const getRandomWord = (words) => {
-    return words[Math.floor(Math.random() * words.length)];
-  };
+    return words[Math.floor(Math.random() * words.length)]
+  }
 
   const [tesisAntitesis, setTesisAntitesis] = useState({
     tesis: getRandomWord(tesisWords),
     antitesis: getRandomWord(antitesisWords),
-  });
-  const [scrollY, setScrollY] = useState(0);
+  })
+  const [scrollY, setScrollY] = useState(0)
 
   const updateScrollPosition = useCallback(
     throttle(() => {
-      setScrollY(window.pageYOffset);
+      setScrollY(window.pageYOffset)
     }, 50),
     []
-  );
+  )
 
   useEffect(() => {
-    window.addEventListener('scroll', updateScrollPosition);
+    window.addEventListener('scroll', updateScrollPosition)
     return () => {
-      window.removeEventListener('scroll', updateScrollPosition);
-    };
-  }, [updateScrollPosition]);
+      window.removeEventListener('scroll', updateScrollPosition)
+    }
+  }, [updateScrollPosition])
 
   useEffect(() => {
-    let selectedTesis = getRandomWord(tesisWords);
-    let selectedAntitesis = getRandomWord(antitesisWords);
+    let selectedTesis = getRandomWord(tesisWords)
+    let selectedAntitesis = getRandomWord(antitesisWords)
 
     while (selectedTesis === selectedAntitesis) {
-      selectedAntitesis = getRandomWord(antitesisWords);
+      selectedAntitesis = getRandomWord(antitesisWords)
     }
 
-    setTesisAntitesis({ tesis: selectedTesis, antitesis: selectedAntitesis });
-  }, [scrollY]);
+    setTesisAntitesis({ tesis: selectedTesis, antitesis: selectedAntitesis })
+  }, [scrollY])
 
   return (
     <nav className={navbarStyles.container}>
@@ -214,23 +212,14 @@ const Navbar = () => {
           </AniLink>
         </li>
         <li>
-        <AniLink fade to="/SuscribirseBoletin">
-          <img src={boletinSVG} alt="Suscríbete a nuestro boletín." />
-        </AniLink>
-      </li>
-        <li>
-          <a target="_blank" rel="noreferrer" href="https://t.me/+u0btF1H3XaZkNGIx">
-            <img src={telegramSvg} alt="Únete a nuestro canal de Telegram." />
-          </a>
-        </li>
-        <li>
-          <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@metaxisdigital/videos">
-            <img src={youtubeSvg} alt="Únete a nuestro canal de Telegram." />
-          </a>
+          <AniLink fade to="/SuscribirseBoletin">
+            <img src={boletinSVG} alt="Suscríbete a nuestro boletín." />
+            <span className={navbarStyles.glowText}>¡Suscríbete al boletín!</span>
+          </AniLink>
         </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
