@@ -47,28 +47,29 @@
 }
 
 .glowText {
-  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #dc143c, 0 0 20px #dc143c,
-    0 0 25px #dc143c, 0 0 30px #dc143c, 0 0 35px #dc143c;
+  color: white;
+  text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000, 0 0 20px #000000,
+    0 0 25px #000000, 0 0 30px #000000, 0 0 35px #000000;
   transition: all 0.3s ease;
   animation: glowText 1.5s infinite alternate;
 }
 
 .glowText:hover {
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #dc143c, 0 0 40px #dc143c,
-    0 0 50px #dc143c, 0 0 60px #dc143c, 0 0 70px #dc143c;
+  text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000,
+    0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;
 }
 
 @keyframes glowText {
   0% {
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #dc143c, 0 0 20px #dc143c;
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000, 0 0 20px #000000;
   }
 
   50% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #dc143c, 0 0 40px #dc143c;
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000;
   }
 
   100% {
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #dc143c, 0 0 20px #dc143c;
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000, 0 0 20px #000000;
   }
 }
 
