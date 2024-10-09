@@ -211,7 +211,7 @@ const Navbar = () => {
             Eventos
           </AniLink>
         </li>
-        <li>
+        <li id={navbarStyles.suscribirseBoletin}>
           <AniLink fade to="/SuscribirseBoletin">
             <img src={boletinSVG} alt="Suscríbete a nuestro boletín." />
             <span className={navbarStyles.glowText}>¡Suscríbete al boletín!</span>
