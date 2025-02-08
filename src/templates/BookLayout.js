@@ -107,7 +107,7 @@ const BookLayout = ({ data }) => {
           <h4 className={bookStyles.downloadWrapper}>
             <a
               className={bookStyles.downloadLink}
-              href={downloadLink}
+              href="https://t.me/+DULTIj9jMLgzNTUx"
               target="_blank"
               rel="noreferrer"
             >
